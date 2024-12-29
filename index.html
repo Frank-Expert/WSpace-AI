@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSpace AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo/w-space-ai.jpeg" alt="WSpace AI Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" onclick="loadSection('home')">Home</a></li>
+                    
+                    <!-- Services Navigation Bar Hover Menu -->
+                    <li class="hover-trigger services-hover">
+                        <a href="#services" onclick="loadSection('services')">Services</a>
+                        <div class="hover-content">
+                            <div class="hover-box" onclick="location.href='#mobile-apps'">
+                                <h3>Mobile Apps Development</h3>
+                                <p>Design and develop mobile apps for your business/company/organization.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#desktop-apps'">
+                                <h3>Desktop Apps Development</h3>
+                                <p>Design and develop desktop Windows apps.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#macos-apps'">
+                                <h3>MacOS IDE Apps Development</h3>
+                                <p>Design and develop Mac OS IDE Apps, iPhone apps, and Apple apps.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#web-development'">
+                                <h3>Website Creation</h3>
+                                <p>Web development solutions for your business/company.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#cyber-security'">
+                                <h3>Cyber Security Services</h3>
+                                <p>We offer cyber security services, protect your website, apps, or programs from hackers and malicious attacks.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#blockchain'">
+                                <h3>Blockchain</h3>
+                                <p>Blockchain solutions for secure and transparent business processes.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#robotics-ai'">
+                                <h3>Robotics & Artificial Intelligence</h3>
+                                <p>Innovative robotics and AI machine learning solutions for modern challenges.</p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- Products Navigation Bar Hover Menu -->
+                    <li class="hover-trigger products-hover">
+                        <a href="#products" onclick="loadSection('products')">Products</a>
+                        <div class="hover-content">
+                            <div class="hover-box" onclick="location.href='#salome'">
+                                <h3>Salome v 3.5</h3>
+                                <ul>
+                                    <li>For Everyone</li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#api'">
+                                <h3>API</h3>
+                                <ul>
+                                    <li>Platform Overview</li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#explore-more'">
+                                <h3>Explore More</h3>
+                                <ul>
+                                    <li>Future AI for Business</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- Pricing Navigation Bar Hover Menu -->
+                    <li class="hover-trigger pricing-hover">
+                        <a href="#pricing" onclick="loadSection('pricing')">Pricing</a>
+                        <div class="hover-content">
+                            <!-- Software Development Section -->
+                            <div class="hover-box" onclick="location.href='#software-development'">
+                                <h2>Software Development</h2>
+                                <p>Innovative website creation services designed to engage users.</p>
+                                
+                            </div>
+                    
+                            <!-- Website Creation Section -->
+                            <div class="hover-box" onclick="location.href='#website-creation'">
+                                <h2>Website Creation</h2>
+                                <p>Innovative website creation services designed to engage users.</p>
+                            </div>
+                    
+                            <!-- Cyber Security Services Section -->
+                            <div class="hover-box" onclick="location.href='#cyber-security'">
+                                <h2>Cyber Security Services</h2>
+                                <p>Comprehensive cyber security services to protect your data.</p>
+                            </div>
+                    
+                            <!-- Blockchain Section -->
+                            <div class="hover-box" onclick="location.href='#blockchain'">
+                                <h2>Blockchain</h2>
+                                <p>Blockchain development services to secure and enhance your projects.</p>
+                            </div>
+                    
+                            <!-- Robotics & AI Machine Learning Section -->
+                            <div class="hover-box" onclick="location.href='#robotics-ai'">
+                                <h2>Robotics & AI Machine Learning</h2>
+                                <p>Advanced robotics and AI machine learning solutions for your business.</p>
+                            </div>
+                    
+                            <!-- Latest Models Section -->
+                            <div class="hover-box" onclick="location.href='#models'">
+                                <h2>Latest Models</h2>
+                                <p>Explore the latest models in AI and machine learning technology.</p>
+                            </div>
+                    
+                            <!-- FAQ Section -->
+                            <div class="hover-box" onclick="location.href='#faq'">
+                                <h2>FAQ</h2>
+                                <ul>
+                                    <li><strong>What’s a token?</strong> Tokens are pieces of words where 1,000 tokens are about 750 words.</li>
+                                </ul>
+                            </div>
+                    
+                            <!-- Contact Sales Button -->
+                            <div class="hover-box" onclick="location.href='#contact-sales'">
+                                <h2>Contact sales</h2>
+                                <button id="contact-sales-btn">Contact Sales</button>
+
+                            </div>
+                        </div>
+                    </li>
+                    
+                    
+                    <!-- Research Navigation Bar Hover Menu -->
+                    <li class="hover-trigger research-hover">
+                        <a href="#research" onclick="loadSection('research')">Research</a>
+                        <div class="hover-content">
+                            <div class="hover-box" onclick="location.href='#vision'">
+                                <h3>Our Vision</h3>
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#mission'">
+                                <h3>Our Mission</h3>
+                                <p>To deliver high-quality, reliable, and innovative software solutions.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#goals'">
+                                <h3>Our Goals</h3>
+                                <p>To continuously evolve and improve our services.</p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- Resources Navigation Bar Hover Menu -->
+                    <li class="hover-trigger resource-hover">
+                        <a href="#resources" onclick="loadSection('resources')">Resources</a>
+                        <div class="hover-content">
+                            <!-- Blog Section -->
+                            <div class="hover-box" onclick="location.href='#blog'">
+                                <h3>Blog</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                    
+                            <!-- WSpace AI Academy Section -->
+                            <div class="hover-box" onclick="location.href='#wspace-ai-academy'">
+                                <h3>WSpace AI Academy</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                    
+                            <!-- Guides & Tutorials Section -->
+                            <div class="hover-box" onclick="location.href='#guides-tutorials'">
+                                <h3>Guides & Tutorials</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                    
+                            <!-- Webinars Section -->
+                            <div class="hover-box" onclick="location.href='#webinars'">
+                                <h3>Webinars</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                    
+                            <!-- Help Center Section -->
+                            <div class="hover-box" onclick="location.href='#help-center'">
+                                <h3>Help Center</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                    
+                            <!-- Community Section -->
+                            <div class="hover-box" onclick="location.href='#community'">
+                                <h3>Community</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                    
+                            <!-- Hire a Consultant Section -->
+                            <div class="hover-box" onclick="location.href='#hire-a-consultant'">
+                                <h3>Hire a Consultant</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                    
+                            <!-- Become a Partner Section -->
+                            <div class="hover-box" onclick="location.href='#become-a-partner'">
+                                <h3>Become a Partner</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li><a href="#contacts" onclick="loadSection('contacts')">Contacts</a></li>
+
+                    <!-- Company Navigation Bar Hover Menu -->
+                    <li class="hover-trigger company-hover">
+                        <a href="#company" onclick="loadSection('company')">Company</a>
+                        <div class="hover-content">
+                            <div class="hover-box" onclick="location.href='#about'">
+                                <h3>About Us</h3>
+                                <p>Learn more about WW-Space AI and our journey.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#faqs'">
+                                <h3>FAQs</h3>
+                                <p>Find answers to commonly asked questions.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#policies'">
+                                <h3>Policies</h3>
+                                <p>Read about our company policies.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#privacy'">
+                                <h3>Privacy</h3>
+                                <p>Understand how we protect your data.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#terms'">
+                                <h3>Terms and Conditions</h3>
+                                <p>Review the terms of our services.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#careers'">
+                                <h3>Careers</h3>
+                                <p>Explore career opportunities at WW-Space AI.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="slide" style="background-image: url('hero/aih.jpg');">
+            <h1> Revolutionizing Engineering and Research with Artificial Intelligence</h1>
+            <p>Advanced solutions for optimizing engineering processes and research <br>
+                AI-driven tools for laboratory automation and data analysis <br>
+                AI in product design, enhancing development workflows and creativity</p>
+        </div>
+        <div class="slide" style="background-image: url('hero/aig.jpg');">
+            <h1>Empowering Software Development through Artificial Intelligence</h1>
+            <p>Building smarter, adaptive software with AI-driven capabilities <br>
+                Accelerating development cycles using machine learning models <br>
+                Creating secure, scalable applications enhanced by AI technologies </p>
+        </div>
+        <div class="slide" style="background-image: url('hero/wapps.jpg');">
+            <h1>Transforming Web and Mobile Applications with Artificial Intelligence</h1>
+            <p>Personalizing user experiences with AI for both web and mobile platforms <br>
+                AI-powered app functionalities for improved efficiency and performance <br>
+                Automating user interaction processes, content management, and feedback loops</p>
+        </div>
+        <div class="slide" style="background-image: url('hero/webdv.jpg');">
+            <h1>Enhancing Cybersecurity with Artificial Intelligence Solutions</h1>
+            <p>Real-time threat detection and prevention using AI-powered systems <br>
+                Safeguarding sensitive data with advanced AI algorithms for security <br>
+                Improving cybersecurity resilience with predictive AI models and automation</p>
+        </div>
+        <div class="slide" style="background-image: url('hero/mob.jpg');">
+            <h1>Artificial Intelligence in Financial Services for Smarter Decisions</h1>
+            <p>AI-driven solutions for fraud detection and financial risk management <br>
+                Predictive financial models and analytics to optimize investments <br>
+                Automating processes and improving customer experiences in finance</p>
+        </div>
+        <div class="slide" style="background-image: url('hero/mobapps.jpg');">
+            <h1>Artificial Intelligence in Healthcare for Advanced Diagnostics</h1>
+            <p>AI-powered models for assisting in diagnosis and personalized treatment <br>
+                Revolutionizing medical research and drug discovery with machine learning <br>
+                Predictive healthcare systems driven by artificial intelligence</p>
+        </div>
+        <div class="slide" style="background-image: url('hero/macos.jpg');">
+            <h1>Building the Future of Robotics with Artificial Intelligence</h1>
+            <p>AI-powered robots capable of autonomous operations in diverse industries <br>
+                Streamlining industrial automation with smart, adaptive robotic systems <br>
+                Developing robotics that can learn and improve with AI-enhanced learning</p>
+        </div>
+        <div class="slide" style="background-image: url('hero/cybersec.jpg');">
+            <h1>Blockchain Innovation Driven by Artificial Intelligence</h1>
+            <p>Strengthening blockchain networks with AI-powered fraud detection <br>
+                Optimizing blockchain operations and automating smart contracts using AI <br>
+                Scaling decentralized systems and enhancing efficiency through AI</p>
+        </div>
+        <div class="slide" style="background-image: url('hero/cybsecurity.jpg');">
+            <h1>Artificial Intelligence Enhancing Education and Learning</h1>
+            <p>Personalized learning experiences driven by AI systems <br>
+                Automating administrative tasks and improving grading systems with AI <br>
+                Enhancing virtual classrooms with intelligent tutoring and feedback systems </p>
+        </div>
+        <div class="slide" style="background-image: url('hero/blockchain.jpg');">
+            <h1>Elevating Customer Support with Artificial Intelligence</h1>
+            <p>AI-driven chatbots and virtual assistants transforming customer service <br>
+                Automating customer inquiries and personalizing interactions with AI <br>
+                Optimizing support services and resolution times using AI technologies</p>
+        </div>
+        <div class="slide" style="background-image: url('hero/blockch.jpg');">
+            <h1>Unlocking Business Insights with Artificial Intelligence</h1>
+            <p>AI-driven data analysis and business intelligence to enhance decision-making <br>
+                Predicting trends and automating business operations with AI tools <br>
+                Using AI to optimize strategic planning and business growth</p>
+        </div>
+        <div class="slide" style="background-image: url('hero/robot.jpg');">
+            <h1>Building Smart Cities with Artificial Intelligence Technologies</h1>
+            <p>Transforming urban living with AI solutions for sustainability and efficiency <br>
+                Predictive maintenance for infrastructure management powered by AI <br>
+                AI-driven smart systems for traffic control, energy management, and waste optimization</p>
+        </div>
+        <!-- Navigation Arrows -->
+        <div class="nav-arrows">
+            <button class="arrow left-arrow">&#10094;</button>
+            <button class="arrow right-arrow">&#10095;</button>
+        </div>
+
+        <!-- Dot Indicators -->
+        <div class="dots-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+
+
+    <!-- Company Info Section -->
+    <section class="company-info">
+        <h2>Redefining Enterprise AI</h2>
+        <ul>
+            <li>1 Years of Driving Innovation with AI-Powered Success</li>
+        </ul>
+        <h2>Democratizing Machine Intelligence.</h2>
+        <ul>
+            <li>Democratizing AI for Every Industry</li>
+            <li>Making Machine Intelligence Accessible, Transformative, and Impactful</li>
+        </ul>
+        <h2>Empowering Businesses with Intelligent Solutions</h2>
+        <ul>
+            <li>Your Trusted Partner in AI-Driven Innovation and Industry Transformation</li>            
+        </ul>
+        <h2>Enterprise AI, Simplified and Scaled</h2>
+        <ul>
+            <li>1 Years of Excellence in Delivering AI Solutions that Work</li>            
+        </ul>
+        <h2>Transforming Industries, One Solution at a Time</h2>
+        <ul>
+            <li>AI Innovation Tailored for Your Success</li>            
+        </ul>
+
+        <div class="giphy-part">        
+            <img src="gifs/giphy.webp" alt="Giphy Animation">
+        </div>
+        
+    </section>
+
+    
+    
+    
+
+    <section class="trust-section">
+        <div class="container">
+        <h2>40% of companies trust WSpace AI to deliver industry-leading AI Models that power Industries</h2>
+        <div class="company-logos">
+            <!-- Logos of companies go here -->
+            <img src="trusted/ebay.png" alt="ebay">
+            <img src="trusted/ford.png" alt="ford">
+            <img src="trusted/google.png" alt="google">
+            <!-- Add more logos as needed -->
+            <img src="trusted/microsoft.png" alt="microsft">
+            <img src="trusted/nasa.png" alt="nasa">
+            <img src="trusted/openai.jpg" alt="open ai">
+            <img src="trusted/safaricom.png" alt="safaricom">
+            <img src="trusted/samsung.png" alt="samsung">
+            <img src="trusted/siemen.png" alt="siemen">
+            <img src="trusted/sony.jpg" alt="sony">
+            <img src="trusted/swift.png" alt="swift">
+            <img src="trusted/tesla.jpg" alt="tesla">
+            <img src="trusted/toyota.jpg" alt="toyota">
+            <img src="trusted/verizon.png" alt="verizon">
+            <img src="trusted/walmart.png" alt="walmart">
+        </div>
+        </div>
+    </section>
+    
+    <!-- Why WSpace AI -->
+    <section class="why-wspace-ai">
+        <div class="container">
+        <h2>Why WSpace AI?</h2>
+        <p>Rely on our expert teams to build enterprise AI models responsibly and cost-effectively. WSpace AI leverages a combination of humans and technology to lower costs and accelerate model development.</p>
+        <div class="metrics">
+            <div class="metric">
+                <h3>99%</h3>
+                <p>First batch client acceptance rate across 10B points per month</p>
+            </div>
+            <div class="metric">
+                <h3>3X</h3>
+                <p>Get models to market 3x faster by eliminating delays, missed deadlines, and excessive rework</p>
+            </div>
+            <div class="metric">
+                <h3>1K+</h3>
+                <p>Lives impacted to date thanks to our purpose-driven business model</p>
+            </div>
+            <div class="metric">
+                <h3>92%</h3>
+                <p>2024 Customer Satisfaction (CSAT) score and an NPS of 64</p>
+            </div>
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <i class="fa fa-rocket"></i>
+                <p>Speed</p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-cogs"></i>
+                <p>Efficiency</p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-shield-alt"></i>
+                <p>Security</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="future-section">
+        <div class="container">
+        <h2>WSpace AI: Building Intelligence for a Smarter Future</h2>
+        <button class="talk-button">Talk to an Expert</button>
+        </div>
+    </section>
+    
+    
+    
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+        <!-- Dynamic content will be loaded here -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 WSpace AI. All rights reserved.</p>    
+        <section id="developer-contacts">              
+            <div class="social-icons">
+                <p><a href="tel:+254716770021" class="icon phone"><i class="fas fa-phone"></i></a></p>
+                <p><a href="mailto:ambetsafrankline@gmail.com" class="icon email"><i class="fas fa-envelope"></i></a></p>
+                <a href="https://www.linkedin.com/in/yourprofile" class="icon linkedin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/yourprofile" class="icon x" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.tiktok.com/@yourprofile" class="icon tiktok" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/c/yourchannel" class="icon youtube" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </section>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

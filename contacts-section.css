@@ -1,0 +1,117 @@
+/* contact sales SECTION */
+
+/* Styling for Contact Sales Manager Section */
+#contacts {
+    border: 2px solid #37393d; /* Dark border for the boxes */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contacts h2 {
+    color: #0ad4f8; /* Dark blue color */
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contacts p {
+    color: #b8b0b0; /* Gray color for text */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contacts form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contacts .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#contacts .form-group label {
+    font-weight: bold;
+    color: #9a9b9c; /* Dark blue color */
+    margin-bottom: 5px;
+}
+
+#contacts .form-group input,
+#contacts .form-group select {
+    padding: 10px;
+    border: 1px solid #4b4c4d;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #777474;
+    background-color: #0ad4f811;
+}
+
+#contacts .form-group input:focus,
+#contacts .form-group select:focus {
+    border-color: #0056b3; /* Blue focus border */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5); /* Soft shadow */
+}
+
+#contacts button[type="submit"] {
+    background-color: #0056b3;
+    color: #5a5959;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#contacts button[type="submit"]:hover {
+    background-color: #2d2f30; /* Darker blue on hover */
+    color: #a9adb1;
+}
+
+/* Social Icons Styling */
+#contacts .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+#contacts .social-icons a {
+    color: #555;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+#contacts .social-icons a:hover {
+    color: #a9adb1; /* Blue color on hover */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    #contacts {
+        padding: 20px;
+    }
+
+    #contacts h2 {
+        font-size: 24px;
+    }
+
+    #contacts .form-group input,
+    #contacts .form-group select {
+        font-size: 14px;
+    }
+
+    #contacts button[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #contacts .social-icons {
+        flex-direction: column;
+    }
+}

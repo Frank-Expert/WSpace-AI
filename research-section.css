@@ -1,0 +1,159 @@
+
+
+/* Research Section Styling */
+/* General Styles for Research Section */
+#research {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #000, #140d0d);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+#research h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    animation: textSlideIn 1.5s ease-in-out;
+}
+
+#research h2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6b6b;
+    bottom: -10px;
+    left: 0;
+    animation: expandLine 2s ease-in-out forwards;
+}
+
+#research p {
+    font-size: 20px;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    color: #ddd;
+    animation: fadeInSlide 2s ease-in-out;
+    line-height: 1.6;
+}
+
+/* Container Styles */
+#research .vision, #research .mission, #research .goals {
+    margin-bottom: 60px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    width: 60%; /* Default width to control the size */
+    max-width: 600px;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: transform 0.6s ease, box-shadow 0.3s ease, opacity 0.6s ease;
+}
+
+/* Align Vision to the Left */
+#research .vision {
+    margin-left: 0;
+    margin-right: auto;
+    transform: translateX(-100px); /* Move from the center to the left */
+    animation: slideInFromLeft 1s ease-in-out forwards;
+}
+
+/* Align Mission to the Right */
+#research .mission {
+    margin-left: auto;
+    margin-right: 0;
+    transform: translateX(100px); /* Move from the center to the right */
+    animation: slideInFromRight 1s ease-in-out forwards;
+}
+
+/* Align Goals to the Left */
+#research .goals {
+    margin-left: 0;
+    margin-right: auto;
+    transform: translateX(-100px); /* Move from the center to the left */
+    animation: slideInFromLeft 1s ease-in-out forwards;
+    animation-delay: 0.2s; /* Delay to stagger the animation */
+}
+
+/* Image Styling */
+#research .vision img, #research .mission img, #research .goals img {
+    width: 80%;
+    max-width: 350px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 4px solid #ff6b6b;
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+#research .vision img, #research .mission img, #research .goals img {
+    filter: brightness(0.8);
+}
+
+#research .vision:hover img, #research .mission:hover img, #research .goals:hover img {
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(1);
+}
+
+/* Heading Styles */
+#research h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ff6b6b;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+#research .vision p, #research .mission p, #research .goals p {
+    font-size: 16px;
+    color: #bbb;
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Animations */
+@keyframes textSlideIn {
+    from { opacity: 0; transform: translateX(-100%); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes expandLine {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-200px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(200px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+
+
+

@@ -1,0 +1,73 @@
+<head>
+    <link rel="stylesheet" href="styles.css"> <!-- Path to your main CSS file -->
+    <link rel="stylesheet" href="contacts-section.css"> <!-- Link to the specific CSS file for contacts -->
+</head>
+
+<!-- Contact Sales Manager Section -->
+<section id="contacts">
+    <h2>Contact Sales Manager</h2>
+    <p>Contact our sales team</p>
+    <p>Connect with our Sales team by filling out the form below.</p>
+    <p>Have a small team? Get started with WSpace AI Team.</p>
+    <p>Explore our <a href="your_production_guide_link" target="_blank">production guide</a> (opens in a new window) for details on our pay-as-you-go plan. For other inquiries, visit our <a href="your_help_center_link" target="_blank">help center</a> (opens in a new window).</p>
+    
+    <form id="contact-sales-form">
+        <div class="form-group">
+            <label for="first-name">First name *</label>
+            <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div class="form-group">
+            <label for="last-name">Last name *</label>
+            <input type="text" id="last-name" name="last-name" required>
+        </div>
+        <div class="form-group">
+            <label for="business-email">Business email *</label>
+            <input type="email" id="business-email" name="business-email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone-number">Phone number</label>
+            <input type="tel" id="phone-number" name="phone-number">
+        </div>
+        <div class="form-group">
+            <label for="company-name">Company name *</label>
+            <input type="text" id="company-name" name="company-name" required>
+        </div>
+        <div class="form-group">
+            <label for="job-title">Job title</label>
+            <input type="text" id="job-title" name="job-title">
+        </div>
+        <div class="form-group">
+            <label for="company-website">Company website</label>
+            <input type="url" id="company-website" name="company-website">
+        </div>
+        <div class="form-group">
+            <label for="company-size">Company size *</label>
+            <select id="company-size" name="company-size" required>
+                <option value="">Select a size…</option>
+                <!-- Add options here -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="industry">Industry *</label>
+            <select id="industry" name="industry" required>
+                <option value="">Select an industry…</option>
+                <!-- Add options here -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="hq-location">Company HQ location *</label>
+            <select id="hq-location" name="hq-location" required>
+                <option value="">Select a country…</option>
+                <!-- Add options here -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="interested-product">Which of our products or services are you interested in? *</label>
+            <select id="interested-product" name="interested-product" required>
+                <option value="">Select a product…</option>
+                <!-- Add options here -->
+            </select>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</section>

@@ -1,0 +1,367 @@
+
+/* Pricing Section */
+/* General Styles */
+
+/* Pricing Section Styling */
+.pricing {
+    background-color: #0c0b0b;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.pricing h1 {
+    font-size: 36px;
+    color: #cc3e34;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* General Styles for h3 in Pricing Details */
+.pricing-section .service-type h3 {
+    font-size: 26px; /* Slightly larger font size for emphasis */
+    color: #3498db; /* Blue color to stand out */
+    margin-bottom: 15px; /* Space below the heading */
+    
+    border-top: 2px solid #3498db; /* Underline with border */
+    padding-top: 10px; /* Padding to create space for the underline */
+    font-weight: lighter; /* Bold text for prominence */
+    text-align: left; /* Center align text */
+
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and hover effects */
+}
+
+/* Hover Effect for h3 */
+.pricing-section .service-type h3:hover {
+    color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight upward movement on hover */
+}
+
+/* Specific Styles for Software Development Section */
+#software-development .service-type h3 {
+    color: #3498db; /* Blue color for consistency with the section border */
+}
+
+
+.pricing p {
+    font-size: 18px;
+    color: #d1bcbc;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Contact Sales Button */
+#contact-sales-btn {
+    display: block;
+    margin: 0 auto 40px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contact-sales-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Pricing Sections */
+/* Container styling for pricing section */
+#software-development,
+#website-creation,
+#cyber-security,
+#blockchain,
+#robotics-ai {
+    margin-bottom: 30px; /* Space between pricing sections */
+}
+
+/* Specific table styling for each service type */
+#software-development .pricing-details table,
+#website-creation .pricing-details table,
+#cyber-security .pricing-details table,
+#blockchain .pricing-details table,
+#robotics-ai .pricing-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Hide overflow */
+    
+}
+
+/* Styling table headers */
+#software-development .pricing-details th,
+#website-creation .pricing-details th,
+#cyber-security .pricing-details th,
+#blockchain .pricing-details th,
+#robotics-ai .pricing-details th {
+    background-color: #3498db;
+    color: #eee5e5;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #777575;
+    font-weight: bold;
+}
+
+/* Styling table cells */
+#software-development .pricing-details td,
+#website-creation .pricing-details td,
+#cyber-security .pricing-details td,
+#blockchain .pricing-details td,
+#robotics-ai .pricing-details td {
+    padding: 10px;
+    border-bottom: 1px solid #585656;
+    color: #ada5a5;
+}
+
+/* Unique styling for table rows */
+#software-development .pricing-details tr:nth-child(even),
+#website-creation .pricing-details tr:nth-child(even),
+#cyber-security .pricing-details tr:nth-child(even),
+#blockchain .pricing-details tr:nth-child(even),
+#robotics-ai .pricing-details tr:nth-child(even) {
+    background-color:transparent;
+}
+
+/* Animations for table rows */
+#software-development .pricing-details tr:hover,
+#website-creation .pricing-details tr:hover,
+#cyber-security .pricing-details tr:hover,
+#blockchain .pricing-details tr:hover,
+#robotics-ai .pricing-details tr:hover {
+    background-color: #3b4650;
+    transition: background-color 0.3s ease;
+}
+
+/* Table caption styling */
+#software-development .pricing-details caption,
+#website-creation .pricing-details caption,
+#cyber-security .pricing-details caption,
+#blockchain .pricing-details caption,
+#robotics-ai .pricing-details caption {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #007bff; /* Different color for captions */
+}
+
+/* Heading and paragraph styling */
+#software-development h2,
+#website-creation h2,
+#cyber-security h2,
+#blockchain h2,
+#robotics-ai h2 {
+    color: #007bff; /* Blue color for section headings */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-top: 2px solid #3498db; /* Underline effect */
+    padding-top: 4px;
+}
+
+#software-development h3,
+#website-creation h3,
+#cyber-security h3,
+#blockchain h3,
+#robotics-ai h3 {
+    color: #b81717; /* Teal color for subheadings */
+    font-size: 1.2em;
+    margin-bottom: 8px;   
+    text-align: center;
+}
+
+#software-development p,
+#website-creation p,
+#cyber-security p,
+#blockchain p,
+#robotics-ai p {
+    color: #cec9c9; /* Dark color for paragraphs */
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+/* Text alignment for pricing details */
+#software-development .pricing-details p,
+#website-creation .pricing-details p,
+#cyber-security .pricing-details p,
+#blockchain .pricing-details p,
+#robotics-ai .pricing-details p {
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Pricing Models Table */
+#models {
+    
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#models table {
+    width: 100%;
+    border-collapse: collapse;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#models th, #models td {
+    padding: 15px;
+    text-align: left;
+}
+
+#models thead {
+    background-color: #3498db;
+    color: #fff;
+}
+
+#models th {
+    font-size: 18px;
+}
+
+#models td {
+    font-size: 16px;
+    color: #a9b1b0;
+}
+
+/* FAQ Section */
+#faq ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#faq li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#faq strong {
+    color: #3498db;
+}
+
+/* Start Creating Button */
+#start-creating #get-started-btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+#start-creating #get-started-btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.modal-content p {
+    font-size: 18px;
+    color: #555;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

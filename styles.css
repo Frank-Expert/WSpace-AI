@@ -1,0 +1,836 @@
+/* General Styles */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    animation: slideInFromTop 1s ease-in-out;
+    font-weight: lighter;
+}
+
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo img {
+    width: 120px; /* Adjusted width for smaller logo */
+    transition: transform 0.5s ease;
+}
+
+.logo img:hover {
+    transform: rotate(360deg);
+}
+
+
+
+
+
+/* Navbar Container */
+nav {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end; /* Align navigation to the right */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0px; /* Reduced gap for a more compact look */
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+nav ul li {
+    position: relative;
+}
+
+/* Navbar links */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 20px;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* Hover effect for links */
+nav ul li a:hover {
+    color: #ff4040;
+}
+
+/* Hover underline effect */
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+
+
+/* Hide the hover content by default */
+nav ul li.hover-trigger .hover-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: rgb(0, 0, 0); /* Dark background for the hover content */
+    top: 100%; /* Position below the navbar */
+    left: 50%; /* Position from the center of the viewport */
+    transform: translate(-50%, -20px); /* Start slightly above */
+    z-index: 1;
+    padding: 20px;
+    width: 100vw; /* Make it full viewport width */
+    border-radius: 5px;
+    max-height: 150vh; /* Limit height to fit within the screen */
+    overflow-y: auto; /* Enable scrolling if content exceeds screen height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for emphasis */
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Slower transition for opacity and position */
+}
+
+/* Show the hover boxes when hovering over the item */
+nav ul li.hover-trigger:hover .hover-content {
+    display: flex; /* Show as flexbox */
+    opacity: 1; /* Fade in */
+    transform: translate(-50%, 0); /* Move to original position */
+    animation: slideIn 0.7s forwards; /* Slower slide down animation */
+}
+
+/* Slide down animation */
+@keyframes slideIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translate(-50%, -20px); /* Start slightly above */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translate(-50%, 0); /* Move to original position */
+    }
+}
+
+/* Each hover box */
+nav ul li.hover-trigger .hover-content .hover-box {
+    border: 2px solid #1a1b1d; /* Dark border for the boxes */
+    padding: 15px;
+    margin: 10px;
+    width: 250px; /* Fixed width for equal size */
+    height: 180px; /* Fixed height for equal size */
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    color: white; /* Text color */
+    text-align: left; /* Left-align the content */
+    background-color: transparent; /* Ensure background is transparent */
+}
+
+
+/* Hover effect for each box */
+nav ul li.hover-trigger .hover-content .hover-box:hover {
+    background-color: #4d43434d; /* Change to a lighter shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Title in each box */
+nav ul li.hover-trigger .hover-content .hover-box h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* Short description in each box */
+nav ul li.hover-trigger .hover-content .hover-box p {
+    font-size: 16px;
+    margin: 0;
+    color: #bbb; /* Description text color */
+    text-align: left;
+    line-height: 1.2; /* Adjust line height for better readability */
+}
+
+/* Ensure the hover content is displayed as a flex container when hovering */
+nav ul li.hover-trigger:hover .hover-content {
+    display: flex; /* Display as flexbox */
+    flex-direction: row; /* Display in rows */
+    flex-wrap: wrap; /* Ensure boxes wrap to new rows when necessary */
+    justify-content: flex-start; /* Align the boxes to the left of the screen */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Services Hover Content */
+li.hover-trigger.services-hover .hover-content {
+    position: absolute;
+    left: 0;
+    width: 100vw; /* Make it full viewport width */
+    margin-left: -150px;
+    
+    
+}
+
+/* Products Hover Content */
+li.hover-trigger.products-hover .hover-content {
+    position: absolute;
+    left: 0;
+    width: 100vw; /* Make it full viewport width */
+    margin-left: -250px;
+    
+}
+
+/* Pricing Hover Content */
+li.hover-trigger.pricing-hover .hover-content {
+    position: absolute;
+    left: 0;
+    width: 100vw; /* Make it full viewport width */
+    margin-left: -380px;
+    
+}
+
+/* Research Hover Content */
+li.hover-trigger.research-hover .hover-content {
+    position: absolute;
+    left: 0;
+    width: 100vw; /* Make it full viewport width */
+    margin-left: -450px;
+    
+}
+
+/* Resources Hover Content */
+li.hover-trigger.resource-hover .hover-content {
+    position: absolute;
+    left: 0;
+    width: 100vw; /* Make it full viewport width */
+    margin-left: -580px;
+    
+}
+
+/* Company Hover Content */
+li.hover-trigger.company-hover .hover-content {
+    position: absolute;
+    left: 0;
+    width: 100vw; /* Make it full viewport width */
+    margin-left: -810px;
+    
+    
+}
+
+
+/* Search bar */
+.search-bar {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 2px solid #506adb;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 280px; /* Adjusted width for smaller search bar */
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    border: 2px solid #2f67ce;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+/* Hero section Images slide */
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Adjust height to 300px as per your requirement */
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Slide container */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Apply the background image and blur using ::before */
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Inherit background from the slide */
+    filter: blur(5px); /* Apply blur effect only to the background image */
+    z-index: -1; /* Place the pseudo-element behind text */
+    background-size: cover;
+    background-position: center;
+}
+
+/* General styling for hero-section text */
+.hero-section h1, .hero-section p {
+    margin: 20px;
+    text-align: left;
+    color: white;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6); /* Moderate text shadow */
+}
+
+/* Heading (h1) style with smooth 3D effect */
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ffffff, #33ff00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5), 0 4px 25px rgba(59, 60, 54, 0.8); /* Sharper 3D effect */
+    animation: heroHeading3DAnimation 1.5s ease-in-out both;
+}
+
+/* Paragraph (p) style */
+.hero-section p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-top: 20px;
+    color: rgba(176, 73, 157, 0.808); /* Vivid text color */
+    text-shadow: 3px 3px 15px rgba(16, 16, 8, 0.6); /* Stronger shadow for clarity */
+    animation: heroParagraphAnimation 2s ease-in-out both;
+    animation-delay: 0.5s; /* Staggered animation */
+}
+
+/* Animations for hero-section text */
+@keyframes heroHeading3DAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes heroParagraphAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Arrows Navigation */
+.nav-arrows {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.arrow {
+    background-color: rgba(49, 48, 48, 0.5);
+    color: white;
+    border: none;
+    font-size: 0.8rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Dot Navigation */
+.dots-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    z-index: 2;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: lightgray;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: green; /* Active dot color */
+}
+
+
+
+
+/* company-info Section - Headlines */ 
+.company-info {
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+    border: 2px solid #142435; /* Border color */
+    margin: 20px 0; /* Spacing around the section */
+}
+
+.company-info h2 {
+    font-size: 1.5rem;
+    color: #007BFF; /* Blue color for the heading */
+    margin-left: 100px; /* Single indent for h2 */
+}
+
+.company-info ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 20; /* Remove default padding */
+}
+
+.company-info ul li {
+    font-size: 1.2rem;
+    margin: 10px 0; /* Spacing between list items */
+    color: #c2a8a8; /* Dark color for text */
+    margin-left: 150px; /* Double indent for list items */
+}
+
+
+/* Company Info Section - Giphy */
+/* Giphy Part */
+.company-info {
+    position: relative;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.giphy-part {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 10;
+    margin-right: 100px;
+}
+
+.giphy-part img {
+    width: 550px; /* Adjust size as needed */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for emphasis */
+    
+}
+
+
+
+/* Trust Section */
+.trust-section {
+    padding: 50px 0;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #0e0f0e;
+    max-width: 1200px; /* Limit the section's width */
+    margin: 0 auto; /* Center the section */
+    overflow: hidden; /* Prevent content from moving outside the section */
+}
+
+.trust-section h2 {
+    font-size: 1.5m;
+    color: #5af009;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.company-logos {
+    display: flex;
+    justify-content: start; /* Align to start to allow continuous scrolling */
+    align-items: center;
+    gap: 30px;
+    animation: moveLogos 20s linear infinite; /* Continuous scrolling animation */
+}
+
+.company-logos img {
+    width: 100px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.company-logos img:hover {
+    opacity: 1;
+}
+
+/* Continuous scrolling effect constrained to section width */
+@keyframes moveLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-800px); /* Match the section's width */
+    }
+}
+
+
+/* Scoped Why WSpace AI Section */
+.why-wspace-ai {
+    padding: 60px 0;
+    border-radius: 10px;
+    text-align: center;
+    border: solid 1px #000;
+}
+
+.why-wspace-ai h2 {
+    font-size: 2.5rem;
+    color: #58bb26;
+    margin-bottom: 30px;
+    animation: why-fadeInUp 1s ease-in-out;
+}
+
+.why-wspace-ai p {
+    font-size: 1.2rem;
+    color: #827e7e;
+    margin-bottom: 40px;
+}
+
+.why-wspace-ai .metrics {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.why-wspace-ai .metric {
+    width: 220px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.why-wspace-ai .metric h3 {
+    font-size: 3rem;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.why-wspace-ai .icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.why-wspace-ai .icon {
+    text-align: center;
+}
+
+.why-wspace-ai .icon i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.why-wspace-ai .icon p {
+    font-size: 1.2rem;
+    color: #a09b9b;
+}
+
+/* Scoped Animation */
+@keyframes why-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* WSPace AI Future Section - Headline / Motto */
+.future-section {
+    padding: 60px 0;
+    background-color: #010810;
+    text-align: center;
+    color: white;
+}
+
+.future-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.talk-button {
+    background-color: #004cff;
+    color: rgb(240, 238, 245);
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.talk-button:hover {
+    background-color: #133415;
+}
+
+
+
+/* Footer Styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    color: #4b4343;
+    border-top: 1px solid #7570709a; /* Optional: Adds a subtle border at the top */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.social-icons .icon {
+    font-size: 1.2rem; /* Adjust size as needed */
+    color: #fff; /* Default color */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons .icon:hover {
+    color: #ff6b6b; /* Hover color */
+    transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* Font Awesome Icons */
+.fas, .fab {
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+    font-weight: 900;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    50% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    80% {
+        transform: scale3d(1.03, 1.03, 1.03);
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes textZoom {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-200deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}

@@ -1,0 +1,78 @@
+
+
+
+/* Services Section */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left; /* Center the items horizontally */
+    gap: 20px; /* Spacing between the items */
+    padding: 50px 20px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.service {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: zoomIn 1s ease-in-out;
+    position: relative;
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis: each item takes up at least 300px */
+    max-width: 400px; /* Optional: to limit the maximum width */
+}
+
+
+#services h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    animation: fadeInSlide 1.5s ease-in-out;
+    text-align: center; /* Ensure the text is centered */
+    width: 100%; /* This ensures it takes up the full width */
+}
+
+
+.service:nth-child(even) {
+    animation: bounceIn 1.5s ease-in-out;
+}
+
+.service:hover {
+    transform: scale(1.05);
+    background-color: #333;
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.service img:hover {
+    transform: rotate(-10deg) scale(1.1);
+}
+
+
+
+.service h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #00ff7f, #1e90ff);
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; /* For WebKit-based browsers */
+    -webkit-text-fill-color: transparent;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+
+.service p {
+    font-size: 18px;
+    animation: fadeInRight 1.5s ease-in-out;
+}

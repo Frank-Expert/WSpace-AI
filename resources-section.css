@@ -1,0 +1,675 @@
+
+
+/* Resources Section Styling */
+/* Reset for the entire resources section */
+#resources * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Section Background */
+#resources {    
+    padding: 50px 20px;
+    color: #fff;
+}
+
+/* Title Styling */
+#resources h2 {
+    font-size: 2.8rem;
+    color: #969090;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #f39c12, #e74c3c);
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+/* Paragraphs - Center Align */
+#resources p {
+    font-size: 1.2rem;
+    color: rgba(230, 222, 222, 0.8);
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.8;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* Blog Section Styling */
+#blog-item {
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px 5px rgba(29, 9, 9, 0.4);
+    max-width: 1200px; /* Set a max width for the blog item container */
+    margin: 0 auto; /* Centers the container horizontally */
+}
+
+/* Blog Item Header Styling */
+#blog-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#blog-item p {
+    font-size: 16px;
+    color: #c7b4b4;
+    margin-bottom: 20px;
+}
+
+/* Blog Container Styling */
+.blog-container {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of items on smaller screens */
+    gap: 20px; /* Space between boxes */
+    justify-content: center; /* Centers the boxes horizontally */
+}
+
+/* Blog Preview Styling */
+#resources .blog-preview {
+    background: linear-gradient(to right, #191b1b, #110606);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left inside each flex item */
+    width: 100%; /* Make sure the width fills the grid cell */
+    max-width: 350px; /* Limit the max width to 300px per box */
+}
+
+/* Blog Preview Header and Text Styling */
+#resources .blog-preview h4 {
+    font-size: 1.2rem;
+    background: linear-gradient(to right, #f39c12, #e74c3c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+}
+
+#resources .blog-preview p {
+    color: #ffffff;
+    text-align: justify;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.blog-preview .blog-image {
+    width: 100%;
+    height: 200px; /* Fixed height for the image container */
+    overflow: hidden;
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove all padding */
+}
+
+.blog-preview .blog-image img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Preserve aspect ratio while covering the container */
+    margin: 0; /* Remove any margins */
+    padding: 0; /* Remove any padding */    
+}
+
+
+/* Read More Button */
+
+.blog-preview a {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #3498db;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-preview a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #3498db;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.blog-preview a:hover::after {
+    transform: translateX(0);
+}
+
+.blog-preview a:hover {
+    color: #2ecc71;
+}
+
+
+
+/* Button Styling */
+#load-more-btn {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#load-more-btn:hover {
+    background-color: #500f03d7;
+}
+
+
+
+
+
+/* WSpace AI Academy Section */  
+#resources {  
+    display: flex; /* Use flexbox for centering */  
+    justify-content: center; /* Center the content horizontally */  
+    align-items: center; /* Center the content vertically (if applicable) */  
+    flex-direction: column; /* Align children in a column */  
+    padding: 20px; /* Add padding to the resources section */
+    
+}  
+
+.academy {
+    max-width: 1200px; /* Maximum width for the academy card */  
+    width: 100%; /* Ensure it takes the full width available up to max */  
+    border-radius: 8px; /* Rounded corners */  
+    padding: 30px; /* Increased padding for better spacing */  
+    margin: 20px 0; /* Margin to separate from other elements */  
+    font-family: 'Arial', sans-serif; /* Font style */  
+    color: #333; /* Text color */  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */  
+    text-align: center; /* Center text alignment */ 
+    
+}  
+
+#resources .academy-link {  
+    display: block; /* Make the link behave like a block element */  
+    width: fit-content; /* Fit the width of the content */  
+    margin: 0 auto; /* Center the button */  
+    padding: 12px 35px; /* Button padding */  
+    background: linear-gradient(to right, #1abc9c, #16a085); /* Gradient background */  
+    color: white; /* Text color */  
+    border-radius: 30px; /* Rounded corners */  
+    font-size: 1.1rem; /* Font size */  
+    text-decoration: none; /* No underline */  
+    transition: background 0.3s ease, transform 0.3s ease; /* Transition effects */  
+    margin-top: 20px; /* Space between the paragraph and button */  
+}  
+
+.academy h3 {  
+    font-size: 26px; /* Size for main heading */  
+    color: #007bff; /* Accent color for main title */  
+    margin-bottom: 15px; /* Space below main heading */  
+}  
+
+.academy h4 {  
+    font-size: 22px; /* Size for subheadings */  
+    margin-top: 20px; /* Space above subheadings */  
+    margin-bottom: 10px; /* Space below subheadings */  
+    color: #0056b3; /* Darker accent color for subheadings */  
+}  
+
+.academy p {  
+    line-height: 1.6; /* Improved line height for readability */  
+    margin-bottom: 15px; /* Space below paragraphs */  
+}  
+
+.academy ul {  
+    list-style-type: none; /* Remove default bullet points */  
+    padding: 0; /* Remove default padding */  
+    margin: 0; /* Remove default margin */  
+}  
+
+.academy .icon-list {  
+    margin-bottom: 20px; /* Space below lists */  
+}  
+
+.academy .icon-list li {  
+    display: flex; /* Using flex for horizontal layout */  
+    align-items: center; /* Center alignment for icons */  
+    margin-bottom: 10px; /* Space between items */  
+}  
+
+.academy .icon {  
+    width: 24px; /* Set width for icons */  
+    height: 24px; /* Set height for icons */  
+    margin-right: 10px; /* Space between icon and text */  
+}
+
+
+/*Guides and Tutorials*/
+
+.guides-tutorials {  
+    max-width: 1000px; /* Maximum width of the section */  
+    border: 1px solid #dee2e6; /* Light border */  
+    border-radius: 8px; /* Rounded corners */  
+    padding: 30px; /* Padding for inner spacing */  
+    margin: 20px auto; /* Center and separate from other elements */  
+    font-family: 'Arial', sans-serif; /* Font style */  
+    color: #333; /* Text color */  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */  
+    text-align: center; /* Center text */  
+}  
+
+.guides-tutorials h3 {  
+    font-size: 26px; /* Size for the main title */  
+    color: #007bff; /* Accent color for the title */  
+    margin-bottom: 15px; /* Space below the title */  
+}  
+
+.guides-tutorials p {  
+    line-height: 1.6; /* Improved line height for readability */  
+    margin-bottom: 20px; /* Space below the paragraph */  
+}  
+
+/* Video Guide Styles */  
+.video-guide {  
+    margin-bottom: 30px; /* Space below the video guide */  
+}  
+
+.video-guide video {  
+    width: 100%; /* Full width of its parent */  
+    max-width: 600px; /* Limit the maximum width */  
+    border-radius: 5px; /* Slightly rounded corners */  
+}  
+
+.video-guide p {  
+    font-weight: bold; /* Make the video title bold */  
+    margin-top: 10px; /* Space above the title */  
+}  
+
+
+
+
+
+/* Written Guide Styles */  
+.written-guide {  
+    text-align: left; /* Left-align the text for better readability */  
+}  
+
+.written-guide h4 {  
+    font-size: 22px; /* Size for the guide title */  
+    color: #0056b3; /* Darker accent color for the guide title */  
+    margin-top: 20px; /* Space above the guide title */  
+    margin-bottom: 10px; /* Space below the guide title */  
+}  
+
+.written-guide p {  
+    line-height: 1.6; /* Improved line height for readability */  
+}
+
+
+
+
+/* Resource Item Cards */
+#resources .resource-item {
+    color: #e7dfdf;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Left-align for readability */
+    box-shadow: 0 0 10px 5px rgba(44, 12, 12, 0.4);
+    border-radius: 8px;
+}
+
+
+
+/* Resource Item Title */
+#resources .resource-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #8e44ad, #3498db);
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+
+
+
+
+/* Centered Search Bar */
+#resources .help-search {
+    width: 60%; /* Reduced width for better balance */
+    padding: 15px;
+    border-radius: 50px;
+    border: 2px solid #1d1c1c;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    background-color: #222121;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* Chat Support Button */
+#resources .chat-support button {
+    padding: 12px 30px;
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+    
+}
+
+#resources .chat-support button:hover {
+    background: linear-gradient(to right, #27ae60, #2ecc71);
+}
+
+
+
+/* Help Center */
+/* Centering Help Text */
+#resources .resource-help-text {
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #9c4d4d;
+}
+
+
+/* Search Bar */
+#resources .help-search {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #464040;
+    font-size: 1rem;
+}
+
+/* FAQs */
+#resources .faqs h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #5a7bd6;
+}
+
+#resources .faq-list {
+    list-style: none;
+    padding: 0;
+}
+
+#resources .faq-item {
+    margin-bottom: 15px;
+}
+
+#resources .faq-question {
+    background-color: transparent;
+    
+    color: rgb(111, 143, 140);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#resources .faq-question:hover {
+    background-color: #232a2e;
+}
+
+#resources .faq-answer {
+    display: none;
+    padding: 10px 15px;
+    text-align: left;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #b31f1f;
+    text-align: left; /* Align text to the left */
+}
+
+#resources .resource-item p {
+    text-align: left; /* Align text to the left */
+    margin: 0 0 15px 0; /* Adjust bottom margin as needed */
+    font-size: 1rem; /* Set font size */
+    color: #c5bdbd; /* Set text color */
+    line-height: 1.6; /* Set line height for better readability */
+    padding-left: 50px;
+}
+
+/* Chat Button */
+#resources .chat-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 35px;
+    background-color: #2ecc71;
+    color: white;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#resources .chat-button:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+
+
+
+
+/* Resource Form - Submit Button */
+#resources form.resource-form button {
+    padding: 12px 35px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#resources form.resource-form button:hover {
+    background: linear-gradient(to right, #2980b9, #3498db);
+}
+
+/* Written Guide */
+#resources .written-guide {
+    background: linear-gradient(to right, #242222, #151220);
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Left-aligned for better reading */
+}
+
+#resources .written-guide h4 {
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #2980b9, #8e44ad);
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+/* Resource Form - Text Areas and Inputs */
+#resources form.resource-form {
+    margin-top: 30px;
+    background: linear-gradient(to right, #ffffff, #f7f7f7);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+
+
+
+
+/* Smaller video thumbnails for video guides */
+#resources .video-guide video,
+#resources .recorded-webinars video {
+    width: 250px;
+    height: 150px;
+    border-radius: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#resources .video-guide video:hover,
+#resources .recorded-webinars video:hover {
+    transform: scale(1.15); /* Enlarges on hover */
+}
+
+
+
+
+
+/* General Styling for Form Containers */
+/* Hire a Consultant and Become a Partner Form Container */
+#consultant-form, #partner-form {
+    background: linear-gradient(to right, #535353, #2b1717);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Form Headers */
+#resources .resource-item h3 {
+    font-size: 2rem;
+    color: #f8fafc;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #8e44ad, #3498db);
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Input and Textarea Styles */
+#consultant-form input, #partner-form input, 
+#consultant-form textarea, #partner-form select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: #f7f4f4;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus State for Inputs */
+#consultant-form input:focus, #partner-form input:focus,
+#consultant-form textarea:focus, #partner-form select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+/* Textarea for Project Description */
+#consultant-form textarea {
+    height: 150px;
+    resize: vertical;
+    text-indent: 10px; /* Indent for better readability */
+}
+
+/* Labels */
+#consultant-form label, #partner-form label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #b42430;
+    display: block;
+    font-weight: bold;
+}
+
+/* Buttons */
+#consultant-form button, #partner-form button {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+#consultant-form button:hover, #partner-form button:hover {
+    background: linear-gradient(to right, #2980b9, #3498db);
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Payment Method Dropdown */
+#partner-form select {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Alignment for Form Inputs */
+#consultant-form input[type="text"],
+#consultant-form input[type="email"],
+#partner-form input[type="text"],
+#partner-form input[type="email"] {
+    text-align: left;
+}
+
+/* Center Aligning Form Buttons */
+#consultant-form button, #partner-form button {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

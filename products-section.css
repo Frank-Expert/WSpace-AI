@@ -1,0 +1,109 @@
+
+
+/* Products Section Styling */
+#products {
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+#products h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    animation: fadeInSlide 1.5s ease-in-out;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Product Group Styling */
+.product-group {
+    display: inline-block;
+    margin: 0 30px;
+    text-align: left;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+    vertical-align: top; /* Ensures all items align at the top */
+}
+
+.product-group:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -15px; /* Adjust as needed to align with text */
+    width: 2px;
+    height: 100%;
+    background-color: #ff6b6b;
+}
+
+.product-group h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #00bfff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    animation: slideInLeft 1.8s ease-in-out;
+}
+
+.product-group ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-group ul li {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #ddd;
+    letter-spacing: 1px;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.product-group ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #ff6b6b;
+    transition: transform 0.3s ease;
+}
+
+.product-group ul li:hover {
+    color: #ff6b6b;
+    transform: translateX(10px);
+}
+
+.product-group ul li:hover::before {
+    transform: translateX(5px);
+}
+
+.product-group:hover {
+    transform: translateY(-10px);
+    color: #ff6b6b;
+}
+
+/* Animations */
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
