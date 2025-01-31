@@ -17,6 +17,55 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+//Hamburger menu
+
+// Toggle the Hamburger Menu
+function toggleHamburgerMenu(event) {
+    event.stopPropagation(); // Prevent click from bubbling up
+    document.getElementById("hamburger-dropdown").classList.toggle("show");
+}
+
+// Close menu when clicking outside
+function closeHamburgerMenu(event) {
+    let menu = document.getElementById("hamburger-dropdown");
+    let hamburgerIcon = document.querySelector(".hamburger-menu");
+
+    // Close the menu only if the click is outside the menu and the hamburger icon
+    if (!menu.contains(event.target) && !hamburgerIcon.contains(event.target)) {
+        menu.classList.remove("show");
+    }
+}
+
+// Handle submenu hover to prevent flickering
+document.addEventListener("DOMContentLoaded", function () {
+    let submenus = document.querySelectorAll(".has-submenu");
+
+    submenus.forEach((submenu) => {
+        submenu.addEventListener("mouseenter", function () {
+            let subMenuElement = this.querySelector(".submenu");
+            if (subMenuElement) {
+                subMenuElement.style.display = "block";
+            }
+        });
+
+        submenu.addEventListener("mouseleave", function () {
+            let subMenuElement = this.querySelector(".submenu");
+            if (subMenuElement) {
+                subMenuElement.style.display = "none";
+            }
+        });
+    });
+
+    // Attach click event listeners
+    document.querySelector(".hamburger-menu").addEventListener("click", toggleHamburgerMenu);
+    document.addEventListener("click", closeHamburgerMenu);
+});
+
+
+
+
+
 // Hero Images Loop
 document.addEventListener('DOMContentLoaded', function () {
     const slides = document.querySelectorAll('.slide');
@@ -264,3 +313,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+//FOOTER DATE TO UPDATE AUTOMATICALLY

@@ -236,32 +236,153 @@
                         <div class="hover-content">
                             <div class="hover-box" onclick="location.href='#about'">
                                 <h3>About Us</h3>
-                                <p>Learn more about WW-Space AI and our journey.</p>
+                                <p>Learn more about WSpace AI and our journey</p>
                             </div>
                             <div class="hover-box" onclick="location.href='#faqs'">
                                 <h3>FAQs</h3>
-                                <p>Find answers to commonly asked questions.</p>
+                                <p>Find answers to commonly asked questions</p>
                             </div>
                             <div class="hover-box" onclick="location.href='#policies'">
                                 <h3>Policies</h3>
-                                <p>Read about our company policies.</p>
+                                <p>Read about our company policies</p>
                             </div>
                             <div class="hover-box" onclick="location.href='#privacy'">
                                 <h3>Privacy</h3>
-                                <p>Understand how we protect your data.</p>
+                                <p>Understand how we protect your data</p>
                             </div>
                             <div class="hover-box" onclick="location.href='#terms'">
                                 <h3>Terms and Conditions</h3>
-                                <p>Review the terms of our services.</p>
+                                <p>Review the terms of our services</p>
                             </div>
                             <div class="hover-box" onclick="location.href='#careers'">
                                 <h3>Careers</h3>
-                                <p>Explore career opportunities at WW-Space AI.</p>
+                                <p>Explore career opportunities at WSpace AI</p>
+                            </div>
+                            <!-- New Content Added -->
+                            <div class="hover-box" onclick="location.href='#news'">
+                                <h3>News</h3>
+                                <p>Stay updated with the latest news from WW-Space AI.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#charter'">
+                                <h3>Our Charter</h3>
+                                <p>Read our mission, vision, and guiding principles.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#security'">
+                                <h3>Security and Privacy</h3>
+                                <p>Discover our security measures to protect your data.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#residency'">
+                                <h3>Residency</h3>
+                                <p>Learn about our residency programs and opportunities.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#careers'">
+                                <h3>Careers</h3>
+                                <p>Check out career opportunities and join our growing team.</p>
                             </div>
                         </div>
                     </li>
+
                 </ul>
+                
             </nav>
+
+            <!-- Hamburger Menu Icon -->
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" onclick="toggleHamburgerMenu()">
+                <div class="hamburger-icon-bar"></div>
+                <div class="hamburger-icon-bar"></div>
+                <div class="hamburger-icon-bar"></div>
+            </div>
+
+            <!-- Hamburger Menu Dropdown -->
+            <div class="hamburger-dropdown" id="hamburger-dropdown">
+                <ul>
+                    <li><a href="#home" onclick="loadSection('home')">Home</a></li>
+
+                    <!-- Services with Sub-items -->
+                    <li class="has-submenu">
+                        <a href="#services" onclick="loadSection('services')">Services</a>
+                        <ul class="submenu">
+                            <li><a href="#mobile-apps" onclick="location.href='#mobile-apps'">Mobile Apps Development</a></li>
+                            <li><a href="#desktop-apps" onclick="location.href='#desktop-apps'">Desktop Apps Development</a></li>
+                            <li><a href="#macos-apps" onclick="location.href='#macos-apps'">MacOS IDE Apps Development</a></li>
+                            <li><a href="#web-development" onclick="location.href='#web-development'">Website Creation</a></li>
+                            <li><a href="#cyber-security" onclick="location.href='#cyber-security'">Cyber Security Services</a></li>
+                            <li><a href="#blockchain" onclick="location.href='#blockchain'">Blockchain</a></li>
+                            <li><a href="#robotics-ai" onclick="location.href='#robotics-ai'">Robotics & Artificial Intelligence</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Products with Sub-items -->
+                    <li class="has-submenu">
+                        <a href="#products" onclick="loadSection('products')">Products</a>
+                        <ul class="submenu">
+                            <li><a href="#salome" onclick="location.href='#salome'">Salome v 3.5</a></li>
+                            <li><a href="#api" onclick="location.href='#api'">API</a></li>
+                            <li><a href="#explore-more" onclick="location.href='#explore-more'">Explore More</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Pricing with Sub-items -->
+                    <li class="has-submenu">
+                        <a href="#pricing" onclick="loadSection('pricing')">Pricing</a>
+                        <ul class="submenu">
+                            <li><a href="#software-development" onclick="location.href='#software-development'">Software Development</a></li>
+                            <li><a href="#website-creation" onclick="location.href='#website-creation'">Website Creation</a></li>
+                            <li><a href="#cyber-security" onclick="location.href='#cyber-security'">Cyber Security Services</a></li>
+                            <li><a href="#blockchain" onclick="location.href='#blockchain'">Blockchain</a></li>
+                            <li><a href="#robotics-ai" onclick="location.href='#robotics-ai'">Robotics & AI Machine Learning</a></li>
+                            <li><a href="#models" onclick="location.href='#models'">Latest Models</a></li>
+                            <li><a href="#faq" onclick="location.href='#faq'">FAQ</a></li>
+                            <li><a href="#contact-sales" onclick="location.href='#contact-sales'">Contact Sales</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Research with Sub-items -->
+                    <li class="has-submenu">
+                        <a href="#research" onclick="loadSection('research')">Research</a>
+                        <ul class="submenu">
+                            <li><a href="#vision" onclick="location.href='#vision'">Our Vision</a></li>
+                            <li><a href="#mission" onclick="location.href='#mission'">Our Mission</a></li>
+                            <li><a href="#goals" onclick="location.href='#goals'">Our Goals</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Resources with Sub-items -->
+                    <li class="has-submenu">
+                        <a href="#resources" onclick="loadSection('resources')">Resources</a>
+                        <ul class="submenu">
+                            <li><a href="#blog" onclick="location.href='#blog'">Blog</a></li>
+                            <li><a href="#wspace-ai-academy" onclick="location.href='#wspace-ai-academy'">WSpace AI Academy</a></li>
+                            <li><a href="#guides-tutorials" onclick="location.href='#guides-tutorials'">Guides & Tutorials</a></li>
+                            <li><a href="#webinars" onclick="location.href='#webinars'">Webinars</a></li>
+                            <li><a href="#help-center" onclick="location.href='#help-center'">Help Center</a></li>
+                            <li><a href="#community" onclick="location.href='#community'">Community</a></li>
+                            <li><a href="#hire-a-consultant" onclick="location.href='#hire-a-consultant'">Hire a Consultant</a></li>
+                            <li><a href="#become-a-partner" onclick="location.href='#become-a-partner'">Become a Partner</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Company with Sub-items -->
+                    <li class="has-submenu">
+                        <a href="#company" onclick="loadSection('company')">Company</a>
+                        <ul class="submenu">
+                            <li><a href="#about" onclick="location.href='#about'">About Us</a></li>
+                            <li><a href="#faqs" onclick="location.href='#faqs'">FAQs</a></li>
+                            <li><a href="#policies" onclick="location.href='#policies'">Policies</a></li>
+                            <li><a href="#privacy" onclick="location.href='#privacy'">Privacy</a></li>
+                            <li><a href="#terms" onclick="location.href='#terms'">Terms and Conditions</a></li>
+                            <li><a href="#careers" onclick="location.href='#careers'">Careers</a></li>
+                            <li><a href="#news" onclick="location.href='#news'">News</a></li>
+                            <li><a href="#charter" onclick="location.href='#charter'">Our Charter</a></li>
+                            <li><a href="#security" onclick="location.href='#security'">Security and Privacy</a></li>
+                            <li><a href="#residency" onclick="location.href='#residency'">Residency</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
             
         </div>
     </header>
@@ -366,34 +487,73 @@
 
 
     <!-- Company Info Section -->
+    <!-- Company Info Section -->
     <section class="company-info">
         <h2>Redefining Enterprise AI</h2>
-        <ul>
-            <li>1 Years of Driving Innovation with AI-Powered Success</li>
-        </ul>
-        <h2>Democratizing Machine Intelligence.</h2>
-        <ul>
-            <li>Democratizing AI for Every Industry</li>
-            <li>Making Machine Intelligence Accessible, Transformative, and Impactful</li>
-        </ul>
-        <h2>Empowering Businesses with Intelligent Solutions</h2>
-        <ul>
-            <li>Your Trusted Partner in AI-Driven Innovation and Industry Transformation</li>            
-        </ul>
-        <h2>Enterprise AI, Simplified and Scaled</h2>
-        <ul>
-            <li>1 Years of Excellence in Delivering AI Solutions that Work</li>            
-        </ul>
-        <h2>Transforming Industries, One Solution at a Time</h2>
-        <ul>
-            <li>AI Innovation Tailored for Your Success</li>            
+        <ul class="olcards">
+            <li style="--cardColor:#fc374e">
+                <div class="content">
+                    <div class="icon">💡</div>
+                    <div class="title">1 Year of Driving Innovation with AI-Powered Success</div>
+                    <div class="text">A year of delivering excellence and impacting industries with AI-driven solutions.</div>
+                </div>
+            </li>
         </ul>
 
-        <div class="giphy-part">        
-            <img src="gifs/giphy.webp" alt="Giphy Animation">
-        </div>
+        <h2>Democratizing Machine Intelligence</h2>
+        <ul class="olcards">
+            <li style="--cardColor:#36aeb3">
+                <div class="content">
+                    <div class="icon">🌍</div>
+                    <div class="title">Democratizing AI for Every Industry</div>
+                    <div class="text">Making AI solutions accessible to all industries and organizations.</div>
+                </div>
+            </li>
+            <li style="--cardColor:#162d59">
+                <div class="content">
+                    <div class="icon">🔑</div>
+                    <div class="title">Making Machine Intelligence Accessible</div>
+                    <div class="text">Empowering businesses to harness the potential of machine intelligence.</div>
+                </div>
+            </li>
+        </ul>
+
+        <h2>Empowering Businesses with Intelligent Solutions</h2>
+        <ul class="olcards">
+            <li style="--cardColor:#f15f0e">
+                <div class="content">
+                    <div class="icon">💼</div>
+                    <div class="title">Your Trusted Partner in AI-Driven Innovation</div>
+                    <div class="text">Providing reliable AI solutions that transform and innovate industries.</div>
+                </div>
+            </li>
+        </ul>
+
+        <h2>Enterprise AI, Simplified and Scaled</h2>
+        <ul class="olcards">
+            <li style="--cardColor:#42a1b1">
+                <div class="content">
+                    <div class="icon">📈</div>
+                    <div class="title">1 Year of Excellence in Delivering AI Solutions</div>
+                    <div class="text">Scaling AI solutions that deliver measurable success.</div>
+                </div>
+            </li>
+        </ul>
+
+        <h2>Transforming Industries, One Solution at a Time</h2>
+        <ul class="olcards">
+            <li style="--cardColor:#0d9d5c">
+                <div class="content">
+                    <div class="icon">🔄</div>
+                    <div class="title">AI Innovation Tailored for Your Success</div>
+                    <div class="text">Revolutionizing industries with personalized, AI-powered solutions.</div>
+                </div>
+            </li>
+        </ul>
+
         
     </section>
+
 
     
     
@@ -481,7 +641,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 WSpace AI. All rights reserved.</p>    
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> WSpace AI. All rights reserved.</p>    
         <section id="developer-contacts">              
             <div class="social-icons">
                 <p><a href="tel:+254716770021" class="icon phone"><i class="fas fa-phone"></i></a></p>
@@ -493,6 +653,8 @@
             </div>
         </section>
     </footer>
+
+
 
     <script src="scripts.js"></script>
 

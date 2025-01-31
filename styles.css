@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* General Styles */
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -52,17 +58,22 @@ header {
 
 
 
+
+
+
 /* Navbar Container */
 nav {
     flex: 3;
-    display: flex;
+    display: flex;    
     justify-content: flex-end; /* Align navigation to the right */
+    flex-wrap: wrap; /* Allow items to wrap in smaller screens */
 }
 
+/* Navigation list */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 0px; /* Reduced gap for a more compact look */
+    gap: 0;
     margin: 0;
     padding: 0;
     position: relative;
@@ -73,11 +84,12 @@ nav ul li {
 }
 
 /* Navbar links */
+/* Navigation links */
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 20px;
+    padding: 10px 15px; /* Reduced padding */
     transition: color 0.3s ease;
     display: flex;
     align-items: center;
@@ -109,62 +121,61 @@ nav ul li a:hover::before {
 
 
 
-
-
 /* Hide the hover content by default */
+/* Parent item: Add relative positioning to hold the dropdown */
+/* Parent item: Add relative positioning to hold the dropdown */
+nav ul li.hover-trigger {
+    position: relative; /* Keeps dropdown positioned within this item */
+}
+
+/* Initially hide the dropdown content */
 nav ul li.hover-trigger .hover-content {
-    display: none; /* Initially hidden */
-    position: absolute;
-    background-color: rgb(0, 0, 0); /* Dark background for the hover content */
-    top: 100%; /* Position below the navbar */
-    left: 50%; /* Position from the center of the viewport */
-    transform: translate(-50%, -20px); /* Start slightly above */
-    z-index: 1;
+    display: none;
+    position: fixed; /* Fix it within the viewport */
+    top: 110px;
+    left: 0; /* Align to the left edge */
+    width: 100vw; /* Full viewport width */
+    background-color: black;
     padding: 20px;
-    width: 100vw; /* Make it full viewport width */
-    border-radius: 5px;
-    max-height: 150vh; /* Limit height to fit within the screen */
-    overflow-y: auto; /* Enable scrolling if content exceeds screen height */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for emphasis */
-    opacity: 0; /* Start fully transparent */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Slower transition for opacity and position */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden; /* Hidden by default */
+    transform: translateY(20px); /* Slightly translate content down */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+    z-index: 1000;
+    display: grid; /* Use grid layout for responsive items */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increase the min width */
+    grid-gap: 20px; /* Increased gap between boxes */
+    box-sizing: border-box; /* Prevent padding from affecting size */
+    overflow: hidden; /* Prevent content from spilling out */
+    padding-left: 20px; /* Small space on the left of the last box */
+    padding-right: 20px; /* Small space on the right of the last box */
 }
 
-/* Show the hover boxes when hovering over the item */
-nav ul li.hover-trigger:hover .hover-content {
-    display: flex; /* Show as flexbox */
-    opacity: 1; /* Fade in */
-    transform: translate(-50%, 0); /* Move to original position */
-    animation: slideIn 0.7s forwards; /* Slower slide down animation */
+/* Show the content when hovering over the parent item or the content itself */
+nav ul li.hover-trigger:hover .hover-content,
+nav ul li.hover-trigger:focus-within .hover-content {
+    display: grid; /* Use grid layout when hovered */
+    opacity: 1; /* Make fully visible */
+    visibility: visible; /* Make visible */
+    transform: translateY(0); /* Reset translate effect */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
 }
 
-/* Slide down animation */
-@keyframes slideIn {
-    from {
-        opacity: 0; /* Start fully transparent */
-        transform: translate(-50%, -20px); /* Start slightly above */
-    }
-    to {
-        opacity: 1; /* Fully visible */
-        transform: translate(-50%, 0); /* Move to original position */
-    }
-}
-
-/* Each hover box */
+/* Each individual hover box */
 nav ul li.hover-trigger .hover-content .hover-box {
-    border: 2px solid #1a1b1d; /* Dark border for the boxes */
-    padding: 15px;
-    margin: 10px;
-    width: 250px; /* Fixed width for equal size */
-    height: 180px; /* Fixed height for equal size */
+    border: 2px solid #153b88; /* Dark border */
+    padding: 20px;  /* Increased padding */
+    min-width: 200px;  /* Min width */
+    min-height: 180px;  /* Min height */
     border-radius: 8px;
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
-    color: white; /* Text color */
-    text-align: left; /* Left-align the content */
-    background-color: transparent; /* Ensure background is transparent */
+    color: white;
+    text-align: left;
+    background-color: transparent;
+    box-sizing: border-box; /* Ensure padding doesn’t affect box size */
 }
-
 
 /* Hover effect for each box */
 nav ul li.hover-trigger .hover-content .hover-box:hover {
@@ -179,21 +190,18 @@ nav ul li.hover-trigger .hover-content .hover-box h3 {
     text-align: left;
 }
 
-/* Short description in each box */
+/* Short description inside each box */
 nav ul li.hover-trigger .hover-content .hover-box p {
     font-size: 16px;
     margin: 0;
-    color: #bbb; /* Description text color */
+    color: #bbb;
     text-align: left;
-    line-height: 1.2; /* Adjust line height for better readability */
+    line-height: 1.2;
 }
 
-/* Ensure the hover content is displayed as a flex container when hovering */
-nav ul li.hover-trigger:hover .hover-content {
-    display: flex; /* Display as flexbox */
-    flex-direction: row; /* Display in rows */
-    flex-wrap: wrap; /* Ensure boxes wrap to new rows when necessary */
-    justify-content: flex-start; /* Align the boxes to the left of the screen */
+/* Ensures no margin on the navbar */
+nav {
+    margin: 0; /* Remove margin between navbar and the content */
 }
 
 
@@ -208,84 +216,37 @@ nav ul li.hover-trigger:hover .hover-content {
 
 
 
-/* Services Hover Content */
-li.hover-trigger.services-hover .hover-content {
-    position: absolute;
-    left: 0;
-    width: 100vw; /* Make it full viewport width */
-    margin-left: -150px;
-    
-    
-}
-
-/* Products Hover Content */
-li.hover-trigger.products-hover .hover-content {
-    position: absolute;
-    left: 0;
-    width: 100vw; /* Make it full viewport width */
-    margin-left: -250px;
-    
-}
-
-/* Pricing Hover Content */
-li.hover-trigger.pricing-hover .hover-content {
-    position: absolute;
-    left: 0;
-    width: 100vw; /* Make it full viewport width */
-    margin-left: -380px;
-    
-}
-
-/* Research Hover Content */
-li.hover-trigger.research-hover .hover-content {
-    position: absolute;
-    left: 0;
-    width: 100vw; /* Make it full viewport width */
-    margin-left: -450px;
-    
-}
-
-/* Resources Hover Content */
-li.hover-trigger.resource-hover .hover-content {
-    position: absolute;
-    left: 0;
-    width: 100vw; /* Make it full viewport width */
-    margin-left: -580px;
-    
-}
-
-/* Company Hover Content */
-li.hover-trigger.company-hover .hover-content {
-    position: absolute;
-    left: 0;
-    width: 100vw; /* Make it full viewport width */
-    margin-left: -810px;
-    
-    
-}
 
 
-/* Search bar */
+
+
+
+/* Search bar container */
 .search-bar {
     flex: 2;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%; /* Ensure it adapts to parent container */
 }
 
+/* Search input */
 .search-bar input {
-    padding: 5px;
-    border: 2px solid #506adb;
+    padding: 10px; /* Slightly larger padding for better UX */
+    border: 1px solid #506adb;
     background-color: #000;
     color: #fff;
     border-radius: 4px 0 0 4px;
     outline: none;
-    width: 280px; /* Adjusted width for smaller search bar */
+    width: 100%; /* Default: Full width of flex container */    
+    font-size: 14px;
+    transition: width 0.3s ease-in-out;
 }
 
+/* Search button */
 .search-bar button {
-    padding: 5px 10px;
-    border: 2px solid #2f67ce;
+    padding: 8px 12px;
+    border: 1px solid #2f67ce;
     background-color: #000;
     color: #fff;
     border-radius: 0 4px 4px 0;
@@ -293,10 +254,918 @@ li.hover-trigger.company-hover .hover-content {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Button hover effect */
 .search-bar button:hover {
     background-color: #fff;
     color: #000;
 }
+
+
+
+
+
+
+
+
+
+
+/* Default: Show Navbar, Hide Hamburger */
+.hamburger-menu {
+    display: none;
+}
+
+/* Basic styles for the hamburger menu */
+/* Hamburger Menu Container */
+.hamburger-menu {
+    
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+.hamburger-icon-bar {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(62, 138, 224);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hamburger Dropdown Menu */
+.hamburger-dropdown {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed so it stays in place */
+    top: 95px; /* Start from 110px from the top of the page */
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    width: 120px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    z-index: 10000;
+}
+
+.hamburger-dropdown.show {
+    display: block; /* Show when active */
+}
+
+.hamburger-dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hamburger-dropdown ul li {
+    padding: 5px;
+    border-bottom: 1px solid rgb(34, 50, 146);
+}
+
+.hamburger-dropdown ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.hamburger-dropdown ul li a:hover {
+    background-color: gray;
+}
+
+/* Submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0; /* Align submenu to the top of the parent container */
+    left: 100%; /* Position it to the right of the parent item */
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    width: 150px;
+    min-height: 395px; /* Set a minimum height */
+    max-height: 395px; /* Set a maximum height to enable scrolling when content exceeds */
+    padding: 0;
+    z-index: 1000;
+    overflow-y: auto; /* Enable vertical scrolling when content overflows */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Show submenu when hovering */
+.has-submenu:hover > .submenu {
+    display: block;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(5px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.submenu {
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+
+
+/*MEDIA QUERIES FOR HAMBURGER MENU AND NAVIGATION BAR VISIBILITY*/
+/* MEDIA QUERIES FOR HAMBURGER MENU AND NAVIGATION BAR VISIBILITY */
+
+
+
+/* Very Small Mobile (Less than 480px) – Hide Navbar, Show Hamburger Menu */
+@media (max-width: 480px) {
+    nav {
+        display: none; /* Hide navbar on very small screens */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu */
+    }
+
+    /* Hamburger Dropdown Menu */
+    .hamburger-dropdown {
+        top: 68px; /* Start from 110px from the top of the page */
+    }
+
+    .logo img {
+        width: 60px; /* Even smaller logo size for very small screens */
+    }
+
+    .search-bar input {
+        width: 70%; /* Reduce input size to take up less space */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: 350px !important; 
+        margin-bottom: auto !important;
+    }
+    
+
+    /* General styling for hero-section text */
+    .hero-section h1, .hero-section p {
+        margin: 0 auto !important;        
+        
+    }
+
+    /* Heading (h1) style with smooth 3D effect */
+    .hero-section h1 {
+        font-size: 1.5rem !important;        
+    }
+
+    /* Paragraph (p) style */
+    .hero-section p {
+        font-size: 1rem !important;
+        margin-top: 5px !important;        
+        line-height: 1.2 !important; /* Reduces space between lines */
+        margin-top: 5px !important; /* Decrease top margin */
+        padding: 0 5px !important; /* Reduce padding if necessary */
+        max-width: 100% !important; /* Prevents overflow */
+        
+    }
+
+    /* Further reduce padding */
+    .company-info {
+        padding: 5px !important;
+    }
+
+    /* Stack cards vertically */
+    .olcards li {
+        margin-top: 0.5rem !important; /* Adjust spacing between items */
+        margin-bottom: 0.5rem !important; /* Adjust spacing between items */
+    }
+
+    /* Further reduce font size for titles and text */
+    .company-info h2 {
+        font-size: 1rem!important;
+    }
+
+    .olcards li .content .title {
+        font-size: 1rem !important;
+    }
+
+    .olcards li .content .text {
+        font-size: 0.8rem!important;
+    }
+
+    /* Further adjust icon size */
+    .olcards li .icon {
+        font-size: 1.8em !important;
+    }
+
+    
+    /* Trust Section */
+    .trust-section {
+        padding: 20px 0 !important;
+        border-radius: 10px !important;        
+        max-width: 100%; /* Limit the section's width */        
+    }
+
+    .trust-section h2 {
+        font-size: 1.2em !important;
+        margin-bottom: 10px !important;
+    }
+
+    .company-logos {        
+        gap: 20px !important;        
+    }
+
+    /* Scoped Why WSpace AI Section */
+    .why-wspace-ai {
+        padding: 60px 0;
+        border-radius: 10px;
+        text-align: center;
+        border: solid 1px #000;
+    }
+
+    .why-wspace-ai h2 {
+        font-size: 1.5rem !important;        
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai p {
+        font-size: 1rem !important;        
+        margin-bottom: 20px !important;
+        
+    }
+
+
+    .why-wspace-ai .metric {
+        width: 60% !important;        
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai .metric h3 {
+        font-size: 2rem !important;        
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai .icons {        
+        gap: 30px;
+        margin-top: 20px !important;
+    }
+
+
+    .why-wspace-ai .icon i {
+        font-size: 2rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai .icon p {
+        font-size: 1.2rem;
+    }
+
+    /* WSPace AI Future Section - Headline / Motto */
+    .future-section {
+        padding: 30px 0 !important;        
+    }
+
+    .future-section h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 15px !important;
+        
+    }
+
+    .talk-button {        
+        padding: 10px 20px !important;
+        font-size: 1rem !important;        
+    }
+
+
+}
+
+
+
+@media (max-width: 539px) and (min-width: 481px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav {
+        display: none; /* Hide navbar on mobile screens */
+    }
+
+    .search-bar input {
+        width: 75%; /* Adjust width */
+    }
+
+    .logo img {
+        width: 70px; /* Adjust logo size */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: 350px !important; 
+        margin-bottom: auto !important;
+    }
+    
+
+    /* General styling for hero-section text */
+    .hero-section h1, .hero-section p {
+        margin: 0 auto !important;        
+        
+    }
+
+    /* Heading (h1) style with smooth 3D effect */
+    .hero-section h1 {
+        font-size: 1.6rem !important;        
+    }
+
+    /* Paragraph (p) style */
+    .hero-section p {
+        font-size: 1.1rem !important;
+        margin-top: 5px !important;        
+        line-height: 1.2 !important; /* Reduces space between lines */
+        margin-top: 5px !important; /* Decrease top margin */
+        padding: 0 5px !important; /* Reduce padding if necessary */
+        max-width: 100% !important; /* Prevents overflow */
+        
+    }
+
+        /* Further reduce padding */
+        .company-info {
+            padding: 8px !important;
+        }
+    
+        /* Stack cards vertically */
+        .olcards li {
+            margin-top: 0.8rem !important; /* Adjust spacing between items */
+            margin-bottom: 0.8rem !important; /* Adjust spacing between items */
+        }
+    
+        /* Further reduce font size for titles and text */
+        .company-info h2 {
+            font-size: 1.2rem!important;
+        }
+    
+        .olcards li .content .title {
+            font-size: 1.2rem !important;
+        }
+    
+        .olcards li .content .text {
+            font-size: 1rem!important;
+        }
+    
+        /* Further adjust icon size */
+        .olcards li .icon {
+            font-size: 2em !important;
+        }
+
+    /* Trust Section */
+    .trust-section {
+        padding: 20px 0 !important;
+        border-radius: 10px !important;        
+        max-width: 100%; /* Limit the section's width */        
+    }
+
+    .trust-section h2 {
+        font-size: 1.3em !important;
+        margin-bottom: 10px !important;
+    }
+
+    .company-logos {        
+        gap: 20px !important;        
+    }
+
+    /* Scoped Why WSpace AI Section */
+    .why-wspace-ai {
+        padding: 30px 0 !important;        
+    }
+
+    .why-wspace-ai h2 {
+        font-size: 1.6rem !important;        
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai p {
+        font-size: 1.1rem !important;        
+        margin-bottom: 20px !important;
+        
+    }
+
+
+    .why-wspace-ai .metric {
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai .metric h3 {
+        font-size: 2.2rem !important;        
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai .icons {        
+        gap: 30px;
+        margin-top: 20px !important;
+    }
+
+
+    .why-wspace-ai .icon i {
+        font-size: 2rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai .icon p {
+        font-size: 1.3rem !important;
+    }
+
+    /* WSPace AI Future Section - Headline / Motto */
+    .future-section {
+        padding: 30px 0 !important;        
+    }
+
+    .future-section h2 {
+        font-size: 1.6rem !important;
+        margin-bottom: 15px !important;
+        
+    }
+
+    .talk-button {        
+        padding: 10px 20px !important;
+        font-size: 1.1rem !important;        
+    }
+
+    
+
+
+}
+
+
+/* Large Mobile View (Between 768px and 540px) – Adjust layout for larger mobile screens */
+@media (max-width: 768px) and (min-width: 540px) {
+    .search-bar input {
+        width: 75%; /* Make input slightly larger */
+    }
+
+    .search-bar button {
+        padding: 8px 12px; /* Adjust button for better touchability */
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav {
+        display: none !important; /* Hide navbar on mobile screens */
+    }
+
+    .logo img {
+        width: 85px; /* Adjust logo size */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: 350px !important; 
+        margin-bottom: auto !important;
+    }
+    
+
+    /* General styling for hero-section text */
+    .hero-section h1, .hero-section p {
+        margin: 0 auto !important;        
+        
+    }
+
+    /* Heading (h1) style with smooth 3D effect */
+    .hero-section h1 {
+        font-size: 2rem !important;        
+    }
+
+    /* Paragraph (p) style */
+    .hero-section p {
+        font-size: 1.5rem !important;
+        margin-top: 5px !important;        
+        line-height: 1.2 !important; /* Reduces space between lines */
+        margin-top: 5px !important; /* Decrease top margin */
+        padding: 0 5px !important; /* Reduce padding if necessary */
+        max-width: 100% !important; /* Prevents overflow */
+        
+    }
+
+    /* Further reduce padding */
+    .company-info {
+        padding: 14px !important;
+    }
+
+    /* Stack cards vertically */
+    .olcards li {
+        margin-top: 1.6rem !important; /* Adjust spacing between items */
+        margin-bottom: 1.2rem !important; /* Adjust spacing between items */
+    }
+
+    /* Further reduce font size for titles and text */
+    .company-info h2 {
+        font-size: 1.4rem!important;
+    }
+
+    .olcards li .content .title {
+        font-size: 1.4rem !important;
+    }
+
+    .olcards li .content .text {
+        font-size: 1.2rem!important;
+    }
+
+    /* Further adjust icon size */
+    .olcards li .icon {
+        font-size: 1.8em !important;
+    }
+
+    /* Trust Section */
+    .trust-section {
+        padding: 20px 0 !important;
+        border-radius: 10px !important;        
+        max-width: 100%; /* Limit the section's width */        
+    }
+
+    .trust-section h2 {
+        font-size: 1.5em !important;
+        margin-bottom: 10px !important;
+    }
+
+    .company-logos {        
+        gap: 25px !important;        
+    }
+
+    /* Scoped Why WSpace AI Section */
+    .why-wspace-ai {
+        padding: 35px 0 !important;        
+    }
+
+    .why-wspace-ai h2 {
+        font-size: 1.8rem !important;        
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai p {
+        font-size: 1.3rem !important;        
+        margin-bottom: 20px !important;
+        
+    }
+
+
+    .why-wspace-ai .metric {
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai .metric h3 {
+        font-size: 2.5rem !important;        
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai .icons {        
+        gap: 30px;
+        margin-top: 20px !important;
+    }
+
+
+    .why-wspace-ai .icon i {
+        font-size: 2.2rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai .icon p {
+        font-size: 1.5rem !important;
+    }
+
+    /* WSPace AI Future Section - Headline / Motto */
+    .future-section {
+        padding: 30px 0 !important;        
+    }
+
+    .future-section h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 15px !important;
+        
+    }
+
+    .talk-button {        
+        padding: 10px 20px !important;
+        font-size: 1.3rem !important;        
+    }
+
+
+}
+
+
+/* Tablet View (Between 1024px and 768px) – Hide Navbar, Show Hamburger Menu */
+@media (max-width: 1024px) and (min-width: 769px) {
+    nav {
+        display: none; /* Hide navbar on tablets */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu */
+    }
+
+    .logo img {
+        width: 100px; /* Smaller logo size for tablet */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: 350px !important; 
+        margin-bottom: auto !important;
+    }
+    
+
+    /* General styling for hero-section text */
+    .hero-section h1, .hero-section p {
+        margin: 0 auto !important;        
+        
+    }
+
+    /* Heading (h1) style with smooth 3D effect */
+    .hero-section h1 {
+        font-size: 2rem !important;        
+    }
+
+    /* Paragraph (p) style */
+    .hero-section p {
+        font-size: 1.6rem !important;
+        margin-top: 5px !important;        
+        line-height: 1.2 !important; /* Reduces space between lines */
+        margin-top: 5px !important; /* Decrease top margin */
+        padding: 0 5px !important; /* Reduce padding if necessary */
+        max-width: 100% !important; /* Prevents overflow */
+        
+    }
+
+    /* Further reduce padding */
+    .company-info {
+        padding: 14px !important;
+    }
+
+    /* Stack cards vertically */
+    .olcards li {
+        margin-top: 1rem !important; /* Adjust spacing between items */
+        margin-bottom: 1rem !important; /* Adjust spacing between items */
+    }
+
+    /* Further reduce font size for titles and text */
+    .company-info h2 {
+        font-size: 1.5rem!important;
+    }
+
+    .olcards li .content .title {
+        font-size: 1.5rem !important;
+    }
+
+    .olcards li .content .text {
+        font-size: 1.4rem!important;
+    }
+
+    /* Further adjust icon size */
+    .olcards li .icon {
+        font-size: 2em !important;
+    }
+
+    /* Trust Section */
+    .trust-section {
+        padding: 25px 0 !important;
+        max-width: 100%; /* Limit the section's width */        
+    }
+
+    .trust-section h2 {
+        font-size: 1.7em !important;
+        margin-bottom: 15px !important;
+    }
+
+    .company-logos {        
+        gap: 30px !important;        
+    }
+
+    /* Scoped Why WSpace AI Section */
+    .why-wspace-ai {
+        padding: 40px 0 !important;        
+    }
+
+    .why-wspace-ai h2 {
+        font-size: 2rem !important;        
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai p {
+        font-size: 1.5rem !important;        
+        margin-bottom: 20px !important;
+        
+    }
+
+
+    .why-wspace-ai .metric {
+        margin-bottom: 15px !important;
+    }
+
+    .why-wspace-ai .metric h3 {
+        font-size: 3rem !important;        
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai .icons {        
+        gap: 30px;
+        margin-top: 20px !important;
+    }
+
+
+    .why-wspace-ai .icon i {
+        font-size: 2.5rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai .icon p {
+        font-size: 1.7rem !important;
+    }
+
+    /* WSPace AI Future Section - Headline / Motto */
+    .future-section {
+        padding: 30px 0 !important;        
+    }
+
+    .future-section h2 {
+        font-size: 2rem !important;
+        margin-bottom: 15px !important;
+        
+    }
+
+    .talk-button {        
+        padding: 10px 20px !important;
+        font-size: 1.5rem !important;        
+    }
+
+
+}
+
+
+@media (max-width: 1199px) and (min-width: 1025px) {
+    nav {
+        display: flex; /* Show navbar for small desktops */
+    }
+
+    .hamburger-menu {
+        display: none; /* Hide hamburger menu */
+    }
+
+    .logo img {
+        width: 110px; /* Adjust logo size */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: 350px !important; 
+        margin-bottom: auto !important;
+    }
+    
+
+    /* General styling for hero-section text */
+    .hero-section h1, .hero-section p {
+        margin: 0 auto !important;        
+        
+    }
+
+    /* Heading (h1) style with smooth 3D effect */
+    .hero-section h1 {
+        font-size: 2.4rem !important;        
+    }
+
+    /* Paragraph (p) style */
+    .hero-section p {
+        font-size: 1.8rem !important;
+        margin-top: 5px !important;        
+        line-height: 1.2 !important; /* Reduces space between lines */
+        margin-top: 5px !important; /* Decrease top margin */
+        padding: 0 5px !important; /* Reduce padding if necessary */
+        max-width: 100% !important; /* Prevents overflow */
+        
+    }
+
+    /* Trust Section */
+    .trust-section {
+        padding: 25px 0 !important;
+        max-width: 100%; /* Limit the section's width */        
+    }
+
+    .trust-section h2 {
+        font-size: 1.9em !important;
+        margin-bottom: 15px !important;
+    }
+
+    .company-logos {        
+        gap: 30px !important;        
+    }
+
+    /* Scoped Why WSpace AI Section */
+    .why-wspace-ai {
+        padding: 40px 0 !important;        
+    }
+
+    .why-wspace-ai h2 {
+        font-size: 2.2rem !important;        
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai p {
+        font-size: 1.7rem !important;        
+        margin-bottom: 20px !important;
+        
+    }
+
+
+    .why-wspace-ai .metric {
+        margin-bottom: 15px !important;
+    }
+
+    .why-wspace-ai .metric h3 {
+        font-size: 3.2rem !important;        
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai .icons {        
+        gap: 30px;
+        margin-top: 20px !important;
+    }
+
+
+    .why-wspace-ai .icon i {
+        font-size: 3rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .why-wspace-ai .icon p {
+        font-size: 1.9rem !important;
+    }
+
+    /* WSPace AI Future Section - Headline / Motto */
+    .future-section {
+        padding: 30px 0 !important;        
+    }
+
+    .future-section h2 {
+        font-size: 2.2rem !important;
+        margin-bottom: 15px !important;
+        
+    }
+
+    .talk-button {        
+        padding: 10px 20px !important;
+        font-size: 1.7rem !important;        
+    }
+
+}
+
+
+/* Very Large Desktop (Above 1200px) – Maintain large layout */
+@media (min-width: 1200px) {
+    nav {
+        display: flex; /* Show navbar on large screens */
+    }
+
+    .hamburger-menu {
+        display: none; /* Hide hamburger menu */
+    }
+
+    .logo img {
+        width: 120px; /* Larger logo for large screens */
+    }
+}
+
+
+/* Extremely Large Screens (Above 1500px) – Optimize for extremely wide screens */
+@media (min-width: 1500px) {
+    header {
+        padding: 20px 40px; /* Add more padding to the header for large screens */
+    }
+
+    nav ul li a {
+        font-size: 20px; /* Increase font size for links */
+    }
+
+    .search-bar input {
+        width: 70%; /* Adjust input size for wider screens */
+    }
+
+    .search-bar button {
+        padding: 10px 15px; /* Increase button size */
+    }
+
+    .logo img {
+        width: 140px; /* Larger logo size for very large screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Hero section Images slide */
@@ -344,7 +1213,6 @@ li.hover-trigger.company-hover .hover-content {
 .hero-section h1, .hero-section p {
     margin: 20px;
     text-align: left;
-    color: white;
     text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6); /* Moderate text shadow */
 }
 
@@ -353,10 +1221,11 @@ li.hover-trigger.company-hover .hover-content {
     font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    background: linear-gradient(45deg, #ffffff, #33ff00);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    position: relative;
+    color: white; /* White text color */
+    background-image: linear-gradient(45deg, #000000, #000000); /* Black background */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text; /* Clip the background to the text */
     text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5), 0 4px 25px rgba(59, 60, 54, 0.8); /* Sharper 3D effect */
     animation: heroHeading3DAnimation 1.5s ease-in-out both;
 }
@@ -366,10 +1235,14 @@ li.hover-trigger.company-hover .hover-content {
     font-size: 1.3rem;
     font-weight: 300;
     margin-top: 20px;
-    color: rgba(176, 73, 157, 0.808); /* Vivid text color */
-    text-shadow: 3px 3px 15px rgba(16, 16, 8, 0.6); /* Stronger shadow for clarity */
+    position: relative;
+    color: white; /* White text color */
+    background-image: linear-gradient(45deg, #000000, #000000); /* Black background */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text; /* Clip the background to the text */
+    text-shadow: 3px 3px 15px rgba(9, 16, 8, 0.6); /* Stronger shadow for clarity */
     animation: heroParagraphAnimation 2s ease-in-out both;
-    animation-delay: 0.5s; /* Staggered animation */
+    animation-delay: 0.5s;
 }
 
 /* Animations for hero-section text */
@@ -394,6 +1267,10 @@ li.hover-trigger.company-hover .hover-content {
         transform: translateY(0);
     }
 }
+
+
+
+
 
 
 /* Arrows Navigation */
@@ -446,57 +1323,124 @@ li.hover-trigger.company-hover .hover-content {
 
 
 
-/* company-info Section - Headlines */ 
+
+/* General Company Info Section */
+/* Center the Company Info Section */
 .company-info {
-    padding: 20px;
-    text-align: left; /* Align text to the left */
-    border: 2px solid #142435; /* Border color */
-    margin: 20px 0; /* Spacing around the section */
+    text-align: left;
+    border: 2px solid #142435;
+    margin: 10px 0;
+    max-width: 1200px; /* Limit the section's width */
+    width: 100%; /* Ensure it takes up full width */
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto; /* Center the container horizontally */
+    padding: 40px; /* Keep existing padding */
 }
 
 .company-info h2 {
-    font-size: 1.5rem;
-    color: #007BFF; /* Blue color for the heading */
-    margin-left: 100px; /* Single indent for h2 */
+    font-size: 1.3rem;
+    color: #007BFF;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .company-info ul {
-    list-style-type: none; /* Remove default bullet points */
-    padding: 20; /* Remove default padding */
+    list-style-type: none;
+    padding: 0;
 }
 
-.company-info ul li {
-    font-size: 1.2rem;
-    margin: 10px 0; /* Spacing between list items */
-    color: #c2a8a8; /* Dark color for text */
-    margin-left: 150px; /* Double indent for list items */
+/* Cards style for list items */
+.olcards,
+.olcards * {
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
 }
 
+.olcards {
+    list-style: none;
+    counter-reset: cardCount;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin-left: 20px;
+}
 
-/* Company Info Section - Giphy */
-/* Giphy Part */
-.company-info {
+.olcards li {
+    counter-increment: cardCount;
+    display: flex;
+    color: white;
+    --labelOffset: 1rem;
+    --arrowClipSize: 1.5rem;
+    margin-top: var(--labelOffset);
     position: relative;
-    padding: 40px;
-    font-family: Arial, sans-serif;
 }
 
+.olcards li::before {
+    content: counter(cardCount, decimal-leading-zero);
+    background: white;
+    color: var(--cardColor);
+    font-size: 2em;
+    font-weight: 700;
+    transform: translateY(calc(-1 * var(--labelOffset)));
+    margin-right: calc(-1 * var(--labelOffset));
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 0.5em;
+}
 
+.olcards li .content {
+    background-color: var(--cardColor);
+    display: grid;
+    padding: 1em 1.5em;
+    grid-template-areas: "icon title" "icon text";
+    gap: 0.25em 1em;
+    clip-path: polygon(0 0, calc(100% - var(--arrowClipSize)) 0, 100% 50%, calc(100% - var(--arrowClipSize)) 100%, calc(100% - var(--arrowClipSize)) calc(100% + 1rem), 0 calc(100% + 1rem));
+    position: relative;
+}
 
-.giphy-part {
+.olcards li .content::before {
+    content: "";
     position: absolute;
-    top: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    z-index: 10;
-    margin-right: 100px;
+    width: var(--labelOffset);
+    height: var(--labelOffset);
+    background: var(--cardColor);
+    left: 0;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    filter: brightness(0.75);
 }
 
-.giphy-part img {
-    width: 550px; /* Adjust size as needed */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for emphasis */
-    
+.olcards li .icon {
+    grid-area: icon;
+    align-self: center;
+    font-size: 2em;
 }
+
+.olcards li .content .title {
+    grid-area: title;
+    font-size: 1.25em;
+}
+
+.olcards li .content .text {
+    grid-area: text;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -567,6 +1511,7 @@ li.hover-trigger.company-hover .hover-content {
     font-size: 1.2rem;
     color: #827e7e;
     margin-bottom: 40px;
+    text-align: start;
 }
 
 .why-wspace-ai .metrics {
@@ -657,9 +1602,9 @@ li.hover-trigger.company-hover .hover-content {
 /* Footer Styling */
 footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 20px 30px;
+    padding: 20px 10px;
     color: #4b4343;
     border-top: 1px solid #7570709a; /* Optional: Adds a subtle border at the top */
 }
@@ -671,12 +1616,14 @@ footer p {
 
 .social-icons {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: 20px;
+    margin-top: 15px; /* Add space between text and icons */
 }
 
 .social-icons .icon {
-    font-size: 1.2rem; /* Adjust size as needed */
+    font-size: 1.2rem;
     color: #fff; /* Default color */
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -690,6 +1637,25 @@ footer p {
 .fas, .fab {
     font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
     font-weight: 900;
+}
+
+/* Media Query for Small Screens (400px and up) */
+@media (max-width: 400px) {
+    footer {
+        padding: 10px 5px;
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Smaller text on small screens */
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icons .icon {
+        font-size: 1rem; /* Smaller icons */
+    }
 }
 
 
