@@ -1,10 +1,11 @@
 
 
 /* Products Section Styling */
-#products {
-    padding: 60px 20px;
+#products {    
     color: #fff;
-    text-align: center;
+    text-align: start;    
+    max-width: 1200px;
+    border: solid 1px #6bb8ff;
 }
 
 #products h2 {
@@ -17,6 +18,7 @@
     animation: fadeInSlide 1.5s ease-in-out;
     display: inline-block;
     width: 100%;
+    text-align: center;
 }
 
 /* Product Group Styling */
@@ -30,15 +32,6 @@
     vertical-align: top; /* Ensures all items align at the top */
 }
 
-.product-group:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -15px; /* Adjust as needed to align with text */
-    width: 2px;
-    height: 100%;
-    background-color: #ff6b6b;
-}
 
 .product-group h3 {
     font-size: 18px;
@@ -106,4 +99,171 @@
 }
 
 
+
+
+
+
+/* Small Mobile View (Up to 480px) */
+@media (max-width: 480px) {
+    #products {        
+        margin: 0 auto;
+    }
+
+    #products h2 {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .product-group {
+        margin: 0 15px;
+        padding: 10px;
+    }
+
+    .product-group h3 {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .product-group ul li {
+        font-size: 12px;
+        margin: 8px 0;
+    }
+}
+
+/* Mobile View (Between 481px and 539px) */
+@media (max-width: 539px) and (min-width: 481px) {
+    #products {        
+        margin: 0 auto;
+    }
+
+    #products h2 {
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+
+    .product-group {
+        margin: 0 15px;
+        padding: 10px;
+    }
+
+    .product-group h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .product-group ul li {
+        font-size: 12px;
+        margin: 8px 0;
+    }
+}
+
+/* Mobile to Small Tablet View (Between 540px and 768px) */
+@media (max-width: 768px) and (min-width: 540px) {
+    #products {        
+        margin: 0 auto;
+    }
+
+    #products h2 {
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+
+    .product-group {
+        margin: 0 15px;
+        padding: 10px;
+    }
+
+    .product-group h3 {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+
+    .product-group ul li {
+        font-size: 13px;
+        margin: 8px 0;
+    }
+}
+
+/* Tablet View (Between 769px and 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    #products {        
+        margin: 0 auto;
+    }
+
+    #products h2 {
+        font-size: 26px;
+        margin-bottom: 0;
+    }
+
+    .product-group {
+        margin: 0 15px;
+        padding: 10px;
+    }
+
+    .product-group h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .product-group ul li {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+}
+
+/* Small Desktop View (Between 1025px and 1199px) */
+@media (max-width: 1199px) and (min-width: 1025px) {
+    #products {        
+        margin: 0 auto;
+    }
+
+    #products h2 {
+        font-size: 26px;
+        margin-bottom: 0;
+    }
+
+    .product-group {
+        margin: 0 15px;
+        padding: 10px;
+    }
+
+    .product-group h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .product-group ul li {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+}
+
+/* Large Desktop View (Above 1200px) */
+@media (min-width: 1200px) {
+    #products {        
+        margin: 0 auto;
+    }
+
+    #products h2 {
+        font-size: 26px;
+        margin-bottom: 0;
+    }
+
+    .product-group {
+        margin: 0 15px;
+        padding: 10px;
+    }
+
+    .product-group h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .product-group ul li {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+}
+
+/* Extra Large Desktop View (Above 1500px) */
 

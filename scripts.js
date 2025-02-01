@@ -313,4 +313,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//FOOTER DATE TO UPDATE AUTOMATICALLY
+//services section hidden information in each div class
+
+document.querySelectorAll('.read-more-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const hiddenContent = this.previousElementSibling; // The div with hidden content
+        const buttonText = this;
+
+        // Toggle visibility of hidden content
+        if (hiddenContent.style.display === "none" || hiddenContent.style.display === "") {
+            hiddenContent.style.display = "block"; // Show content
+            buttonText.textContent = "Show Less"; // Change button text
+        } else {
+            hiddenContent.style.display = "none"; // Hide content
+            buttonText.textContent = "Read More"; // Change button text back
+        }
+    });
+});
+
