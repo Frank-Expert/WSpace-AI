@@ -4,18 +4,7 @@
     box-sizing: border-box;
 }
 
-/* General Styles */
-body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: black;
-    color: white;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    line-height: 1.6;
-    font-size: 16px;
-    font-weight: lighter;
-}
+
 
 /* Header */
 header {
@@ -271,7 +260,7 @@ nav {
 
 /* Default: Show Navbar, Hide Hamburger */
 .hamburger-menu {
-    display: none;
+    display: none !important;
 }
 
 /* Basic styles for the hamburger menu */
@@ -374,12 +363,22 @@ nav {
 
 /* Very Small Mobile (Less than 480px) – Hide Navbar, Show Hamburger Menu */
 @media (max-width: 480px) {
+
+    main {
+        padding: 10px 0; /* Reduced padding for smaller screens */
+    }
+
+    .container {
+        padding: 0 10px; /* Slightly reduced padding */
+        width: 95%; /* Allows more space on small screens */
+    }
+    
     nav {
-        display: none; /* Hide navbar on very small screens */
+        display: none !important; /* Hide navbar on very small screens */
     }
 
     .hamburger-menu {
-        display: flex; /* Show hamburger menu */
+        display: flex !important; /* Show hamburger menu */
     }
 
     /* Hamburger Dropdown Menu */
@@ -537,12 +536,14 @@ nav {
 
 
 @media (max-width: 539px) and (min-width: 481px) {
-    .hamburger-menu {
-        display: flex;
-    }
+    
 
     nav {
-        display: none; /* Hide navbar on mobile screens */
+        display: none !important; /* Hide navbar on very small screens */
+    }
+
+    .hamburger-menu {
+        display: flex !important; /* Show hamburger menu */
     }
 
     .search-bar input {
@@ -684,7 +685,21 @@ nav {
         font-size: 1.1rem !important;        
     }
 
-    
+    footer {
+        padding: 10px 5px;
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Smaller text on small screens */
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icons .icon {
+        font-size: 1rem; /* Smaller icons */
+    }
 
 
 }
@@ -700,12 +715,13 @@ nav {
         padding: 8px 12px; /* Adjust button for better touchability */
     }
 
-    .hamburger-menu {
-        display: flex;
+    .hamburger-menu {        
+        display: flex !important; /* Show hamburger menu */
+        
     }
 
     .nav {
-        display: none !important; /* Hide navbar on mobile screens */
+        display: none !important; /* Ensure nav is hidden */
     }
 
     .logo img {
@@ -843,6 +859,8 @@ nav {
         font-size: 1.3rem !important;        
     }
 
+    
+
 
 }
 
@@ -850,11 +868,11 @@ nav {
 /* Tablet View (Between 1024px and 768px) – Hide Navbar, Show Hamburger Menu */
 @media (max-width: 1024px) and (min-width: 769px) {
     nav {
-        display: none; /* Hide navbar on tablets */
+        display: none !important; /* Hide navbar on tablets */
     }
 
     .hamburger-menu {
-        display: flex; /* Show hamburger menu */
+        display: flex !important; /* Show hamburger menu */
     }
 
     .logo img {
@@ -997,11 +1015,11 @@ nav {
 
 @media (max-width: 1199px) and (min-width: 1025px) {
     nav {
-        display: flex; /* Show navbar for small desktops */
+        display: flex !important; /* Show navbar for small desktops */
     }
 
     .hamburger-menu {
-        display: none; /* Hide hamburger menu */
+        display: none !important; /* Hide hamburger menu */
     }
 
     .logo img {
@@ -1600,16 +1618,40 @@ nav {
 
 
 
-/* Footer Styling */
-/* Make the body take full height and use flexbox */
+/* Global Styling */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;  /* Ensures the body takes up at least the full height of the viewport */
+    min-height: 100vh; /* Ensures full viewport height */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: lighter;
 }
 
+/* Main Content Area */
 main {
-    flex: 1;  /* Ensures the main content takes up the available space */
+    flex: 1; /* Ensures main content expands */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: flex-start; /* Align content to the top */
+    padding: 10px 0; /* Adds spacing */
+}
+
+/* Standardized Container for Consistency */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers content */
+    padding: 0 10px; /* Balanced padding for different screen sizes */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
 /* Footer Styling */
@@ -1617,16 +1659,19 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 10px;
+    padding: 20px 15px;
     color: #4b4343;
-    border-top: 1px solid #7570709a; /* Optional: Adds a subtle border at the top */
-    margin-top: auto;  /* This makes the footer stay at the bottom */
+    border-top: 1px solid rgba(117, 112, 112, 0.6); /* Subtle border */
+    margin-top: auto; /* Keeps footer at the bottom */
+    text-align: center;
 }
 
 footer p {
     margin: 0;
     font-size: 1rem;
 }
+
+
 
 .social-icons {
     display: flex;
@@ -1655,23 +1700,6 @@ footer p {
 }
 
 /* Media Query for Small Screens (400px and up) */
-@media (max-width: 400px) {
-    footer {
-        padding: 10px 5px;
-    }
-
-    footer p {
-        font-size: 0.9rem; /* Smaller text on small screens */
-    }
-
-    .social-icons {
-        gap: 15px;
-    }
-
-    .social-icons .icon {
-        font-size: 1rem; /* Smaller icons */
-    }
-}
 
 
 /* Animations */

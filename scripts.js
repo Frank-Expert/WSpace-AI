@@ -37,6 +37,9 @@ function closeHamburgerMenu(event) {
     }
 }
 
+
+
+
 // Handle submenu hover to prevent flickering
 document.addEventListener("DOMContentLoaded", function () {
     let submenus = document.querySelectorAll(".has-submenu");
