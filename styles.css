@@ -356,12 +356,12 @@ nav {
 @media (max-width: 480px) {
 
     main {
-        padding: 10px 0; /* Reduced padding for smaller screens */
+        padding: 0; /* Reduced padding for smaller screens */
     }
 
     .container {
-        padding: 0 10px; /* Slightly reduced padding */
-        width: 95%; /* Allows more space on small screens */
+        padding: 0x; /* Slightly reduced padding */
+        width: 100%; /* Allows more space on small screens */
     }
     
     nav {
@@ -1266,11 +1266,11 @@ nav {
 
 /* Heading (h1) style with smooth 3D effect */
 .hero-section h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2.2rem;
+    font-weight: bold;    
     text-transform: uppercase;
     position: relative;
-    color: white; /* White text color */
+    color: rgb(255, 255, 255); /* White text color */
     background-image: linear-gradient(45deg, #000000, #000000); /* Black background */
     -webkit-background-clip: text; /* Clip the background to the text */
     background-clip: text; /* Clip the background to the text */
@@ -1280,7 +1280,7 @@ nav {
 
 /* Paragraph (p) style */
 .hero-section p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 300;
     margin-top: 20px;
     position: relative;
@@ -1330,7 +1330,7 @@ nav {
 }
 
 .arrow {
-    background-color: rgba(49, 48, 48, 0.5);
+    background-color: transparent;
     color: white;
     border: none;
     font-size: 0.8rem;
@@ -1340,9 +1340,6 @@ nav {
     margin: 0 10px;
 }
 
-.arrow:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
 
 /* Dot Navigation */
 .dots-container {
@@ -1371,8 +1368,6 @@ nav {
 
 
 
-
-/* General Company Info Section */
 /* Center the Company Info Section */
 .company-info {
     text-align: left;
@@ -1387,7 +1382,7 @@ nav {
 
 .company-info h2 {
     font-size: 1.3rem;
-    color: #007BFF;
+    color: #55d60b;
     margin-left: 20px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -1679,7 +1674,7 @@ main {
 
 /* Standardized Container for Consistency */
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto; /* Centers content */
     padding: 0 10px; /* Balanced padding for different screen sizes */
@@ -1690,6 +1685,7 @@ main {
 html, body {
     overflow-x: hidden;
     width: 100%;
+    
 }
 
 /* Apply box-sizing globally */
@@ -1706,13 +1702,24 @@ section {
     overflow-x: hidden; /* Ensures no horizontal scrolling within sections */
 }
 
+/* Hide sections by default */
+.hidden {
+    display: none;
+}
+
+/* Optional: Styling for active or visible sections */
+.active-section {
+    display: block;
+}
+
+
 /* Footer Styling */
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 15px;
-    color: #4b4343;
+    color: #a19e9e;
     border-top: 1px solid rgba(117, 112, 112, 0.6); /* Subtle border */
     margin-top: auto; /* Keeps footer at the bottom */
     text-align: center;

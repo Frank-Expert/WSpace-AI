@@ -1,21 +1,3 @@
-// Optional JavaScript for additional interactions
-// Typewriting effect
-document.addEventListener("DOMContentLoaded", function () {
-    const elements = document.querySelectorAll(".service p");
-    elements.forEach((element) => {
-        const text = element.innerHTML;
-        element.innerHTML = "";
-        let i = 0;
-        const typeEffect = setInterval(() => {
-            element.innerHTML += text.charAt(i);
-            i++;
-            if (i > text.length) {
-                clearInterval(typeEffect);
-            }
-        }, 50);
-    });
-});
-
 
 
 //Hamburger menu
@@ -65,6 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", closeHamburgerMenu);
 });
 
+
+
+
+//JavaScript for Navigation Block:
 
 
 
@@ -155,28 +141,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// JavaScript for Modal
-document.addEventListener('DOMContentLoaded', function() {
-    var modal = document.getElementById('contact-sales-modal');
-    var btn = document.getElementById('contact-sales-btn');
-    var span = document.getElementsByClassName('close')[0];
-
-    btn.onclick = function() {
-        modal.style.display = 'block';
-    }
-
-    span.onclick = function() {
-        modal.style.display = 'none';
-    }
-
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    }
-});
-
-
 //RESEARCH RESPONSIVE scrollBehavior: 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -229,47 +193,16 @@ document.getElementById('load-more-btn').addEventListener('click', function () {
 //Guides and Tutorials
 
 
-
-
-//HELP CENTER QUESTION
-document.addEventListener('DOMContentLoaded', function() {
-    const faqItems = document.querySelectorAll('#resources .faq-item');
-
-    faqItems.forEach(item => {
-        const questionButton = item.querySelector('.faq-question');
-        const answerDiv = item.querySelector('.faq-answer');
-
-        questionButton.addEventListener('click', function() {
-            // Close all answers
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.querySelector('.faq-answer').style.display = 'none';
-                }
-            });
-
-            // Toggle the clicked answer
-            if (answerDiv.style.display === 'block') {
-                answerDiv.style.display = 'none';
-            } else {
-                answerDiv.style.display = 'block';
-            }
-        });
-    });
-});
+//Ensure All Sections are Loaded Before Accessing Them
 
 
 
-// scripts.js
 // Function to load section content
-// scripts.js
-
 // Function to load section content
 function loadSection(section) {
     const mainContent = document.getElementById('main-content');
     const heroSection = document.querySelector('.hero-section');
     const companyInfoSection = document.querySelector('.company-info');
-
-    // Add new sections for the home page
     const trustSection = document.querySelector('.trust-section');
     const whyWspaceAISection = document.querySelector('.why-wspace-ai');
     const futureSection = document.querySelector('.future-section');
@@ -281,7 +214,6 @@ function loadSection(section) {
         trustSection.style.display = 'block';
         whyWspaceAISection.style.display = 'block';
         futureSection.style.display = 'block';
-        mainContent.innerHTML = ''; // Clear the main content as Home has its own content
     } else {
         // Hide all home sections
         heroSection.style.display = 'none';
@@ -289,7 +221,7 @@ function loadSection(section) {
         trustSection.style.display = 'none';
         whyWspaceAISection.style.display = 'none';
         futureSection.style.display = 'none';
-        
+
         // Load the appropriate section content for other sections
         fetch(`${section}-section.html`) // This will correctly fetch the respective sections
             .then(response => {
@@ -315,22 +247,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 //services section hidden information in each div class
-
-document.querySelectorAll('.read-more-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const hiddenContent = this.previousElementSibling; // The div with hidden content
-        const buttonText = this;
-
-        // Toggle visibility of hidden content
-        if (hiddenContent.style.display === "none" || hiddenContent.style.display === "") {
-            hiddenContent.style.display = "block"; // Show content
-            buttonText.textContent = "Show Less"; // Change button text
-        } else {
-            hiddenContent.style.display = "none"; // Hide content
-            buttonText.textContent = "Read More"; // Change button text back
-        }
-    });
-});
-

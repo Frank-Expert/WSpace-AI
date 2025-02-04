@@ -32,9 +32,9 @@
 
 .tilesWrap li {
     display: inline-block;
-    width: 25%; /* Increased width */
-    min-width: 350px; /* Increased min-width */
-    max-width: 450px; /* Increased max-width */
+    width: 35%; /* Increased width */
+    min-width: 450px; /* Increased min-width */
+    max-width: 650px; /* Increased max-width */
     padding: 120px 20px 40px;
     position: relative;
     vertical-align: top;
@@ -70,17 +70,17 @@
 }
 
 .tilesWrap li button {
-  background: transparent;
-  border: 1px solid #b7b7b7;
-  padding: 10px 20px;
-  color: #b7b7b7;
-  border-radius: 3px;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-  transform: translateY(-40px);
-  opacity: 0;
-  cursor: pointer;
-  overflow: hidden;
+    background: transparent;
+    border: 1px solid #b7b7b7;
+    padding: 10px 20px;
+    color: #b7b7b7;
+    border-radius: 3px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-40px);
+    opacity: 0;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .tilesWrap li button:before {
@@ -158,11 +158,6 @@
   background: linear-gradient(to right, #0ABFBC, #FC354C);
 }
 
-
-
-
-
-
 .tilesWrap li img {
   width: 100%; /* Makes the image span the full width of the container */
   height: auto; /* Maintains the aspect ratio of the image */
@@ -171,3 +166,226 @@
   transition: transform 0.3s ease-in-out; /* Adds smooth transition for hover effect */
 }
 
+
+
+
+
+/* Extra Small Screens (0 - 480px) */
+@media (max-width: 480px) {
+  .tilesWrap li {
+      width: 100%;
+      min-width: unset;
+      max-width: unset;
+      padding: 60px 10px 10px;
+      margin: 10px 0;
+  }
+
+  
+  #research h2 {
+    font-size: 1.5rem;
+    
+  }
+
+  #research p {
+    font-size: 0.9rem;    
+    margin-bottom: 10px;
+  }
+  
+  .tilesWrap li h2 {
+      top: 40px;
+      right: 20px;
+      font-size: 3rem !important; /* Adjust the font size for better visibility */  
+      letter-spacing: 1px; /* Add some spacing between the letters for clarity */
+  }
+
+
+  .tilesWrap li p {
+      font-size: 12px;
+      line-height: 24px;
+  }
+
+  .tilesWrap li button {
+      padding: 8px 15px;
+  }
+}
+
+/* Small Mobile Screens (481px - 539px) */
+@media (max-width: 539px) and (min-width: 481px) {
+  .tilesWrap li {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    padding: 80px 10px 15px;
+    margin: 10px 0;
+  }
+
+  #research h2 {
+    font-size: 1.6rem;
+  }
+
+  #research p {
+    font-size: 0.9rem;    
+    margin-bottom: 10px;
+  }
+
+  .tilesWrap li h2 {
+      top: 50px;
+      right: 10px;
+      font-size: 4rem !important; /* Adjust the font size for better visibility */  
+      letter-spacing: 1px; /* Add some spacing between the letters for clarity */
+  }
+
+  .tilesWrap li p {
+      font-size: 12px;
+      line-height: 24px;
+  }
+
+  .tilesWrap li button {
+      padding: 8px 15px;
+  }
+
+}
+
+/* Medium Mobile & Small Tablets (540px - 768px) */
+@media (max-width: 768px) and (min-width: 540px) {
+  .tilesWrap li {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    padding: 80px 10px 15px;
+    margin: 10px 0;
+  }
+
+  #research h2 {
+    font-size: 1.6rem;
+  }
+
+  #research p {
+    font-size: 1rem;    
+    margin-bottom: 10px;
+  }
+
+  .tilesWrap li h2 {
+      top: 50px;
+      right: 10px;
+      font-size: 4rem !important; /* Adjust the font size for better visibility */  
+      letter-spacing: 1px; /* Add some spacing between the letters for clarity */
+  }
+
+  .tilesWrap li p {
+      font-size: 12px;
+      line-height: 24px;
+  }
+
+  .tilesWrap li button {
+      padding: 8px 15px;
+  }
+}
+
+/* Large Tablets (769px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  #research {    
+    width: 100%;
+  }
+  
+  .tilesWrap li {
+    min-width: unset;
+    max-width: unset;
+    padding: 80px 10px 15px;
+    margin: 10px 0;
+    margin: 20px;
+  }
+
+  #research h2 {
+    font-size: 1.6rem;
+  }
+
+  #research p {
+    font-size: 1rem;    
+    margin-bottom: 10px;
+  }
+
+  .tilesWrap li h2 {
+      top: 50px;
+      right: 10px;
+      font-size: 4rem !important; /* Adjust the font size for better visibility */  
+      letter-spacing: 1px; /* Add some spacing between the letters for clarity */
+  }
+
+  .tilesWrap li p {
+      font-size: 12px;
+      line-height: 24px;
+  }
+
+  .tilesWrap li button {
+      padding: 8px 15px;
+  }
+}
+
+/* Small Desktops (1025px - 1199px) */
+@media (max-width: 1199px) and (min-width: 1025px) {
+  #research {    
+    width: 100%;
+  }
+  
+  .tilesWrap li {
+    min-width: unset;
+    max-width: unset;
+    padding: 95px 10px 15px;
+    margin: 10px 0;
+    margin: 20px;
+  }
+
+  #research h2 {
+    font-size: 1.8rem;
+  }
+
+  #research p {
+    font-size: 1.2rem;    
+    margin-bottom: 15px;
+  }
+
+  .tilesWrap li h2 {
+      top: 50px;
+      right: 10px;
+      font-size: 5rem !important; /* Adjust the font size for better visibility */  
+      letter-spacing: 2px; /* Add some spacing between the letters for clarity */
+  }
+
+  .tilesWrap li p {
+      font-size: 13px;
+      line-height: 24px;
+  }
+
+  .tilesWrap li button {
+      padding: 8px 15px;
+  }
+}
+
+/* Standard Desktops (1200px and above) */
+@media (min-width: 1200px) {
+  .tilesWrap li {
+      width: 25%;
+      padding: 120px 30px 55px;
+  }
+
+  .tilesWrap li h2 {
+      font-size: 7rem;
+      top: 110px;
+      right: 16px;
+  }
+}
+
+/* Large Screens (1500px and above) */
+@media (min-width: 1500px) {
+  .tilesWrap li {
+      width: 22%;
+      padding: 130px 35px 60px;
+  }
+
+  .tilesWrap li h2 {
+      font-size: 7.5rem;
+      top: 115px;
+      right: 18px;
+  }
+}
