@@ -1,7 +1,15 @@
 <head>
     <link rel="stylesheet" href="styles.css"> <!-- Path to your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="resources-section.css"> <!-- Link to the new CSS file -->
     <script src="scripts.js" defer></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
 </head>
 
 <section id="resources">
@@ -10,7 +18,7 @@
         <p>Empowering Your Journey: Discover WSpace AI's Cutting-Edge Tools and Insights</p>
         <!-- Blog Section -->
         <div id="blog-item">
-            <h3>Our Blog</h3>
+            <h3>Our Blogs</h3>
             <p>Stay updated with the latest trends and insights in AI and technology.</p>
             <div class="blog-container">
                 <!-- Blog Item 1 -->
@@ -63,50 +71,187 @@
         </div>
 
 
-        <!-- WSpace AI Academy Section -->  
-        <div class="resource-item academy">  
-            <h3>WSpace AI Academy</h3>  
-            <p>Empower your skills with expert-led courses in AI, web development, cybersecurity, data analysis, and more. Our comprehensive programs are designed to equip you with practical skills and knowledge to thrive in today’s tech-driven world.</p>  
-            <a href="https://wspaceaiacademy.com" target="_blank" class="academy-link">Visit Academy</a>  
-            
-            <h4>1. Programming and Software Engineering</h4>  
-            <p>Our courses cover a wide range of languages and frameworks:</p>  
-            <ul class="icon-list">  
-                <li><img src="icons/python.svg" alt="Python" class="icon"> Python</li>  
-                <li><img src="icons/javascript.svg" alt="JavaScript" class="icon"> JavaScript</li>  
-                <li><img src="icons/java.svg" alt="Java" class="icon"> Java</li>  
-                <li><img src="icons/csharp.svg" alt="C#" class="icon"> C#</li>  
-                <li><img src="icons/html.svg" alt="HTML/CSS" class="icon"> HTML/CSS</li>  
-                <li><img src="icons/agile.svg" alt="Agile" class="icon"> Agile Methodologies</li>  
-            </ul>  
-
-            <h4>2. Cybersecurity</h4>  
-            <p>Protecting information is crucial in today’s digital landscape. Our cybersecurity program includes:</p>  
-            <ul class="icon-list">  
-                <li><img src="icons/network-security.svg" alt="Network Security" class="icon"> Network Security</li>  
-                <li><img src="icons/ethical-hacking.svg" alt="Ethical Hacking" class="icon"> Ethical Hacking</li>  
-                <li><img src="icons/information-security.svg" alt="Information Security" class="icon"> Information Security</li>  
-                <li><img src="icons/compliance.svg" alt="Compliance" class="icon"> Compliance and Risk Management</li>  
-                <li><img src="icons/incident-response.svg" alt="Incident Response" class="icon"> Incident Response</li>  
-            </ul>  
-
-            <h4>3. Data Analysis</h4>  
-            <p>Transform data into actionable insights with our data analysis courses:</p>  
-            <ul class="icon-list">  
-                <li><img src="icons/excel.svg" alt="Excel" class="icon"> Excel</li>  
-                <li><img src="icons/sql.svg" alt="SQL" class="icon"> SQL</li>  
-                <li><img src="icons/statistics.svg" alt="Statistical Analysis" class="icon"> Statistical Analysis</li>  
-                <li><img src="icons/data-visualization.svg" alt="Data Visualization" class="icon"> Data Visualization</li>  
-                <li><img src="icons/machine-learning.svg" alt="Machine Learning" class="icon"> Machine Learning Basics</li>  
-            </ul>
-            
+        <!-- WSpace AI Academy Section -->
+        <div class="resource-item academy">
+            <h3>WSpace AI Academy</h3>
+            <p>Empower your skills with expert-led courses in AI, web development, cybersecurity, data analysis, and more. Our comprehensive programs are designed to equip you with practical skills and knowledge to thrive in today’s tech-driven world.</p>
             <a href="https://wspaceaiacademy.com" target="_blank" class="academy-link">Visit Academy</a>
+                <div class="icon-list-container">
+                <h4>1. Certificate in Software Engineering</h4>
+                <p>Our courses cover a wide range of languages and frameworks:</p>
+                    <ul class="icon-list">
+                        <li><i class="fa-brands fa-python"></i><br> Python
+                            <p>Learn Python programming fundamentals, object-oriented programming, web development, and automation.</p>
+                        </li>
+                        <li><i class="fa-brands fa-js"></i><br> JavaScript
+                            <p>Master JavaScript for interactive web pages, asynchronous programming, and front-end frameworks like React and Node.js.</p>
+                        </li>
+                        <li><i class="fa-brands fa-java"></i><br> Java
+                            <p>Understand Java programming, including object-oriented design, Java libraries, and frameworks for mobile and enterprise applications.</p>
+                        </li>
+                        <li><i class="fa-brands fa-cuttlefish"></i><br> C#
+                            <p>Learn C# programming for desktop and mobile apps, including .NET framework and integration with Azure cloud services.</p>
+                        </li>
+                        <li><i class="fa-brands fa-html5"></i><br> HTML5
+                            <p>Understand HTML5 fundamentals for structuring web pages, multimedia embedding, and semantic web development.</p>
+                        </li>
+                        <li><i class="fa-brands fa-css3-alt"></i><br> CSS
+                            <p>Learn how to style and layout web pages with CSS, including responsive design, animations, and Flexbox/Grid systems.</p>
+                        </li>
+                        <li><i class="fa-brands fa-angular"></i><br> Agile Methodologies
+                            <p>Master Agile methodologies for project management, including Scrum, Kanban, and iterative development.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="icon-list-container">
+                <h4>2. Certificate in Cybersecurity</h4>
+                <p>Protecting information is crucial in today’s digital landscape. Our cybersecurity program includes:</p>
+                    <ul class="icon-list">
+                        <li><i class="fa-solid fa-shield-alt"></i><br> Network Security
+                            <p>Learn how to secure networks, firewalls, and VPNs to protect against cyber threats and ensure system integrity.</p>
+                        </li>
+                        <li><i class="fa-solid fa-laptop-code"></i><br> Ethical Hacking
+                            <p>Understand penetration testing techniques, vulnerability scanning, and ethical hacking tools for discovering security weaknesses.</p>
+                        </li>
+                        <li><i class="fa-solid fa-lock"></i><br> Information Security
+                            <p>Study cryptography, access control systems, and data protection techniques to safeguard sensitive information.</p>
+                        </li>
+                        <li><i class="fa-solid fa-balance-scale"></i><br> Compliance and Risk Management
+                            <p>Learn about compliance frameworks, regulatory requirements, and risk assessment strategies for maintaining security protocols.</p>
+                        </li>
+                        <li><i class="fa-solid fa-shield-virus"></i><br> Incident Response
+                            <p>Learn how to develop and execute response strategies to security incidents, minimizing damage and restoring normal operations.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="icon-list-container">
+                <h4>3. Certificate in Data Science</h4>
+                <p>Transform data into actionable insights with our data analysis courses:</p>
+                    <ul class="icon-list">
+                        <li><i class="fa-solid fa-table"></i><br> Excel
+                            <p>Master Excel for data analysis, including pivot tables, advanced functions, and data manipulation techniques.</p>
+                        </li>
+                        <li><i class="fa-solid fa-database"></i><br> SQL
+                            <p>Learn SQL for database management, querying relational databases, and performing data manipulation operations.</p>
+                        </li>
+                        <li><i class="fa-solid fa-chart-line"></i><br> Statistical Analysis
+                            <p>Understand statistical methods for analyzing data, including hypothesis testing, regression analysis, and probability theory.</p>
+                        </li>
+                        <li><i class="fa-solid fa-pie-chart"></i><br> Data Visualization
+                            <p>Learn how to present data insights effectively through charts, graphs, and interactive visualizations using tools like Tableau and Power BI.</p>
+                        </li>
+                        <li><i class="fa-solid fa-robot"></i><br> Machine Learning Basics
+                            <p>Understand the fundamentals of machine learning algorithms, including supervised and unsupervised learning, and building models with tools like Python.</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="icon-list-container">
+                <h4>4. Certificates in Engineering & Design Software</h4>
+                <p>Master industry-leading engineering and design tools:</p>         
+                    <div class="icon-list">                
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/autocad.png" alt="AutoCAD" class="icon"> <strong>Certificate in AutoCAD</strong>
+                                <p>Learn 2D and 3D CAD design, drafting, and modeling techniques for architecture, engineering, and construction.</p>
+                            </li>
+                        </ul>
+
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/civil3d.png" alt="Civil 3D" class="icon"> <strong>Certificate in Civil 3D</strong>
+                                <p>Master civil engineering design, including road design, grading, and stormwater analysis using Civil 3D.</p>
+                            </li>
+                        </ul>
+
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/revit.jpg" alt="Revit" class="icon"> <strong>Certificate in Revit</strong>
+                                <p>Develop skills in Building Information Modeling (BIM) for architectural and structural design projects.</p>
+                            </li>
+                        </ul>
+
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/robot.jpg" alt="Robot Structural Designer" class="icon"> <strong>Certificate in Robot Structural Designer</strong>
+                                <p>Analyze and design complex structures with advanced computational tools for engineers.</p>
+                            </li>
+                        </ul>
+
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/tekla.png" alt="Tekla Structural Designer" class="icon"> <strong>Certificate in Tekla Structural Designer</strong>
+                                <p>Learn structural modeling, analysis, and BIM integration for steel and concrete structures.</p>
+                            </li>
+                        </ul>
+
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/fusion.jpg" alt="Fusion 360" class="icon"> <strong>Certificate in Fusion 360</strong>
+                                <p>Gain expertise in cloud-based 3D CAD, CAM, and CAE for product design and manufacturing.</p>
+                            </li>
+                        </ul>
+
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/ansys.jpg" alt="Ansys" class="icon"> <strong>Certificate in Ansys</strong>
+                                <p>Learn finite element analysis (FEA) and computational fluid dynamics (CFD) for engineering simulations.</p>
+                            </li>
+                        </ul>
+
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/catia.jpeg" alt="Catia" class="icon"> <strong>Certificate in Catia</strong>
+                                <p>Develop advanced 3D modeling skills for product design, aerospace, and automotive industries.</p>
+                            </li>
+                        </ul>
+
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/etabs.webp" alt="Etabs" class="icon"> <strong>Certificate in Etabs</strong>
+                                <p>Specialize in high-rise building design, seismic analysis, and structural engineering.</p>
+                            </li>
+                        </ul>
+
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/safe.jpg" alt="Safe" class="icon"> <strong>Certificate in Safe</strong>
+                                <p>Learn slab and foundation design with integrated finite element analysis tools.</p>
+                            </li>
+                        </ul>
+
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/staadpro.jpg" alt="StaadPro" class="icon"> <strong>Certificate in StaadPro New Edition</strong>
+                                <p>Master structural analysis and design automation for buildings, bridges, and towers.</p>
+                            </li>
+                        </ul>
+
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/archicad.png" alt="ArchiCAD" class="icon"> <strong>Certificate in ArchiCAD</strong>
+                                <p>Gain skills in BIM-based architectural design and visualization.</p>
+                            </li>
+                        </ul>
+
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/lumion.png" alt="Lumion" class="icon"> <strong>Certificate in Lumion</strong>
+                                <p>Learn real-time architectural visualization and rendering for immersive presentations.</p>
+                            </li>
+                        </ul>
+
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/sketchup.png" alt="SketchUp" class="icon"> <strong>Certificate in SketchUp</strong>
+                                <p>Develop skills in intuitive 3D modeling for architecture, interior design, and urban planning.</p>
+                            </li>
+                        </ul>
+
+                        <ul class="icon-list">
+                            <li><img src="wspace-ai-academy/logos/photoshop.png" alt="Adobe Photoshop" class="icon"> <strong>Certificate in Adobe Photoshop</strong>
+                                <p>Master image editing, graphic design, and digital art creation for various applications.</p>
+                            </li>
+                        </ul>
+                    </div>
+                <a href="https://wspaceaiacademy.com" target="_blank" class="academy-link">Visit Academy</a>
+            </div>
         </div>
 
+
+        
         <!-- Guides & Tutorials Section -->
-        <div class="resource-item">
+        <div class="guides-tutorials">
             <h3>Guides & Tutorials</h3>
             <p>Step-by-step guides and tutorials to help you navigate our products.</p>
+            
             <div class="video-guide">
                 <video controls>
                     <source src="videos/WSpace AI Tutorial guide 1 Overview of the company.mp4" type="video/mp4">
@@ -114,7 +259,7 @@
                 </video>
                 <p>A detailed description of how to use our products. Step-by-step instructions...</p>
                 <video controls>
-                    <source src="videos/Baobab video.mp4" type="video/mp4">
+                    <source src="videos/Baobab video.mp" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p>A detailed description of how to use our products. Step-by-step instructions...</p>
@@ -124,6 +269,7 @@
                 </video>
                 <p>A detailed description of how to use our products. Step-by-step instructions...</p>
             </div>
+
             <div class="written-guide">
                 <h4>Guide Title</h4>
                 <p>A detailed description of how to use our products. Step-by-step instructions...</p>
@@ -131,28 +277,74 @@
         </div>
 
         <!-- Webinars Section -->
-        <div class="resource-item">
+        <!-- Webinars Section -->
+        <!-- Webinars Section -->
+        <div class="webinars">
             <h3>Webinars</h3>
-            <p>Join our live webinars and watch previous recordings.</p>
+            <p class="section-description">Join our live webinars and watch previous recordings. Stay updated with new sessions and be part of the conversation.</p>
+
             <div class="upcoming-webinars">
                 <h4>Upcoming Webinars</h4>
-                <ul>
-                    <li>Webinar Title 1 - <a href="#">Register</a></li>
-                    <li>Webinar Title 2 - <a href="#">Register</a></li>
-                </ul>
+                <div class="webinar-item">
+                    <div class="webinar-info">
+                        <h5>Webinar Title 1</h5>
+                        <p class="webinar-details"><strong>Date:</strong> March 15, 2025</p>
+                        <p class="webinar-details"><strong>Time:</strong> 10:00 AM UTC</p>
+                        <p class="webinar-details"><strong>Speakers:</strong> John Doe (CEO), Mary Jane (Product Manager)</p>
+                        <p class="webinar-description">In this webinar, we’ll provide a step-by-step guide on using our platform’s new features, with a live Q&A session.</p>
+                        <a href="#" class="register-button">Register Now</a>
+                    </div>
+                    <div class="webinar-image">
+                        <img src="webinar-image1.jpg" alt="Webinar 1" />
+                    </div>
+                </div>
+
+                <div class="webinar-item">
+                    <div class="webinar-info">
+                        <h5>Webinar Title 2</h5>
+                        <p class="webinar-details"><strong>Date:</strong> March 22, 2025</p>
+                        <p class="webinar-details"><strong>Time:</strong> 2:00 PM UTC</p>
+                        <p class="webinar-details"><strong>Speakers:</strong> Alex Brown (CTO), Lisa White (Lead Designer)</p>
+                        <p class="webinar-description">This session will cover the latest design trends in the industry and how to integrate them with our tools.</p>
+                        <a href="#" class="register-button">Register Now</a>
+                    </div>
+                    <div class="webinar-image">
+                        <img src="webinar-image2.jpg" alt="Webinar 2" />
+                    </div>
+                </div>
             </div>
+
             <div class="recorded-webinars">
                 <h4>Previous Recordings</h4>
-                <video controls>
-                    <source src="your-webinar-recording.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="recorded-item">
+                    <video controls>
+                        <source src="your-webinar-recording.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="recorded-info">
+                        <h5>Webinar Title 1 Recording</h5>
+                        <p class="recorded-details"><strong>Date:</strong> February 10, 2025</p>
+                        <p class="recorded-description">This recorded session dives into product features with a detailed walkthrough of the platform's interface and capabilities.</p>
+                    </div>
+                </div>
+
+                <div class="recorded-item">
+                    <video controls>
+                        <source src="your-webinar-recording2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="recorded-info">
+                        <h5>Webinar Title 2 Recording</h5>
+                        <p class="recorded-details"><strong>Date:</strong> January 28, 2025</p>
+                        <p class="recorded-description">An introductory session to help you get started with our platform, covering the basics of setting up your account and using core features.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Help Center Section -->
         <!-- Help Center Section -->
-        <div class="resource-item">
+        <div class="help-center">
             <h3>Help Center</h3>
             <span class="resource-help-text">Get answers with our comprehensive Help Center.</span>
 
@@ -222,47 +414,141 @@
 
 
         <!-- Community Section -->
-        <div class="resource-item">
-            <h3>Community</h3>
-            <p>Join our vibrant community to collaborate on AI and tech projects.</p>
-            <a href="community-forum-link" class="community-link">Join the Community</a>
+        <!-- Community Section -->
+        <div class="community">
+            <h3>Join Our Thriving Community</h3>
+            <p>At WSpace AI, we believe in the power of collaboration. Our vibrant community is a space where innovators, developers, and enthusiasts from all over the world come together to share ideas, work on cutting-edge AI and tech projects, and help each other grow. Whether you're looking to learn, network, or contribute, there's always a place for you here.</p>
+            <p>By joining, you’ll get access to exclusive resources, expert-led discussions, and exciting collaborative opportunities. We host regular webinars, workshops, and hackathons that are designed to keep you up to date with the latest in AI development, machine learning, and more. You’ll also find a supportive environment where you can ask questions, exchange feedback, and collaborate with like-minded individuals.</p>
+            <p>Ready to be part of something bigger? Whether you're a seasoned professional or just starting out, our community is the perfect place for you to learn, grow, and connect. We’re all about building the future of technology, and we’d love for you to be a part of it.</p>
+
+            <!-- Community Registration Form -->
+            <form class="community-form">
+                <div class="form-group">
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="community-submit-button">Join the Community Today</button>
+                </div>
+            </form>
         </div>
+
 
         <!-- Hire a Consultant Form -->
-        <div class="resource-item">
+        <!-- Hire a Consultant Form -->
+        <div class="consultant-form">
             <h3>Hire a Consultant</h3>
             <form id="consultant-form" class="consultant-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="project">Project Description:</label>
-                <textarea id="project" name="project" required></textarea>
-                
-                <button type="submit">Submit</button>
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+
+                <!-- Phone Number Field (optional) -->
+                <div class="form-group">
+                    <label for="phone"></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number (optional)">
+                </div>
+
+                <!-- Subject (optional) -->
+                <div class="form-group">
+                    <label for="company"></label>
+                    <input type="company" id="company" name="company" placeholder="Enter company (optional)">
+                </div>
+
+                <!-- Subject (optional) -->
+                <div class="form-group">
+                    <label for="subject"></label>
+                    <input type="subject" id="subject" name="subject" placeholder="Enter subject">
+                </div>
+
+                <!-- Project Description -->
+                <div class="form-group">
+                    <label for="project"></label>
+                    <textarea id="project" name="project" required placeholder="Describe your project"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
             </form>
         </div>
+
 
         <!-- Become a Partner Form -->
-        <div class="resource-item">
-            <h3>Become a Partner</h3>
-            <form id="partner-form" class="partner-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="payment">Payment Method:</label>
-                <select id="payment" name="payment">
-                    <option value="credit-card">Credit Card</option>
-                    <option value="paypal">PayPal</option>
-                </select>
+        <!-- Become a WSpace Partner -->
+        <div class="partner-form-container">
+            <h3>Become a WSpace Partner</h3>
+            <p>We are on a mission to make software toolmaking ubiquitous, but we can't do it alone. Become a WSpace partner and grow with us.</p>
+            
+            <h4>Which partner program is the right one for you?</h4>
+            <p>Find the partner program that works for you and enjoy the benefits of working with WSpace.</p>
 
-                <button type="submit">Submit</button>
-            </form>
+            <!-- Partner Program Options -->
+            <div class="program-options">
+                <div class="program-card">
+                    <h5>Technology Partner Program</h5>
+                    <p>WSpace works best when connected with other tools that power our work. Our technology partners build integrations that connect workflows, drive productivity, and delight our joint users.</p>
+                    <a href="#" class="btn">Become a technology partner →</a>
+                </div>
+                
+                <div class="program-card">
+                    <h5>Solutions Partner Program</h5>
+                    <p>Help us support the unique needs of WSpace customers and grow your business. Solutions partners unlock new sales and services opportunities, get prioritized leads, and benefit from dedicated support & resources.</p>
+                    <a href="#" class="btn">Become a solutions partner →</a>
+                </div>
+
+                <div class="program-card">
+                    <h5>Security & Compliance Partner Program</h5>
+                    <p>Join dozens of Security & Compliance partners around the globe and help us ensure security and compliance for WSpace Enterprise customers.</p>
+                    <a href="#" class="btn">Become a security & compliance partner →</a>
+                </div>
+
+                <div class="program-card">
+                    <h5>Startup Partner Program</h5>
+                    <p>Offer your startup network free WSpace access and resources, including 6 months free of WSpace Plus, unlimited AI, exclusive software discounts, and get access to our Startups Champions Community.</p>
+                    <a href="#" class="btn">Become a startup partner →</a>
+                </div>
+
+                <div class="program-card">
+                    <h5>Affiliate Partner Program</h5>
+                    <p>Refer WSpace to friends and followers and earn 50% of all referred payments with no limit. As an Affiliate partner, you get to track your rewards and get access to our Affiliates Resource Center.</p>
+                    <a href="#" class="btn">Become an affiliate partner →</a>
+                </div>
+            </div>
+
+            <p>Join our ecosystem of 1,000+ WSpace partners</p>
+
+            <!-- Partner Testimonials -->
+            <div class="partner-testimonials">
+                <div class="testimonial">
+                    <p><em>"Figma’s integrations on WSpace offer a seamless and visual way to use our tools in concert, delighting our joint users and making work more collaborative."</em></p>
+                    <h6>Anna Kohnen, Head of Partnerships at Figma, WSpace technology partner</h6>
+                </div>
+
+                <div class="testimonial">
+                    <p><em>"We are thrilled to be partnered with WSpace. Intercom and WSpace's startup programs deliver huge value to startups, empowering founders with the tools they need to scale their businesses."</em></p>
+                    <h6>Pedro Muller, Head of Startups at Intercom, WSpace startup partner</h6>
+                </div>
+
+                <div class="testimonial">
+                    <p><em>"I love sharing the tools I build inside of WSpace. And WSpace's affiliate program lets me get paid doing the things I already wanted to do."</em></p>
+                    <h6>Thomas Frank, Content creator, WSpace affiliate partner</h6>
+                </div>
+            </div>
         </div>
+
     </div>
 </section>

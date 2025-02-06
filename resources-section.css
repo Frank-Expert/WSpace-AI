@@ -10,15 +10,18 @@
 
 /* Section Background */
 #resources {    
-    padding: 50px 20px;
+    padding: 0 !important;
     color: #fff;
+
 }
 
 /* Title Styling */
 #resources h2 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
     color: #969090;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     background: linear-gradient(to right, #f39c12, #e74c3c);
     background-clip: text; /* Standard property */
     -webkit-background-clip: text;
@@ -44,8 +47,7 @@
 
 
 /* Blog Section Styling */
-#blog-item {
-    padding: 20px;
+#blog-item {    
     text-align: center;
     box-shadow: 0 0 10px 5px rgba(29, 9, 9, 0.4);
     max-width: 1200px; /* Set a max width for the blog item container */
@@ -156,8 +158,6 @@
     color: #2ecc71;
 }
 
-
-
 /* Button Styling */
 #load-more-btn {
     padding: 10px 20px;
@@ -168,6 +168,7 @@
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #load-more-btn:hover {
@@ -178,182 +179,540 @@
 
 
 
-/* WSpace AI Academy Section */  
-#resources {  
-    display: flex; /* Use flexbox for centering */  
-    justify-content: center; /* Center the content horizontally */  
-    align-items: center; /* Center the content vertically (if applicable) */  
-    flex-direction: column; /* Align children in a column */  
-    padding: 20px; /* Add padding to the resources section */
-    
-}  
 
-.academy {
-    max-width: 1200px; /* Maximum width for the academy card */  
-    width: 100%; /* Ensure it takes the full width available up to max */  
-    border-radius: 8px; /* Rounded corners */  
-    padding: 30px; /* Increased padding for better spacing */  
-    margin: 20px 0; /* Margin to separate from other elements */  
-    font-family: 'Arial', sans-serif; /* Font style */  
-    color: #333; /* Text color */  
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */  
-    text-align: center; /* Center text alignment */ 
-    
-}  
 
-#resources .academy-link {  
-    display: block; /* Make the link behave like a block element */  
-    width: fit-content; /* Fit the width of the content */  
-    margin: 0 auto; /* Center the button */  
-    padding: 12px 35px; /* Button padding */  
-    background: linear-gradient(to right, #1abc9c, #16a085); /* Gradient background */  
-    color: white; /* Text color */  
-    border-radius: 30px; /* Rounded corners */  
-    font-size: 1.1rem; /* Font size */  
-    text-decoration: none; /* No underline */  
-    transition: background 0.3s ease, transform 0.3s ease; /* Transition effects */  
-    margin-top: 20px; /* Space between the paragraph and button */  
-}  
-
-.academy h3 {  
-    font-size: 26px; /* Size for main heading */  
-    color: #007bff; /* Accent color for main title */  
-    margin-bottom: 15px; /* Space below main heading */  
-}  
-
-.academy h4 {  
-    font-size: 22px; /* Size for subheadings */  
-    margin-top: 20px; /* Space above subheadings */  
-    margin-bottom: 10px; /* Space below subheadings */  
-    color: #0056b3; /* Darker accent color for subheadings */  
-}  
-
-.academy p {  
-    line-height: 1.6; /* Improved line height for readability */  
-    margin-bottom: 15px; /* Space below paragraphs */  
-}  
-
-.academy ul {  
-    list-style-type: none; /* Remove default bullet points */  
-    padding: 0; /* Remove default padding */  
-    margin: 0; /* Remove default margin */  
-}  
-
-.academy .icon-list {  
-    margin-bottom: 20px; /* Space below lists */  
-}  
-
-.academy .icon-list li {  
-    display: flex; /* Using flex for horizontal layout */  
-    align-items: center; /* Center alignment for icons */  
-    margin-bottom: 10px; /* Space between items */  
-}  
-
-.academy .icon {  
-    width: 24px; /* Set width for icons */  
-    height: 24px; /* Set height for icons */  
-    margin-right: 10px; /* Space between icon and text */  
+/* General Style for Academy Section */
+.resource-item.academy {      
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+.resource-item.academy h3 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #2df805; /* White text */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resource-item.academy p {
+    font-size: 16px;
+    color: #ddd; /* Lighter gray text */
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.academy-link {
+    display: inline-block;
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.academy-link:hover {
+    background-color: #0056b3;
+}
+
+/* Individual Course Styles */
+/* Header Styles */
+.resource-item.academy h3 {
+    font-size: 28px;
+    color: #0056b3;
+    margin-bottom: 15px;
+}
+
+.resource-item.academy h4 {
+    font-size: 24px;
+    color: #26be07;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+.icon-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.icon-list li {
+    width: 300px; /* Keep the width of the items the same */
+    background-color: #222; /* Dark background for each item */
+    border-radius: 8px;
+    padding-top: 10px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-list li img {
+    width: 80%; /* Increased image size */
+    height: auto; /* Increased image size */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.icon-list li i {
+    font-size: 40px; /* Increased icon size */
+    color: #fff; /* White icons */
+    margin-bottom: 20px;
+}
+
+.icon-list li strong {
+    display: block;
+    font-size: 20px;
+    color: #fff; /* White text */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.icon-list li p {
+    font-size: 14px;
+    color: #ccc; /* Light gray text */
+    line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* WSpace AI Academy Button Centering */
+.academy-link {
+    all: unset;
+    width: 150px; /* Adjust width */
+    height: 40px; /* Adjust height */
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px !important;
+    display: inline-flex;  /* Make it inline-flex for centering */
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    text-align: center;
+    margin: 0 auto;  /* Horizontally center the button */
+    margin-top: 20px !important;
+    display: flex;
+    justify-content: center; /* Center inside its parent */
+    align-items: center; /* Ensures proper vertical alignment */
+    
+    left: 50%;
+    transform: translateX(-50%); /* This centers the button horizontally */
+}
+
+  /* Button Shadow Effects */
+.academy-link::after,
+.academy-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+}
+
+.academy-link::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #282b2d;
+    border-radius: 10px;
+}
+
+.academy-link::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+}
+
+  /* Button Hover Effects */
+.academy-link:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+}
+
+.academy-link:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+  /* Button Active Effects */
+.academy-link:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*Guides and Tutorials*/
+/* General layout with a sleek, centered look */
+.guides-tutorials {
+    background: linear-gradient(135deg, #1a2a6c, #0e0d0d, #5a3f04);
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 50px !important;
+    margin-top: 50px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    color: #fff;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    
+}
 
-.guides-tutorials {  
-    max-width: 1000px; /* Maximum width of the section */  
-    border: 1px solid #dee2e6; /* Light border */  
-    border-radius: 8px; /* Rounded corners */  
-    padding: 30px; /* Padding for inner spacing */  
-    margin: 20px auto; /* Center and separate from other elements */  
-    font-family: 'Arial', sans-serif; /* Font style */  
-    color: #333; /* Text color */  
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */  
-    text-align: center; /* Center text */  
-}  
+.guides-tutorials h3 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
 
-.guides-tutorials h3 {  
-    font-size: 26px; /* Size for the main title */  
-    color: #007bff; /* Accent color for the title */  
-    margin-bottom: 15px; /* Space below the title */  
-}  
+.guides-tutorials p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
 
-.guides-tutorials p {  
-    line-height: 1.6; /* Improved line height for readability */  
-    margin-bottom: 20px; /* Space below the paragraph */  
-}  
+/* Center video and allow flexible aspect ratios */
+.video-guide {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+}
 
-/* Video Guide Styles */  
-.video-guide {  
-    margin-bottom: 30px; /* Space below the video guide */  
-}  
-
-.video-guide video {  
-    width: 100%; /* Full width of its parent */  
-    max-width: 600px; /* Limit the maximum width */  
-    border-radius: 5px; /* Slightly rounded corners */  
-}  
-
-.video-guide p {  
-    font-weight: bold; /* Make the video title bold */  
-    margin-top: 10px; /* Space above the title */  
-}  
-
-
-
-
-
-/* Written Guide Styles */  
-.written-guide {  
-    text-align: left; /* Left-align the text for better readability */  
-}  
-
-.written-guide h4 {  
-    font-size: 22px; /* Size for the guide title */  
-    color: #0056b3; /* Darker accent color for the guide title */  
-    margin-top: 20px; /* Space above the guide title */  
-    margin-bottom: 10px; /* Space below the guide title */  
-}  
-
-.written-guide p {  
-    line-height: 1.6; /* Improved line height for readability */  
+.video-guide video {
+    width: 50% !important;
+    max-width: 90%;
+    height: auto!important;
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease-in-out;
+    border: 5px solid #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 
+/* Styling for written guide section */
+.written-guide {
+    background-color: #2f2f2f;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;    
+    position: relative;
+}
+
+.written-guide::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 10%;
+    width: 80%;
+    height: 6px;
+    background: linear-gradient(45deg, #fdbb2d, #b21f1f);
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.written-guide h4 {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+}
+
+.written-guide p {
+    font-size: 1.1rem;
+    color: #dcdcdc;
+    line-height: 1.7;
+}
 
 
-/* Resource Item Cards */
-#resources .resource-item {
-    color: #e7dfdf;
-    border-radius: 10px;
+/* Ensure responsiveness */
+
+
+/* Webinars Section */
+.webinars {
     width: 100%;
     max-width: 1200px;
-    padding: 30px;
-    margin-bottom: 25px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left; /* Left-align for readability */
-    box-shadow: 0 0 10px 5px rgba(44, 12, 12, 0.4);
-    border-radius: 8px;
-}
-
-
-
-/* Resource Item Title */
-#resources .resource-item h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    background: linear-gradient(to right, #8e44ad, #3498db);
-    background-clip: text; /* Standard property */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    margin: 20px auto;    
+    background: #130b0b;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+/* Section Heading */
+.webinars h3 {
+    font-size: 2rem;
+    color: #32dd07;
+    margin-bottom: 20px;
+}
+
+/* Section Description */
+.section-description {
+    font-size: 1.1rem;
+    color: #f0e7e7;
+    margin-bottom: 30px;
+}
+
+/* Upcoming Webinars */
+.upcoming-webinars {
+    text-align: left;
+}
+
+.upcoming-webinars h4 {
+    font-size: 1.5rem;
+    color: #eee7e7;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Individual Webinar Items */
+.webinar-item {
+    display: flex;    
+    padding: 20px;
+    margin-bottom: 20px !important;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-bottom : 2px solid #f0e7e7;
+}
 
 
 
+/* Webinar Information */
+.webinar-info {
+    flex: 1;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the button */
+}
+
+.webinar-info h5 {
+    font-size: 1.3rem;
+    color: #c9e64a;
+    margin-bottom: 10px;
+}
+
+.webinar-details {
+    font-size: 1rem;
+    color: #c7c5c5;
+    margin: 5px 0;
+}
+
+.webinar-description {
+    font-size: 1rem;
+    color: #d6d1d1;
+    margin-top: 10px;
+}
+
+/* Webinar Image */
+.webinar-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.webinar-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    width: 250px;
+    height: auto;
+}
+
+/* Register Button */
+.register-button {
+    background: #b21f1f;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 20px !important;
+    /* Center the button */
+    position: relative;
+    left: 50%;
+    transform: translateX(0%);
+}
+
+.register-button:hover {
+    background: #fdbb2d;
+    
+}
+
+
+
+/* Recorded Webinars */
+.recorded-webinars {
+    margin-top: 40px;
+    text-align: left;
+    background: #141a2e;
+    margin-bottom: 20px !important;
+}
+
+.recorded-webinars h4 {
+    font-size: 1.5rem;
+    color: #68d112;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Individual Recorded Webinar */
+.recorded-item {
+    display: flex;
+    align-items: center;
+    background-color: transparent !important;
+    margin-bottom: 100px !important;
+    border-radius: 10px;    
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recorded-item video {
+    width: 35% !important;
+    height: auto !important;
+    border-radius: 8px;
+}
+
+.recorded-info {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.recorded-info h5 {
+    font-size: 1.2rem;
+    color: #b9a325;
+    margin-bottom: 10px;
+    margin-left: 20px !important;
+}
+
+.recorded-details {
+    font-size: 1rem;
+    color: #522b2b;
+    margin-bottom: 10px;
+    text-align: left !important;
+    margin-left: 50px !important;
+}
+
+.recorded-description {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+
+
+
+/*HELP CENTER*/
+/* General layout with a sleek, centered look */
+.help-center {
+    background: linear-gradient(135deg, #1a2a6c, #0e0d0d, #5a3f04);
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px !important;
+    margin-top: 50px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    color: #fff;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    
+}
+
+.help-center h3 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.help-center p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
 
 /* Centered Search Bar */
-#resources .help-search {
+.help-search {
     width: 60%; /* Reduced width for better balance */
     padding: 15px;
     border-radius: 50px;
@@ -367,36 +726,6 @@
     margin-right: auto;
 }
 
-
-
-
-
-
-
-
-
-
-/* Chat Support Button */
-#resources .chat-support button {
-    padding: 12px 30px;
-    background: linear-gradient(to right, #2ecc71, #27ae60);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    text-align: center;
-    
-}
-
-#resources .chat-support button:hover {
-    background: linear-gradient(to right, #27ae60, #2ecc71);
-}
-
-
-
-/* Help Center */
 /* Centering Help Text */
 #resources .resource-help-text {
     display: block;
@@ -406,10 +735,9 @@
     color: #9c4d4d;
 }
 
-
 /* Search Bar */
 #resources .help-search {
-    width: 70%;
+    width: 60%;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -435,7 +763,6 @@
 
 #resources .faq-question {
     background-color: transparent;
-    
     color: rgb(111, 143, 140);
     border: none;
     padding: 10px;
@@ -482,6 +809,7 @@
     font-size: 1.1rem;
     text-decoration: none;
     transition: background 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
 }
 
 #resources .chat-button:hover {
@@ -493,183 +821,466 @@
 
 
 
-/* Resource Form - Submit Button */
-#resources form.resource-form button {
-    padding: 12px 35px;
-    background: linear-gradient(to right, #3498db, #2980b9);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+
+
+
+/*COMMUNITY*/
+/* Community Section Styling */
+/* Community Section Styling */
+.community {
+    padding: 40px 20px;
+    background-color: #040d1a;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted effect */    
+    color: #333;
+    animation: fadeIn 1.2s ease-out;
 }
 
-#resources form.resource-form button:hover {
-    background: linear-gradient(to right, #2980b9, #3498db);
-}
-
-/* Written Guide */
-#resources .written-guide {
-    background: linear-gradient(to right, #242222, #151220);
-    padding: 25px;
-    border-radius: 10px;
-    margin-top: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Left-aligned for better reading */
-}
-
-#resources .written-guide h4 {
-    font-size: 1.5rem;
-    background: linear-gradient(to right, #2980b9, #8e44ad);
-    background-clip: text; /* Standard property */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 10px;
-}
-
-/* Resource Form - Text Areas and Inputs */
-#resources form.resource-form {
-    margin-top: 30px;
-    background: linear-gradient(to right, #ffffff, #f7f7f7);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-
-
-
-
-/* Smaller video thumbnails for video guides */
-#resources .video-guide video,
-#resources .recorded-webinars video {
-    width: 250px;
-    height: 150px;
-    border-radius: 15px;
-    margin-top: 20px;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-}
-
-#resources .video-guide video:hover,
-#resources .recorded-webinars video:hover {
-    transform: scale(1.15); /* Enlarges on hover */
-}
-
-
-
-
-
-/* General Styling for Form Containers */
-/* Hire a Consultant and Become a Partner Form Container */
-#consultant-form, #partner-form {
-    background: linear-gradient(to right, #535353, #2b1717);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Form Headers */
-#resources .resource-item h3 {
-    font-size: 2rem;
-    color: #f8fafc;
-    text-align: center;
+/* Heading Styles */
+.community h3 {
+    font-size: 2.2rem;
+    color: #2e7d32; /* Green to match the brand */
+    font-weight: 700;
     margin-bottom: 20px;
-    background: linear-gradient(to right, #8e44ad, #3498db);
-    background-clip: text; /* Standard property */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: slideInFromTop 0.8s ease-out;
+    text-align: center;
 }
 
-/* Input and Textarea Styles */
-#consultant-form input, #partner-form input, 
-#consultant-form textarea, #partner-form select {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
+/* Paragraph Styles */
+.community p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left !important;
+}
+
+/* Form Styling */
+.community-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    position: relative;    
+    left: 50%;
+    transform: translateX(-50%) !important;
+    
+}
+
+/* Targeting .form-group only within the community form */
+.community-form .form-group {
+    width: 60%;
+    margin-bottom: 10px !important;
+    animation: slideInFromBottom 0.8s ease-out forwards;
+}
+
+
+/* Label Styling */
+.form-group label {
     font-size: 1rem;
-    background-color: #f9f9f9;
-    color: #f7f4f4;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left;
+    display: block;
 }
 
-/* Focus State for Inputs */
-#consultant-form input:focus, #partner-form input:focus,
-#consultant-form textarea:focus, #partner-form select:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+/* Input Fields */
+.form-group input {
+    width: 100%;
+    height: 45px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    margin-top: 5px;
+    transition: border-color 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+/* Input Focus */
+.form-group input:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+}
+
+/* Placeholder Styling */
+.form-group input::placeholder {
+    color: #7e7c7c;
+    font-style: italic;
+
+}
+
+/* Submit Button Styling */
+.community-submit-button {
+    background-color: #cf420a;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;   
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Submit Button Hover and Active Effects */
+.community-submit-button:hover {
+    background-color: #388e3c;
+    
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/* Consultant Form Container */
+.consultant-form {
+    background-color: #1bb5f10a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    animation: fadeIn 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Keep relative positioning for the form */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Only horizontally center */
+    margin-top: 100px; /* Adds some spacing from the top */
+}
+
+/* Heading Style */
+.consultant-form h3 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #91e20f;
+    animation: slideIn 1.5s ease-out;
+    margin-top: 20px !important;
+}
+
+/* Form Styles */
+#consultant-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Targeting .form-group only within the consultant-form */
+.consultant-form .form-group {
+    width: 90%;
+    margin-bottom: 10px !important;
+    animation: slideInFromBottom 0.8s ease-out forwards;
+}
+
+
+/* Input and Textarea Styling */
+.consultant-form input, 
+.consultant-form textarea {
+    padding: 10px !important; /* Increased padding for a larger touch area */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    background-color: rgba(12, 37, 37, 0.363);
+    width: 100% !important; /* Make inputs and textareas take full available width */
+    max-width: 750px; /* Limit max width for larger screens */
+}
+
+/* Focus Effect */
+.consultant-form input:focus, 
+.consultant-form textarea:focus {
+    border-color: #007bff;
     outline: none;
 }
 
-/* Textarea for Project Description */
-#consultant-form textarea {
-    height: 150px;
+/* Textarea Specific Height */
+.consultant-form textarea {
+    height: 250px;
     resize: vertical;
-    text-indent: 10px; /* Indent for better readability */
+    color: #acaaaa;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Labels */
-#consultant-form label, #partner-form label {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-    color: #b42430;
-    display: block;
-    font-weight: bold;
-}
-
-/* Buttons */
-#consultant-form button, #partner-form button {
-    background: linear-gradient(to right, #3498db, #2980b9);
+/* Button Styling */
+/* Button Styling */
+.consultant-form button {   
+    display: block; /* Ensures the button behaves as a block element */
+    margin: 20px auto; /* Centers the button horizontally */
+    padding: 12px 35px;    
     color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.1rem;
     border-radius: 30px;
-    cursor: pointer;
+    font-size: 1.1rem;
+    text-decoration: none;
     transition: background 0.3s ease, transform 0.3s ease;
-    display: block;
-    margin: 20px auto;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    background-color: #3f2e9c;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    
+
 }
 
-#consultant-form button:hover, #partner-form button:hover {
-    background: linear-gradient(to right, #2980b9, #3498db);
-    transform: translateY(-3px); /* Slight lift on hover */
+/* Button Hover Effect */
+.consultant-form button:hover {
+    background-color: #0056b3;
 }
 
-/* Payment Method Dropdown */
-#partner-form select {
-    padding: 15px;
-    border: 2px solid #ddd;
+
+/* Input Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .consultant-form {
+        padding: 20px;
+        width: 90%;
+    }
+    
+    .consultant-form h3 {
+        font-size: 20px;
+    }
+    
+    .consultant-form input, 
+    .consultant-form textarea {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+/* Partner Form Container */
+.partner-form-container {
+    background-color: #0b1730;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 40px auto;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Heading Styles */
+.partner-form-container h3 {
+    text-align: center;
+    font-size: 32px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+.partner-form-container h4 {
+    font-size: 24px;
+    text-align: center;
+    color: #6c7742;
+    margin-top: 30px;
+}
+
+.partner-form-container p {
+    text-align: center;
+    font-size: 16px;
+    color: #865d5d;
+    margin-bottom: 20px;
+}
+
+/* Program Card Styling */
+.program-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.program-card {
+    border: solid 2px;
+    padding: 10px !important;
     border-radius: 8px;
-    background-color: #f9f9f9;
-    font-size: 1rem;
-    color: #333;
-}
-
-/* Alignment for Form Inputs */
-#consultant-form input[type="text"],
-#consultant-form input[type="email"],
-#partner-form input[type="text"],
-#partner-form input[type="email"] {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     text-align: left;
 }
 
-/* Center Aligning Form Buttons */
-#consultant-form button, #partner-form button {
-    display: block;
+.program-card h5 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #946f08;
+}
+
+.program-card p {
+    font-size: 14px;
+    color: #a59191;
+    margin-bottom: 20px;
+}
+
+.program-card .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;    
+    height: 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: center;
+    align-content: center;
+    
+}
+
+.program-card .btn:hover {
+    background-color: #45a049;
+}
+
+/* Testimonials Styling */
+.partner-testimonials {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.partner-testimonials .testimonial {    
+    padding: 20px !important;
+    background-color: #becceb;    
+    margin: 20px 20px !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.partner-testimonials .testimonial em {
+    font-style: italic;
+    color: #333;
+    font-size: 18px;
+}
+
+.partner-testimonials .testimonial h6 {
+    font-size: 16px;
+    color: #4CAF50;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .partner-form-container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .program-options {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .partner-form-container h3 {
+        font-size: 24px;
+    }
+
+    .partner-form-container p {
+        font-size: 14px;
+    }
+
+    .partner-testimonials .testimonial em {
+        font-size: 16px;
+    }
 }
