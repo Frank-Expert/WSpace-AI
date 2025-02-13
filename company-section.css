@@ -1,93 +1,154 @@
-
-
-/* Company Section Styling */
+/* Company Section */
 #company {
-    padding: 60px 20px;
-    color: #fff;
+    padding: 10px 20px;
     text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
+/* Section Title */
 #company h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #ff6b6b;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    animation: fadeInSlide 1.5s ease-in-out;
-    font-weight: lighter;
-}
-
-.company-group {
-    display: inline-block;
-    width: 22%;
-    margin: 20px 0;
-    padding: 20px;
-    text-align: left;
-    position: relative;
-    border-left: 2px solid #ff6b6b;
-    transition: transform 0.3s ease, color 0.3s ease;
-    animation: fadeInUp 2s ease-in-out;
-    
-}
-
-.company-group:not(:last-child) {
-    border-left: 2px solid #6d5151;
-    padding-left: 30px;
-}
-
-.company-group a h3 {
-    font-size: 18px;
-    color: #00bfff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 2.5rem;
+    color: #10fa10;
     margin-bottom: 10px;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: slideDown 1s ease-out forwards 0.3s;
+}
+
+/* Company Container */
+.company-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive Grid */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Company Cards */
+.company-group {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+/* Hover Effect */
+.company-group:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Icons - Assigning Unique Colors */
+.company-group h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
-    font-weight: lighter;
+    justify-content: center;
+    gap: 8px;
 }
 
-.company-group a h3 i {
-    margin-right: 10px;
-    color: #ff6b6b;
+.company-group h3 i {
+    font-size: 3.5rem;
+    transition: transform 0.3s ease;
 }
 
-.company-group a h3:hover {
-    color: #ff6b6b;
-    transform: translateX(5px);
+/* Hover Effect on Icons */
+.company-group:hover h3 i {
+    transform: rotate(10deg) scale(1.2);
 }
 
+/* Icon Colors */
+.company-group h3 i.fa-building { color: #ffcc00; }      /* About Us - Yellow */
+.company-group h3 i.fa-question-circle { color: #ff5733; } /* FAQs - Orange */
+.company-group h3 i.fa-file-alt { color: #3399ff; }        /* Policies - Blue */
+.company-group h3 i.fa-lock { color: #00cc99; }           /* Privacy - Teal */
+.company-group h3 i.fa-gavel { color: #9933ff; }          /* Terms - Purple */
+.company-group h3 i.fa-newspaper { color: #ff6699; }      /* News - Pink */
+.company-group h3 i.fa-scroll { color: #ff3300; }         /* Charter - Red */
+.company-group h3 i.fa-shield-alt { color: #00ffcc; }     /* Security - Cyan */
+.company-group h3 i.fa-home { color: #ff6600; }          /* Residency - Dark Orange */
+.company-group h3 i.fa-briefcase { color: #33cc33; }      /* Careers - Green */
+
+/* Description */
 .company-group p {
-    font-size: 16px;
-    color: #ddd;
-    margin: 0;
-    transition: color 0.3s ease;
+    font-size: 1rem;
+    color: #bbb;
+    line-height: 1.4;
+    text-align: start;
 }
 
-.company-group:hover {
-    transform: translateY(-10px);
+/* Links */
+.company-group a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.company-group:hover p {
-    color: #ff6b6b;
+/* Flip Card Effect (Optional) */
+.company-group {
+    perspective: 1000px;
 }
 
-/* Animations */
-@keyframes fadeInSlide {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
+.company-group .front,
+.company-group .back {
+    backface-visibility: hidden;
+    transition: transform 0.6s ease;
 }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.company-group .back {
+    transform: rotateY(180deg);
+    position: absolute;
 }
 
+.company-group:hover .front {
+    transform: rotateY(180deg);
+}
 
+.company-group:hover .back {
+    transform: rotateY(0deg);
+}
 
+/* Scroll Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-#about-content {
-    display: none; /* Hidden by default */
+/* Section Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide Down Title */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

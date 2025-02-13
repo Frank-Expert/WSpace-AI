@@ -1,44 +1,34 @@
-
-
-/* Resources Section Styling */
-/* Reset for the entire resources section */
-#resources * {
-    margin: 0;
+#resources {
+    background-color: #0f0f0f;
+    color: #ffffff;
     padding: 0;
-    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100%;
 }
 
-/* Section Background */
-#resources {    
-    padding: 0 !important;
-    color: #fff;
-
+#resources .container {
+    max-width: 100%;
+    margin: 0 auto;
 }
 
-/* Title Styling */
+#resources h2, 
+#resources h3, 
+#resources h4 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
 #resources h2 {
     font-size: 2.5rem;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    color: #969090;
-    margin-bottom: 0px;
-    background: linear-gradient(to right, #f39c12, #e74c3c);
-    background-clip: text; /* Standard property */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
+    color: #f8f8f7;
 }
 
-/* Paragraphs - Center Align */
 #resources p {
-    font-size: 1.2rem;
-    color: rgba(230, 222, 222, 0.8);
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    line-height: 1.8;
     text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }
-
 
 
 
@@ -47,51 +37,52 @@
 
 
 /* Blog Section Styling */
-#blog-item {    
+#blogs {    
     text-align: center;
-    box-shadow: 0 0 10px 5px rgba(29, 9, 9, 0.4);
-    max-width: 1200px; /* Set a max width for the blog item container */
-    margin: 0 auto; /* Centers the container horizontally */
+    box-shadow: 0 0 10px 5px rgba(160, 5, 5, 0.4);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Blog Item Header Styling */
-#blog-item h3 {
-    font-size: 24px;
+/* Blog Header & Text Styling */
+#blogs h3 {
+    font-size: 30px;
     margin-bottom: 10px;
+    color: #f5d209;
 }
 
-#blog-item p {
+#blogs p {
     font-size: 16px;
     color: #c7b4b4;
     margin-bottom: 20px;
 }
 
-/* Blog Container Styling */
+/* Blog Container */
 .blog-container {
-    margin: 0 auto;
-    padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping of items on smaller screens */
-    gap: 20px; /* Space between boxes */
-    justify-content: center; /* Centers the boxes horizontally */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0 auto;
 }
 
 /* Blog Preview Styling */
-#resources .blog-preview {
+.blog-preview {
     background: linear-gradient(to right, #191b1b, #110606);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Align text to the left */
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align content to the left inside each flex item */
-    width: 100%; /* Make sure the width fills the grid cell */
-    max-width: 350px; /* Limit the max width to 300px per box */
+    align-items: flex-start;
+    max-width: 350px;
+    width: 100%;
 }
 
-/* Blog Preview Header and Text Styling */
-#resources .blog-preview h4 {
+/* Blog Title Styling */
+.blog-preview h4 {
     font-size: 1.2rem;
     background: linear-gradient(to right, #f39c12, #e74c3c);
     background-clip: text;
@@ -100,7 +91,8 @@
     margin-bottom: 8px;
 }
 
-#resources .blog-preview p {
+/* Blog Description */
+.blog-preview p {
     color: #ffffff;
     text-align: justify;
     margin-bottom: 8px;
@@ -108,22 +100,19 @@
     font-weight: lighter;
 }
 
-.blog-preview .blog-image {
+/* Blog Image Container */
+.blog-image {
     width: 100%;
-    height: 200px; /* Fixed height for the image container */
+    height: 200px;
     overflow: hidden;
-    margin: 0; /* Remove all margins */
-    padding: 0; /* Remove all padding */
 }
 
-.blog-preview .blog-image img {
-    width: 100%; /* Ensure the image fills the container */
-    height: 100%; /* Ensure the image fills the container */
-    object-fit: cover; /* Preserve aspect ratio while covering the container */
-    margin: 0; /* Remove any margins */
-    padding: 0; /* Remove any padding */    
+/* Blog Image */
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
 
 /* Read More Button */
 
@@ -179,119 +168,182 @@
 
 
 
-
-
 /* General Style for Academy Section */
-.resource-item.academy {      
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+.wspace-ai.academy {    
+    border-radius: 12px;  
+    width: 100%;
+    margin: 50px auto;
+    background-color: #16152c;
 }
 
-.resource-item.academy h3 {
-    font-size: 42px;
-    font-weight: bold;
-    color: #2df805; /* White text */
-    text-align: center;
-    margin-bottom: 20px;
-}
 
-.resource-item.academy p {
-    font-size: 16px;
-    color: #ddd; /* Lighter gray text */
-    text-align: center;
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
 
-.academy-link {
-    display: inline-block;
-    background-color: #1e90ff;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.academy-link:hover {
-    background-color: #0056b3;
-}
-
-/* Individual Course Styles */
-/* Header Styles */
-.resource-item.academy h3 {
-    font-size: 28px;
-    color: #0056b3;
-    margin-bottom: 15px;
-}
-
-.resource-item.academy h4 {
-    font-size: 24px;
-    color: #26be07;
-    margin-top: 20px;
+.wspace-ai.academy h3 {
+    font-size: 30px;
     margin-bottom: 10px;
+    color: #f5d209;
 }
 
-
-
-
-
-
-
-
-
-
-.icon-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-}
-
-.icon-list li {
-    width: 300px; /* Keep the width of the items the same */
-    background-color: #222; /* Dark background for each item */
-    border-radius: 8px;
-    padding-top: 10px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+h4 {
+    color: #40e9cd;
+    margin-bottom: 10px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.icon-list li img {
-    width: 80%; /* Increased image size */
-    height: auto; /* Increased image size */
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-}
-
-.icon-list li i {
-    font-size: 40px; /* Increased icon size */
-    color: #fff; /* White icons */
-    margin-bottom: 20px;
-}
-
-.icon-list li strong {
-    display: block;
+.wspace-ai.academy h4 {
     font-size: 20px;
-    color: #fff; /* White text */
     margin-bottom: 10px;
-    font-weight: bold;
+    color: #43da16;
+    margin-top: 20px;
 }
 
-.icon-list li p {
-    font-size: 14px;
-    color: #ccc; /* Light gray text */
-    line-height: 1.4;
+
+p {
+    color: #bbb7b7;
+    line-height: 1.6;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%; /* Prevents text from overflowing */
 }
+
+
+/* Icons and Images */
+.icon-list-container {
+    
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+/* Default styling for all icon lists */
+.icon-list {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* General Scrolling Animations */
+@keyframes scroll-left {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+@keyframes scroll-right {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+}
+
+/* Apply independent movement to each li */
+.icon-list li {
+    display: inline-block;
+    min-width: 150px; /* Ensure visibility */
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap;
+    animation-duration: 10s; /* Adjust speed */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Odd sections move left */
+.icon-list-container:nth-of-type(odd) .icon-list li {
+    animation-name: scroll-left;
+}
+
+/* Even sections move right */
+.icon-list-container:nth-of-type(even) .icon-list li {
+    animation-name: scroll-right;
+}
+
+/* Ensure independent movement */
+.icon-list li {
+    animation-delay: 0s !important;
+}
+
+/* Clone effect to ensure all items remain visible */
+.icon-list::after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+
+/* Each List Item Adjusts in Height & Width Based on Content */
+.icon-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 180px; /* Minimum width */
+    max-width: 320px; /* Prevents extreme stretching */
+    width: auto; /* Adjusts dynamically */
+    padding: 10px;    
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border: solid 2px #f0f0f0;
+    height: auto; /* Adjusts height dynamically */
+}
+
+/* Prevents Text Overflow */
+.icon-list li h3, 
+.icon-list li h4, 
+.icon-list li p {
+    width: 100%;
+    white-space: normal;
+    overflow: hidden; /* Ensures no text overflow */
+    text-overflow: ellipsis; /* Adds "..." if text is too long */
+}
+
+/* Icons and Images Default Size */
+.icon-list img {
+    width: 40%;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 10px !important;
+}
+
+/* Icons and Images Default Size */
+.icon-list i {
+    width: 40%;
+    height: auto;    
+    font-size: 100px;
+    margin-bottom: 10px;
+    padding: 10px !important;
+}
+
+
+
+
+/* Different Colors for Each Icon */
+.icon-list li i.fa-python { color: #3776AB; } /* Python - Blue */
+.icon-list li i.fa-js { color: #F7DF1E; } /* JavaScript - Yellow */
+.icon-list li i.fa-java { color: #007396; } /* Java - Blue */
+.icon-list li i.fa-cuttlefish { color: #5C2D91; } /* C# - Purple */
+.icon-list li i.fa-html5 { color: #E34F26; } /* HTML5 - Red */
+.icon-list li i.fa-css3-alt { color: #1572B6; } /* CSS3 - Blue */
+.icon-list li i.fa-angular { color: #DD0031; } /* Agile - Red */
+
+/* Cybersecurity Icons */
+.icon-list li i.fa-shield-alt { color: #2E86C1; } /* Network Security - Blue */
+.icon-list li i.fa-laptop-code { color: #1ABC9C; } /* Ethical Hacking - Green */
+.icon-list li i.fa-lock { color: #E67E22; } /* Information Security - Orange */
+.icon-list li i.fa-balance-scale { color: #A569BD; } /* Compliance - Purple */
+.icon-list li i.fa-shield-virus { color: #C0392B; } /* Incident Response - Red */
+
+/* Data Science Icons */
+.icon-list li i.fa-table { color: #F39C12; } /* Excel - Yellow */
+.icon-list li i.fa-database { color: #34495E; } /* SQL - Dark Gray */
+.icon-list li i.fa-chart-line { color: #27AE60; } /* Statistical Analysis - Green */
+.icon-list li i.fa-pie-chart { color: #8E44AD; } /* Data Visualization - Purple */
+.icon-list li i.fa-robot { color: #3498DB; } /* Machine Learning - Blue */
 
 
 
@@ -306,13 +358,14 @@
 /* WSpace AI Academy Button Centering */
 .academy-link {
     all: unset;
-    width: 150px; /* Adjust width */
+    width: 100px; /* Adjust width */
     height: 40px; /* Adjust height */
     font-size: 16px;
     background: transparent;
     border: none;
     position: relative;
-    color: #f0f0f0;
+    color: #f5f109;
+    font-weight: bold;
     cursor: pointer;
     z-index: 1;
     padding: 10px 20px !important;
@@ -326,13 +379,17 @@
     text-align: center;
     margin: 0 auto;  /* Horizontally center the button */
     margin-top: 20px !important;
+    margin-bottom: 20px !important;
     display: flex;
     justify-content: center; /* Center inside its parent */
     align-items: center; /* Ensures proper vertical alignment */
     
-    left: 50%;
-    transform: translateX(-50%); /* This centers the button horizontally */
 }
+
+.academy-link:hover {
+    background-color: #127ef1;
+}
+
 
   /* Button Shadow Effects */
 .academy-link::after,
@@ -397,33 +454,37 @@
 
 
 
-/*Guides and Tutorials*/
-/* General layout with a sleek, centered look */
-.guides-tutorials {
-    background: linear-gradient(135deg, #1a2a6c, #0e0d0d, #5a3f04);
+/* Guides and Tutorials */
+.guides-tutorials {    
     border-radius: 10px;
-    margin: 0 auto;
-    margin-bottom: 50px !important;
-    margin-top: 50px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    box-shadow: 0 0 10px 5px rgba(160, 5, 5, 0.4);
     color: #fff;    
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    overflow: hidden;
-    
+    width: 100%;
+    max-width: 1200px;
 }
 
+/* Section Title */
 .guides-tutorials h3 {
-    font-size: 2rem;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    color: #f0f0f0;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #f5d209;
 }
 
+.guides-tutorials h4 {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+}
+
+/* Section Intro */
 .guides-tutorials p {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.8);
@@ -431,42 +492,63 @@
     margin-bottom: 30px;
 }
 
-/* Center video and allow flexible aspect ratios */
+/* Video Guides */
 .video-guide {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    max-width: 900px;
+    max-width: 700px;
     margin-bottom: 40px;
     justify-content: center;
     align-items: center;
 }
 
-.video-guide video {
-    width: 50% !important;
-    max-width: 90%;
-    height: auto!important;
+/* Video Styling */
+.video-item {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
     border-radius: 15px;
-    transition: box-shadow 0.3s ease-in-out;
-    border: 5px solid #ffffff;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
 }
 
 
-/* Styling for written guide section */
-.written-guide {
+
+.video-item video {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease-in-out;
+    
+}
+
+/* Video Description */
+.video-description {
+    font-size: 1rem;
+    color: #ddd;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Styling for Written Guide Section */
+.written-guides {
     background-color: #2f2f2f;
     border-radius: 15px;
     padding: 25px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
-    width: 90%;
+    width: 100%;
     max-width: 800px;
     margin: 30px auto;    
     position: relative;
 }
 
-.written-guide::before {
+/* Guide Section Header Styling */
+.written-guides::before {
     content: '';
     position: absolute;
     top: -15px;
@@ -478,7 +560,8 @@
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-.written-guide h4 {
+/* Guide Item */
+.written-guides h4 {
     font-size: 1.6rem;
     color: #fff;
     margin-bottom: 10px;
@@ -487,298 +570,384 @@
     font-weight: 700;
 }
 
-.written-guide p {
+.written-guides p {
     font-size: 1.1rem;
     color: #dcdcdc;
     line-height: 1.7;
+}
+
+/* Guide Item */
+.guide-item {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 5px solid #ffcc00;
+    transition: 0.3s ease-in-out;
+}
+
+.guide-item h5 {
+    font-size: 1.3rem;
+    color: #ffcc00;
+}
+
+.guide-item p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Unique Styling for "Read More" Links */
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    color: #121212;
+    background: #ffcc00;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.read-more:hover {
+    background: #fdbb2d;
+    color: #121212;
 }
 
 
 /* Ensure responsiveness */
 
 
+
 /* Webinars Section */
 .webinars {
     width: 100%;
     max-width: 1200px;
-    margin: 20px auto;    
-    background: #130b0b;
+    margin: auto;
+    background: #0c0909;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+
 }
 
-/* Section Heading */
+/* Section Title */
 .webinars h3 {
-    font-size: 2rem;
-    color: #32dd07;
-    margin-bottom: 20px;
-}
-
-/* Section Description */
-.section-description {
-    font-size: 1.1rem;
-    color: #f0e7e7;
-    margin-bottom: 30px;
-}
-
-/* Upcoming Webinars */
-.upcoming-webinars {
-    text-align: left;
-}
-
-.upcoming-webinars h4 {
-    font-size: 1.5rem;
-    color: #eee7e7;
-    margin-bottom: 15px;
     text-align: center;
-}
-
-/* Individual Webinar Items */
-.webinar-item {
-    display: flex;    
-    padding: 20px;
-    margin-bottom: 20px !important;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    border-bottom : 2px solid #f0e7e7;
-}
-
-
-
-/* Webinar Information */
-.webinar-info {
-    flex: 1;
-    padding-right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers the button */
-}
-
-.webinar-info h5 {
-    font-size: 1.3rem;
-    color: #c9e64a;
+    font-size: 2rem;
+    color: #ffcc00;
     margin-bottom: 10px;
 }
 
-.webinar-details {
-    font-size: 1rem;
-    color: #c7c5c5;
-    margin: 5px 0;
+.upcoming-webinars h4 {
+    font-size: 1.8rem;
+    color: #8194d3;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
+/* Description */
+.section-description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+/* Webinar Container - Responsive Grid */
+.webinar-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100% !important;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Webinar Info */
+.webinar-info {
+    flex: 1;
+    min-width: 300px; /* Ensures content doesn’t shrink too much */
+}
+
+.webinar-info h5 {
+    font-size: 1.5rem;
+    color: #d3d6c2;
+    text-align: center;
+    margin-bottom: 15px;
+    
+}
+
+/* Webinar Details - Table-Like Layout */
+.webinar-details-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #555;
+    border-radius: 8px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    margin-bottom: 15px;
+}
+
+/* Rows inside the table-like layout */
+.webinar-detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Last row should not have a border */
+.webinar-detail-row:last-child {
+    border-bottom: none;
+}
+
+/* Left column (labels) */
+.webinar-detail-row strong {
+    width: 40%;
+    text-align: left;
+    color: #e9e6db;
+    font-weight: bold;
+}
+
+/* Right column (data) */
+.webinar-detail-row span {
+    width: 60%;
+    text-align: left;
+    color: #ddd;
+}
+
+/* Webinar Description */
 .webinar-description {
     font-size: 1rem;
     color: #d6d1d1;
     margin-top: 10px;
+    text-align: left;
 }
 
 /* Webinar Image */
 .webinar-image {
     flex: 1;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    min-width: 300px;
 }
 
 .webinar-image img {
     max-width: 100%;
     border-radius: 8px;
-    width: 250px;
     height: auto;
 }
 
 /* Register Button */
 .register-button {
-    background: #b21f1f;
+    display: block;
+    width: 150px;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid #b2971f;
     color: #fff;
-    padding: 15px 25px;
-    border-radius: 8px;
+    text-align: center;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    margin-bottom: 20px !important;
-    /* Center the button */
-    position: relative;
-    left: 50%;
-    transform: translateX(0%);
+    border-radius: 8px;
+    margin: 15px auto;
+    transition: 0.3s;
 }
 
 .register-button:hover {
     background: #fdbb2d;
-    
+    color: #121212;
 }
+
+
 
 
 
 /* Recorded Webinars */
+/* Recorded Webinars Container */
 .recorded-webinars {
     margin-top: 40px;
     text-align: left;
-    background: #141a2e;
-    margin-bottom: 20px !important;
-}
-
-.recorded-webinars h4 {
-    font-size: 1.5rem;
-    color: #68d112;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-/* Individual Recorded Webinar */
-.recorded-item {
-    display: flex;
-    align-items: center;
-    background-color: transparent !important;
-    margin-bottom: 100px !important;
-    border-radius: 10px;    
-    margin-bottom: 20px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.recorded-item video {
-    width: 35% !important;
-    height: auto !important;
-    border-radius: 8px;
-}
-
-.recorded-info {
-    flex: 1;
-    padding-left: 20px;
-}
-
-.recorded-info h5 {
-    font-size: 1.2rem;
-    color: #b9a325;
-    margin-bottom: 10px;
-    margin-left: 20px !important;
-}
-
-.recorded-details {
-    font-size: 1rem;
-    color: #522b2b;
-    margin-bottom: 10px;
-    text-align: left !important;
-    margin-left: 50px !important;
-}
-
-.recorded-description {
-    font-size: 1rem;
-    color: #666;
-}
-
-
-
-
-
-/*HELP CENTER*/
-/* General layout with a sleek, centered look */
-.help-center {
-    background: linear-gradient(135deg, #1a2a6c, #0e0d0d, #5a3f04);
-    border-radius: 10px;
+    width: 100% !important; /* Allow it to be responsive */
+    max-width: 1200px;
     margin: 0 auto;
-    margin-bottom: 20px !important;
-    margin-top: 50px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-    color: #fff;    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
     
 }
 
+/* Section Title */
+.recorded-webinars h4 {
+    font-size: 1.8rem;
+    color: #8194d3;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Recorded Webinar Items */
+.recorded-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    gap: 20px;
+    flex-wrap: wrap; /* Enables auto-stacking on smaller screens */
+    justify-content: center;
+}
+
+/* Video Styling */
+.recorded-item video {
+    flex: 1; /* Allow video to take up available space */
+    max-width: 40%; /* Default size */
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    min-width: 250px; /* Prevents it from getting too small */
+}
+
+/* Recorded Webinar Info */
+.recorded-info {
+    flex: 1;
+    min-width: 250px; /* Prevents content from being too small */
+    text-align: left;
+}
+
+/* Recorded Webinar Heading */
+.recorded-info h5 {
+    font-size: 1.5rem;
+    color: #b9a325;
+    margin-bottom: 10px;
+}
+
+/* Recorded Webinar Details */
+.recorded-details {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Recorded Webinar Description */
+.recorded-description {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+/* Watch Now Button */
+.watch-now {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3f2e9c;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.watch-now:hover {
+    background: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+/* Help Center - Main Container */
+.help-center {
+    background-color: #1bb5f10a;
+    border-radius: 10px;
+    margin: 50px auto 20px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
+}
+
+/* Help Center Heading */
 .help-center h3 {
     font-size: 2rem;
+    text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 20px;
     color: #f0f0f0;
-    text-transform: uppercase;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.help-center p {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-/* Centered Search Bar */
-.help-search {
-    width: 60%; /* Reduced width for better balance */
-    padding: 15px;
-    border-radius: 50px;
-    border: 2px solid #1d1c1c;
-    margin-bottom: 30px;
-    font-size: 1rem;
-    background-color: #222121;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Help Center Subtext */
+.help-text {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Centering Help Text */
-#resources .resource-help-text {
-    display: block;
-    text-align: center;
     font-size: 1.1rem;
     margin-bottom: 20px;
-    color: #9c4d4d;
+    color: #f0d1d1;
 }
 
 /* Search Bar */
-#resources .help-search {
+#help-search {
     width: 60%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #464040;
+    padding: 15px;
+    border-radius: 50px;
+    border: 2px solid #1d1c1c;
     font-size: 1rem;
+    background-color: #222121;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto 30px;
 }
 
-/* FAQs */
-#resources .faqs h4 {
+/* FAQs Section */
+.faqs h4 {
     font-size: 1.4rem;
     margin-bottom: 10px;
     color: #5a7bd6;
 }
 
-#resources .faq-list {
+.faq-list {
     list-style: none;
     padding: 0;
+    text-align: left;
 }
 
-#resources .faq-item {
+.faq-item {
     margin-bottom: 15px;
 }
 
-#resources .faq-question {
+/* FAQ Buttons */
+.faq-question {
     background-color: transparent;
     color: rgb(111, 143, 140);
     border: none;
     padding: 10px;
-    border-radius: 5px;
     width: 100%;
     text-align: left;
     font-size: 1.1rem;
     cursor: pointer;
     transition: background 0.3s ease;
+    border-radius: 5px;
 }
 
-#resources .faq-question:hover {
+.faq-question:hover {
     background-color: #232a2e;
 }
 
-#resources .faq-answer {
+/* FAQ Answers */
+.faq-answer {
     display: none;
     padding: 10px 15px;
     text-align: left;
@@ -786,20 +955,10 @@
     margin-top: 5px;
     font-size: 1rem;
     color: #b31f1f;
-    text-align: left; /* Align text to the left */
-}
-
-#resources .resource-item p {
-    text-align: left; /* Align text to the left */
-    margin: 0 0 15px 0; /* Adjust bottom margin as needed */
-    font-size: 1rem; /* Set font size */
-    color: #c5bdbd; /* Set text color */
-    line-height: 1.6; /* Set line height for better readability */
-    padding-left: 50px;
 }
 
 /* Chat Button */
-#resources .chat-button {
+.chat-button {
     display: block;
     margin: 20px auto;
     padding: 12px 35px;
@@ -812,20 +971,13 @@
     cursor: pointer;
 }
 
-#resources .chat-button:hover {
-    background-color: #27ae60;
+.chat-button:hover {
+    background-color: #ae7327;
     transform: translateY(-2px);
 }
 
 
 
-
-
-
-
-
-/*COMMUNITY*/
-/* Community Section Styling */
 /* Community Section Styling */
 .community {
     padding: 40px 20px;
@@ -833,36 +985,35 @@
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted effect */    
-    color: #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    color: #fff;
     animation: fadeIn 1.2s ease-out;
 }
 
 /* Heading Styles */
 .community h3 {
     font-size: 2.2rem;
-    color: #2e7d32; /* Green to match the brand */
+    color: #2e7d32;
     font-weight: 700;
     margin-bottom: 20px;
-    line-height: 1.4;
     text-transform: uppercase;
     letter-spacing: 1px;
     animation: slideInFromTop 0.8s ease-out;
     text-align: center;
 }
 
-/* Paragraph Styles */
+/* Paragraph Styles (Now Left-Aligned) */
 .community p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #555;
+    color: #ddd;
     margin-bottom: 20px;
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
-    max-width: 100px;
+    max-width: 1000px;
+    text-align: left !important; /* Left-aligned text */
     margin-left: auto;
     margin-right: auto;
-    text-align: left !important;
 }
 
 /* Form Styling */
@@ -873,27 +1024,23 @@
     margin-top: 30px;
     opacity: 0;
     animation: fadeIn 1.5s ease-out forwards;
-    width: 80%;
-    align-items: center;
-    justify-content: center;
-    position: relative;    
-    left: 50%;
-    transform: translateX(-50%) !important;
-    
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto; /* Centering form */
 }
 
-/* Targeting .form-group only within the community form */
+/* Form Groups */
 .community-form .form-group {
-    width: 60%;
-    margin-bottom: 10px !important;
+    width: 100%;
+    margin-bottom: 15px;
     animation: slideInFromBottom 0.8s ease-out forwards;
 }
 
-
 /* Label Styling */
-.form-group label {
+.community-form label {
     font-size: 1rem;
-    color: #333;
+    color: #ccc;
     margin-bottom: 8px;
     font-weight: bold;
     text-align: left;
@@ -901,92 +1048,72 @@
 }
 
 /* Input Fields */
-.form-group input {
+.community-form input {
     width: 100%;
     height: 45px;
     padding: 12px 15px;
     border-radius: 8px;
     border: 1px solid #ddd;
     font-size: 1rem;
-    margin-top: 5px;
     transition: border-color 0.3s ease;
     outline: none;
-    box-sizing: border-box;
     background-color: #fff;
 }
 
 /* Input Focus */
-.form-group input:focus {
+.community-form input:focus {
     border-color: #2e7d32;
     box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
 }
 
 /* Placeholder Styling */
-.form-group input::placeholder {
+.community-form input::placeholder {
     color: #7e7c7c;
     font-style: italic;
-
 }
 
-/* Submit Button Styling */
+/* Submit Button (Centered) */
 .community-submit-button {
     background-color: #cf420a;
     color: #fff;
     padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 1.2rem;   
+    border-radius: 10px;
+    font-size: 1.2rem;
     cursor: pointer;
-    width: 100%;
     max-width: 300px;
-    height: 50px;
-    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
     font-weight: bold;
     margin-top: 20px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     display: block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-left: auto;
+    margin-right: auto; /* Centered button */
 }
 
-/* Submit Button Hover and Active Effects */
+/* Button Hover Effect */
 .community-submit-button:hover {
     background-color: #388e3c;
-    
 }
 
 /* Animations */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 @keyframes slideInFromTop {
-    0% {
-        transform: translateY(-30px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    0% { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes slideInFromBottom {
-    0% {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
 }
+
+
+
 
 
 
@@ -995,7 +1122,7 @@
 
 /* Consultant Form Container */
 .consultant-form {
-    background-color: #1bb5f10a;
+    background-color: #0efcfc0a;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -1005,38 +1132,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative; /* Keep relative positioning for the form */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Only horizontally center */
-    margin-top: 100px; /* Adds some spacing from the top */
+    position: relative; /* Keep relative positioning */
+    margin: 10px auto; /* Centers the form horizontally */
 }
+
 
 /* Heading Style */
 .consultant-form h3 {
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
-    color: #91e20f;
+    color: #a0fa0f;
     animation: slideIn 1.5s ease-out;
-    margin-top: 20px !important;
+    
 }
 
 /* Form Styles */
 #consultant-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 /* Targeting .form-group only within the consultant-form */
 .consultant-form .form-group {
-    width: 90%;
+    width: 100%;
     margin-bottom: 10px !important;
     animation: slideInFromBottom 0.8s ease-out forwards;
 }
@@ -1070,6 +1196,16 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.consultant-form input::placeholder,
+.consultant-form textarea::placeholder {
+    color: rgba(182, 173, 173, 0.7); /* Light white color */
+    font-style: italic; /* Optional: Italic styling */
+    font-size: 1rem; /* Adjust font size */
+    opacity: 1; /* Ensures full visibility */
+    font-weight: 300 !important; /* Adjust font weight */
+}
+
+
 /* Button Styling */
 /* Button Styling */
 .consultant-form button {   
@@ -1083,7 +1219,7 @@
     transition: background 0.3s ease, transform 0.3s ease;
     cursor: pointer;
     width: 150px;
-    height: 40px;
+    height: auto;
     background-color: #3f2e9c;
     position: relative;
     align-items: center;
@@ -1091,8 +1227,6 @@
     text-align: center;
     display: flex;
     justify-content: center;
-    left: 50%;
-    transform: translateX(-50%);
     
 
 }
@@ -1126,36 +1260,18 @@
     }
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
-    .consultant-form {
-        padding: 20px;
-        width: 90%;
-    }
-    
-    .consultant-form h3 {
-        font-size: 20px;
-    }
-    
-    .consultant-form input, 
-    .consultant-form textarea {
-        font-size: 14px;
-    }
-}
-
-
 
 
 
 
 /* Partner Form Container */
 .partner-form-container {
-    background-color: #0b1730;
-    padding: 30px;
-    border-radius: 12px;
+    background-color: #0b1730;    
+    width: 100% !important;
+    border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 0 auto;
     animation: fadeIn 1s ease-out;
 }
 
@@ -1163,7 +1279,7 @@
 .partner-form-container h3 {
     text-align: center;
     font-size: 32px;
-    color: #4CAF50;
+    color: #0bf313;
     margin-bottom: 20px;
     animation: slideIn 1s ease-out;
 }
@@ -1171,7 +1287,7 @@
 .partner-form-container h4 {
     font-size: 24px;
     text-align: center;
-    color: #6c7742;
+    color: #c3f010;
     margin-top: 30px;
 }
 
@@ -1201,12 +1317,12 @@
 .program-card h5 {
     font-size: 22px;
     margin-bottom: 15px;
-    color: #946f08;
+    color: #ca970b;
 }
 
 .program-card p {
     font-size: 14px;
-    color: #a59191;
+    color: #cebbbb;
     margin-bottom: 20px;
 }
 
@@ -1216,12 +1332,11 @@
     background-color: #4CAF50;
     color: white;
     width: 100%;    
-    height: 40px;
+    height: auto;
     text-decoration: none;
     border-radius: 30px;
     font-size: 16px;
     transition: background-color 0.3s ease;
-
     text-align: center;
     align-items: center;
     align-content: center;
@@ -1241,7 +1356,7 @@
 .partner-testimonials .testimonial {    
     padding: 20px !important;
     background-color: #becceb;    
-    margin: 20px 20px !important;
+    margin: 10px auto !important;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
@@ -1255,7 +1370,7 @@
 
 .partner-testimonials .testimonial h6 {
     font-size: 16px;
-    color: #4CAF50;
+    color: #033605;
     margin-top: 15px;
     font-weight: bold;
 }

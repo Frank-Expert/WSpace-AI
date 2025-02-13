@@ -1,53 +1,66 @@
-
-
-//Hamburger menu
-
-// Toggle the Hamburger Menu
+// Function to toggle the Hamburger Menu
 function toggleHamburgerMenu(event) {
     event.stopPropagation(); // Prevent click from bubbling up
-    document.getElementById("hamburger-dropdown").classList.toggle("show");
-}
-
-// Close menu when clicking outside
-function closeHamburgerMenu(event) {
     let menu = document.getElementById("hamburger-dropdown");
-    let hamburgerIcon = document.querySelector(".hamburger-menu");
-
-    // Close the menu only if the click is outside the menu and the hamburger icon
-    if (!menu.contains(event.target) && !hamburgerIcon.contains(event.target)) {
-        menu.classList.remove("show");
-    }
+    menu.classList.toggle("show");
 }
 
+// Function to close ALL menus (hamburger + submenus)
+function closeAllMenus() {
+    let hamburgerDropdown = document.getElementById("hamburger-dropdown");
+    let submenus = document.querySelectorAll(".submenu");
 
+    // Hide hamburger menu
+    hamburgerDropdown.classList.remove("show");
 
+    // Hide all submenus
+    submenus.forEach((submenu) => {
+        submenu.style.display = "none";
+    });
+}
 
-// Handle submenu hover to prevent flickering
+// Function to close submenu when clicking an item inside it
+function closeSubMenuOnClick() {
+    let allMenuItems = document.querySelectorAll(".submenu a, .navbar a, .hamburger-menu a");
+
+    allMenuItems.forEach((item) => {
+        item.addEventListener("click", function () {
+            closeAllMenus();
+        });
+    });
+}
+
+// Handle submenu hover to show and hide
 document.addEventListener("DOMContentLoaded", function () {
     let submenus = document.querySelectorAll(".has-submenu");
 
     submenus.forEach((submenu) => {
+        let subMenuElement = submenu.querySelector(".submenu");
+
         submenu.addEventListener("mouseenter", function () {
-            let subMenuElement = this.querySelector(".submenu");
             if (subMenuElement) {
                 subMenuElement.style.display = "block";
             }
         });
 
         submenu.addEventListener("mouseleave", function () {
-            let subMenuElement = this.querySelector(".submenu");
             if (subMenuElement) {
                 subMenuElement.style.display = "none";
             }
         });
     });
 
-    // Attach click event listeners
+    // Attach event listeners
     document.querySelector(".hamburger-menu").addEventListener("click", toggleHamburgerMenu);
-    document.addEventListener("click", closeHamburgerMenu);
+    document.addEventListener("click", function (event) {
+        // Close everything if clicking outside of menu
+        if (!event.target.closest(".hamburger-menu, .navbar, .submenu")) {
+            closeAllMenus();
+        }
+    });
+
+    closeSubMenuOnClick(); // Ensure menus close on item click
 });
-
-
 
 
 //JavaScript for Navigation Block:
@@ -169,31 +182,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //RESOURCES
-// Event listener for the chat button
-document.getElementById('chat-button').addEventListener('click', function() {
-    alert('Chat with our support team will be available soon!'); // Placeholder alert for chat functionality
-});
-
-// Consultant form submission handler
-document.getElementById('consultant-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting
-    alert('Thank you for submitting the form. Our consultant will contact you soon!');
-});
-
-// Partner form submission handler
-document.getElementById('partner-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting
-    alert('Your partnership request has been submitted!');
-});
-
-document.getElementById('load-more-btn').addEventListener('click', function () {
-    window.location.href = '/blogs'; // Replace '/blogs' with the URL of your full blog page
-});
-
-//Guides and Tutorials
-
-
-//Ensure All Sections are Loaded Before Accessing Them
 
 
 
@@ -247,4 +235,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//services section hidden information in each div class
