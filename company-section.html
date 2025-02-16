@@ -1,8 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <link rel="stylesheet" href="styles.css"> <!-- Path to your CSS file -->
     <link rel="stylesheet" href="company-section.css"> <!-- Link to the new CSS file -->
     <script src="scripts.js" defer></script>
 </head>
+
+
+
+
+
+<body>
+    
 
 <!-- Company Section -->
 <section id="company">
@@ -10,11 +19,10 @@
         <h2>Company</h2>
         <div class="company-container">
             <!-- Company Section in company-section.html -->
-            
 
-            <div class="company-group">
+            <div class="company-group" id="company-section">
                 <div class="front">
-                    <a href="company-pages/about-us.html" id="about-link" target="_self">
+                    <a href="#panel-1">
                         <h3><i class="fas fa-building"></i> About Us</h3>
                     </a>
                     <p>Find answers to commonly asked questions.</p>
@@ -24,10 +32,43 @@
                     <p>Discover our History</p>                    
                 </div>
             </div>
+            
+            <div id="panel-1" class="content-panel">
+                <a href="#company-section" class="back-link">← Back</a>
+                <h3>About Us</h3>
+                <p>At WSpace AI, we are at the forefront of innovation, bridging the gap between advanced technology and practical solutions. 
+                    Our journey began with a vision to revolutionize the tech industry by combining robotics, 
+                    artificial intelligence, and mobile app development to tackle modern challenges and drive business growth.</p>
+            
+                <h4>Our History</h4>
+                <p>Founded with a passion for pushing the boundaries of technology, WSpace AI has evolved into a leading provider of cutting-edge solutions. 
+                    Over the years, we have successfully partnered with a diverse range of industries, 
+                    delivering tailored solutions that enhance efficiency and effectiveness.</p>
+            
+                <h4>Our Mission</h4>
+                <p>Our mission is to empower businesses with innovative technology that transforms their 
+                    operations and drives success. We are dedicated to delivering high-quality, 
+                    customized solutions that meet the unique needs of our clients, leveraging the latest advancements in AI and robotics.</p>
+            
+                <h4>Our Vision</h4>
+                <p>We envision a future where technology seamlessly integrates with everyday business practices, enhancing capabilities 
+                    and fostering growth. At WSpace AI, we strive to be a global leader in technological innovation, 
+                    constantly exploring new frontiers and setting new standards in the industry.
+
+                </p>
+            </div>
+            
+
+            
+
+
+
+
+
 
             <div class="company-group">
                 <div class="front">
-                    <a href="#faqs">
+                    <a href="#panel-2">
                         <h3><i class="fas fa-question-circle"></i> FAQs</h3>
                     </a>
                     <p>Find answers to commonly asked questions.</p>
@@ -36,10 +77,46 @@
                     <p>Find answers to commonly asked questions in our detailed FAQ section.</p>
                 </div>
             </div>
+            
+            <!-- FAQs Content Panel -->
+            <div id="panel-2" class="content-panel">
+                <a href="#" class="back-link">← Back</a>
+                <h3>FAQs</h3>
+                <p>Frequently Asked Questions (FAQs) are a list of common questions and answers that help customers understand key aspects of our services. These questions include:</p>
+            
+                <h4>1. How do I integrate the API?</h4>
+                <p>To integrate our API, follow the detailed instructions provided in our documentation. If you need assistance, our support team is available to help ensure a seamless integration process.</p>
+            
+                <h4>2. What is the pricing for consultants?</h4>
+                <p>Consulting services are priced based on the scope and complexity of your project. For a personalized quote, please contact us to discuss your specific needs and objectives.</p>
+            
+                <h4>3. What industries do you specialize in?</h4>
+                <p>We specialize in various industries, including finance, healthcare, manufacturing, and technology, tailoring our solutions to meet the unique needs of each sector.</p>
+            
+                <h4>4. How long does it take to develop a mobile app?</h4>
+                <p>Development timelines vary based on project complexity. On average, it takes 3 to 6 months from concept to launch. We provide a detailed timeline after assessing your project requirements.</p>
+            
+                <h4>5. Can you customize solutions for specific business needs?</h4>
+                <p>Yes, we offer tailored solutions to address the unique requirements of your business, ensuring that our technology aligns with your specific objectives.</p>
+            
+                <h4>6. What support do you provide after deployment?</h4>
+                <p>We offer ongoing support, including regular updates, bug fixes, and technical assistance to ensure your solution continues to function smoothly.</p>
+            
+                <h4>7. How do you ensure data security in your solutions?</h4>
+                <p>We implement robust encryption protocols, secure access controls, and conduct regular security audits to protect your data and comply with industry standards.</p>
+            
+                <h4>8. Do you offer training for using your solutions?</h4>
+                <p>Yes, we provide comprehensive training, including user guides, sessions, and ongoing support to help you effectively utilize our solutions.</p>
+            </div>
+            
+
+
+
+
 
             <div class="company-group">
                 <div class="front">
-                    <a href="#policies">
+                    <a href="#panel-3">
                         <h3><i class="fas fa-file-alt"></i> Policies</h3>
                     </a>
                     <p>Read our company policies on various aspects.</p>
@@ -48,10 +125,74 @@
                     <p>Read about our company policies and how they affect our services.</p>
                 </div>
             </div>
+            
+            <!-- Policies Content Panel -->
+            <div id="panel-3" class="content-panel">
+                <a href="#" class="back-link">← Back</a>
+                <h3>Policies</h3>
+            
+                <h4>1. Privacy Policy</h4>
+                <p>Policies are a set of guiding principles designed to influence decisions and actions within the company, 
+                    ensuring that operations run smoothly and in compliance with regulations. 
+                    At WSpace AI, we are committed to protecting your privacy. Our Privacy Policy outlines 
+                    how we collect, use, and safeguard your personal information. 
+                    We adhere to stringent measures to ensure that your data remains confidential and secure.
+                </p>
+            
+                <h4>2. Terms of Service</h4>
+                <p>Terms and Conditions (T&Cs) are the legal agreements between WSpace AI and its clients, outlining the rules for using our services. 
+                    Our Terms of Service detail the conditions under which we provide our services.
+                    By using our products and services, you agree to comply with these terms, 
+                    which include provisions on service usage, intellectual property rights, and liability limitations.
+                </p>
+            
+                <h4>3. Data Security Policy</h4>
+                <p>Data security options refer to the methods and technologies used to protect sensitive client information from unauthorized access, breaches, or theft. 
+                    We prioritize data security through rigorous measures, including encryption, secure access controls, and regular audits. 
+                    Our Data Security Policy ensures that your information is protected from unauthorized access and breaches.
+                </p>
+            
+                <h4>4. Refund and Cancellation Policy</h4>
+                <p>Refund and Cancellation Policies outline the conditions under which clients can request a refund or cancel services. 
+                    Our Refund and Cancellation Policy outlines the procedures and conditions for requesting refunds or canceling services. 
+                    We aim to provide transparency and fairness in handling such requests.
+                </p>
+            
+                <h4>5. Service Level Agreement (SLA)</h4>
+                <p>A Service Level Agreement (SLA) is a contract between WSpace AI and its clients that defines the expected 
+                    level of service, including response times, availability, and issue resolution. 
+                    The SLA defines the performance standards and guarantees for our services. It includes details on uptime, support response times, 
+                    and resolution procedures to ensure that we meet your expectations and deliver high-quality service.
+                </p>
+            
+                <h4>6. Compliance Policy</h4>
+                <p>A Compliance Policy ensures that WSpace AI adheres to all relevant legal and regulatory requirements in its operations. 
+                    We comply with all relevant laws and regulations applicable to our industry. 
+                    Our Compliance Policy ensures that our practices align with legal requirements and industry standards.
+                </p>
+            
+                <h4>7. Ethical Standards Policy</h4>
+                <p>The Ethical Standards Policy establishes the moral guidelines that govern behavior 
+                    within the company and in its interactions with clients and partners. 
+                    Our Ethical Standards Policy reflects our commitment to integrity and ethical behaviour in all our business dealings. 
+                    We strive to maintain high ethical standards and encourage transparency and honesty in our operations.
+                </p>
+            
+                <h4>8. Customer Support Policy</h4>
+                <p>A Customer Support Policy outlines how the company will assist customers in resolving issues, 
+                    providing guidance, and answering questions. We are dedicated to providing excellent customer support. 
+                    Our Customer Support Policy outlines the available support channels, response times, 
+                    and procedures for addressing your inquiries and issues.
+                </p>
+            </div>
+            
+
+
+
 
             <div class="company-group">
                 <div class="front">
-                    <a href="#privacy">
+                    <a href="#panel-4">
                         <h3><i class="fas fa-lock"></i> Privacy</h3>
                     </a>
                     <p>Understand how we protect your data.</p>
@@ -60,10 +201,66 @@
                     <p>Learn about our privacy practices and how we secure your information.</p>
                 </div>
             </div>
+            
+            <!-- Privacy Content Panel -->
+            <div id="panel-4" class="content-panel">
+                <a href="#" class="back-link">← Back</a>
+                <h3>Privacy</h3>
+            
+                <h4>1. Data Collection</h4>
+                <p>At WSpace AI, we collect personal and business information necessary for providing and improving our services. 
+                    This may include contact details, usage data, and other relevant information. 
+                    We collect data in compliance with applicable privacy laws and regulations.
+                </p>
+            
+                <h4>2. Data Usage</h4>
+                <p>Your data is used to enhance our services, communicate with you, and provide personalized experiences. 
+                    We do not use your information for purposes beyond those outlined 
+                    in our Privacy Policy, and we ensure it is handled with strict confidentiality.
+                </p>
+            
+                <h4>3. Data Protection</h4>
+                <p>We implement robust security measures, including encryption and secure access controls, 
+                    to protect your data from unauthorized access, alteration, or disclosure. 
+                    Our security practices are regularly reviewed and updated to safeguard your information.
+                </p>
+            
+                <h4>4. Data Sharing</h4>
+                <p>We do not share your data with third parties without your consent, except as required by law or to fulfill our service obligations. 
+                    Any third-party services we use are vetted for compliance with our privacy standards.
+                </p>
+            
+                <h4>5. User Rights</h4>
+                <p>You have the right to access, correct, or delete your personal information. 
+                    If you have any concerns about your data or wish to exercise these rights, 
+                    please contact us, and we will assist you per applicable laws.
+                </p>
+            
+                <h4>6. Data Retention</h4>
+                <p>We retain your data only for as long as necessary to fulfill the purposes for which it was collected, or as required by law. 
+                    Once data is no longer needed, we take appropriate measures to securely dispose of it.
+                </p>
+            
+                <h4>7. Changes to the Privacy Policy</h4>
+                <p>We may update our Privacy Policy from time to time to reflect changes in our practices or legal requirements. 
+                    We will notify you of any significant changes and encourage you to review the policy periodically.
+                </p>
+            
+                <h4>8. Contact Us</h4>
+                <p>For any questions or concerns about our privacy practices, please contact us directly. 
+                    Our team is available to address your inquiries and ensure that your privacy is protected.
+                </p>
+            </div>
+            
+
+
+
+
+
 
             <div class="company-group">
                 <div class="front">
-                    <a href="#terms">
+                    <a href="#panel-5">
                         <h3><i class="fas fa-gavel"></i> Terms and Conditions</h3>
                     </a>
                     <p>Review the terms and conditions of our services.</p>
@@ -73,21 +270,139 @@
                 </div>
             </div>
             
+            <!-- Terms and Conditions Content Panel -->
+            <div id="panel-5" class="content-panel">
+                <a href="#" class="back-link">← Back</a>
+                <h3>Terms and Conditions</h3>
+            
+                <h4>1. Acceptance of Terms</h4>
+                <p>By accessing or using our services and products, you agree to comply with and be bound by these Terms and Conditions. 
+                    If you do not agree with these terms, please do not use our services.
+                </p>
+            
+                <h4>2. Services Provided</h4>
+                <p>WSpace AI offers a range of technology solutions, including mobile app development, robotics, artificial intelligence, and consulting services. 
+                    Details of the services provided are outlined in our service agreements and on our website.
+                </p>
+            
+                <h4>3. Intellectual Property</h4>
+                <p>All intellectual property rights related to our services and products, including but not limited to software, 
+                    content, and branding, are owned by WSpace AI or its licensors. 
+                    You may not use, reproduce, or distribute any of our intellectual property without prior written consent.
+                </p>
+            
+                <h4>4. User Responsibilities</h4>
+                <p>You agree to use our services and products following applicable laws and regulations. 
+                    You are responsible for any activities that occur under your account 
+                    and for maintaining the confidentiality of your account credentials.
+                </p>
+            
+                <h4>5. Payment Terms</h4>
+                <p>Payment terms for our services are outlined in our service agreements. 
+                    You agree to pay all applicable fees per the terms specified. Late payments may incur additional charges.
+                </p>
+            
+                <h4>6. Limitation of Liability</h4>
+                <p>WSpace AI is not liable for any indirect, incidental, or consequential damages arising from 
+                    the use of our services or products. Our liability is limited to the maximum extent permitted by law.
+                </p>
+            
+                <h4>7. Termination</h4>
+                <p>We reserve the right to terminate or suspend access to our services if you breach these Terms and Conditions. 
+                    You may terminate your use of our services by providing written notice under the terms of our service agreements.
+                </p>
+            
+                <h4>8. Changes to Terms</h4>
+                <p>We may update these Terms and Conditions from time to time. We will notify you of any significant changes, 
+                    and your continued use of our services constitutes acceptance of the updated terms.
+                </p>
+            
+                <h4>9. Governing Law</h4>
+                <p>These Terms and Conditions are governed by and construed under the laws of [Your Jurisdiction]. 
+                    Any disputes arising under these terms will be subject to the exclusive jurisdiction of the courts in [Your Jurisdiction].
+                </p>
+            
+                <h4>10. Contact Information</h4>
+                <p>For any questions or concerns regarding these Terms and Conditions, please contact us at [ ]. 
+                    We are here to assist you and ensure your understanding of our terms.
+                </p>
+            </div>
+            
+
+
+
+
+
+
             <div class="company-group">
                 <div class="front">
-                    <a href="#news">
+                    <a href="#panel-6">
                         <h3><i class="fas fa-newspaper"></i> News</h3>
                     </a>
-                    <p>Stay updated with the latest news from WW-Space AI.</p>
+                    <p>Stay updated with the latest news from WSpace AI.</p>
                 </div>
                 <div class="back">
                     <p>Read our latest news and updates directly from our team.</p>
                 </div>
             </div>
+            
+            <!-- News Content Panel -->
+            <div id="panel-6" class="content-panel">
+                <a href="#" class="back-link">← Back</a>
+                <h3>News</h3>
+                <h4>Stay updated with the latest news from WSpace AI.</h4>
+            
+                <h5>1. Latest Innovations and Updates</h5>
+                <p>Discover the newest developments and innovations from WSpace AI. 
+                    We regularly share updates about our latest projects, technological advancements, and product launches.
+                </p>
+            
+                <h5>2. Company Announcements</h5>
+                <p>Stay informed about important company news, including changes in our team, new partnerships, and major milestones. 
+                    We keep you updated on significant events and achievements at WSpace AI.
+                </p>
+            
+                <h5>3. Industry Insights</h5>
+                <p>Read about trends and insights from the tech industry. Our team shares expert opinions and analyses on 
+                    emerging technologies, market shifts, and industry news relevant to our services.
+                </p>
+            
+                <h5>4. Events and Webinars</h5>
+                <p>Find out about upcoming events, webinars, and conferences hosted or attended by WSpace AI. 
+                    Join us to learn more about our work, network with industry professionals, and participate in engaging discussions.
+                </p>
+            
+                <h5>5. Press Releases</h5>
+                <p>Access our official press releases for detailed information on major announcements and developments. 
+                    Our press releases provide in-depth information on our latest news and media coverage.
+                </p>
+            
+                <h5>6. Success Stories and Case Studies</h5>
+                <p>Read about our successful projects and client case studies. 
+                    Learn how WSpace AI's solutions have made a positive impact and 
+                    delivered value to businesses across various industries.
+                </p>
+            
+                <h5>7. Community Involvement</h5>
+                <p>Stay updated on our community involvement and corporate social responsibility initiatives. 
+                    Discover how we're contributing to social causes and making a difference in the community.
+                </p>
+            
+                <h5>8. Blog Highlights</h5>
+                <p>Explore featured blog posts from our team. Our blog offers valuable insights, tips, 
+                    and updates on topics related to technology, innovation, and business strategies.
+                </p>
+            </div>
+            
+
+
+
+
+
 
             <div class="company-group">
                 <div class="front">
-                    <a href="#charter">
+                    <a href="#panel-7">
                         <h3><i class="fas fa-scroll"></i> Our Charter</h3>
                     </a>
                     <p>Read our mission, vision, and guiding principles.</p>
@@ -96,10 +411,51 @@
                     <p>Explore our mission statement, vision, and the values that guide us.</p>
                 </div>
             </div>
+            
+            <!-- Our Charter Content Panel -->
+            <div id="panel-7" class="content-panel">
+                <a href="#" class="back-link">← Back</a>
+                <h3>Our Charter</h3>
+                <h4>Read our mission, vision, and guiding principles.</h4>
+            
+                <h5>1. Mission Statement</h5>
+                <p>At WSpace AI, our mission is to drive technological innovation and provide cutting-edge 
+                    solutions that empower businesses to thrive in a rapidly evolving digital landscape. 
+                    We are dedicated to delivering excellence through our expertise in AI-driven solutions, software development, and robotics.
+                </p>
+            
+                <h5>2. Vision</h5>
+                <p>Our vision is to be a global leader in AI and technology solutions, shaping the future with advanced artificial intelligence and robotics. 
+                    We aim to create impactful, transformative technologies that address critical challenges 
+                    in business and society, fostering growth and progress.
+                </p>
+            
+                <h5>3. Guiding Principles</h5>
+                <ul>
+                    <li><strong>Innovation:</strong> We are committed to continuous innovation, leveraging the latest technologies to deliver pioneering solutions that meet the evolving needs of our clients.</li>
+                    <li><strong>Integrity:</strong> We uphold the highest standards of integrity in all our business practices, ensuring transparency, honesty, and ethical behavior in every interaction.</li>
+                    <li><strong>Customer-Centricity:</strong> Our clients are at the heart of everything we do. We strive to understand their needs and provide tailored solutions that exceed their expectations.</li>
+                    <li><strong>Collaboration:</strong> We believe in the power of collaboration and teamwork. By working together with our clients and partners, we achieve greater results and drive mutual success.</li>
+                    <li><strong>Excellence:</strong> We pursue excellence in every aspect of our work, from the quality of our solutions to the professionalism of our team. Our commitment to excellence ensures that we deliver value and achieve outstanding results.</li>
+                    <li><strong>Sustainability:</strong> We are dedicated to sustainable practices and creating solutions that contribute to the long-term well-being of our environment and society.</li>
+                </ul>
+            
+                <h5>4. Values</h5>
+                <p>Our core values define who we are and guide our actions. At WSpace AI, we value innovation, integrity, excellence, and a commitment to making a positive impact. 
+                    These values are the foundation of our company culture and drive us to achieve our mission and vision.
+                </p>
+            </div>
+            
+
+
+
+
+
+
 
             <div class="company-group">
                 <div class="front">
-                    <a href="#security">
+                    <a href="#panel-8">
                         <h3><i class="fas fa-shield-alt"></i> Security and Privacy</h3>
                     </a>
                     <p>Discover our security measures to protect your data.</p>
@@ -108,10 +464,56 @@
                     <p>Learn about our security protocols and how we ensure your data is protected.</p>
                 </div>
             </div>
+            
+            <!-- Security and Privacy Content Panel -->
+            <div id="panel-8" class="content-panel">
+                <a href="#" class="back-link">← Back</a>
+                <h3>Security and Privacy</h3>
+            
+                <h5>1. Security Protocols</h5>
+                <p>At WSpace AI, we prioritize the security of your data with advanced encryption techniques, ensuring secure transmission and storage. 
+                    Our infrastructure is designed to protect against unauthorized access and cyber threats.</p>
+            
+                <h5>2. Access Controls</h5>
+                <p>We enforce strict access controls, including role-based access and multi-factor authentication (MFA). 
+                    Regular audits ensure that only authorized personnel handle sensitive information.</p>
+            
+                <h5>3. Regular Security Audits</h5>
+                <p>Our systems undergo routine security audits and penetration testing to identify vulnerabilities. 
+                    We continuously enhance security measures to stay ahead of emerging threats.</p>
+            
+                <h5>4. Data Protection Practices</h5>
+                <p>We adhere to global data protection best practices, including data anonymization and secure disposal methods. 
+                    Your information is handled with the highest level of care and compliance.</p>
+            
+                <h5>5. Incident Response</h5>
+                <p>In case of a security incident, our dedicated incident response team takes immediate action to mitigate risks. 
+                    Our protocols ensure minimal impact and swift resolution.</p>
+            
+                <h5>6. Compliance with Standards</h5>
+                <p>WSpace AI complies with international data security regulations, including **GDPR, CCPA**, and other industry standards. 
+                    We ensure full legal compliance and data protection transparency.</p>
+            
+                <h5>7. Employee Training</h5>
+                <p>Our employees undergo regular cybersecurity training to recognize and respond to potential threats. 
+                    This helps maintain a security-conscious culture within our organization.</p>
+            
+                <h5>8. Privacy Policy</h5>
+                <p>Our <a href="#privacy-policy">Privacy Policy</a> details how we collect, store, and protect personal data. 
+                    We prioritize transparency, ensuring you are informed about how your information is handled.</p>
+            </div>
+            
+
+
+
+
+
+
+
 
             <div class="company-group">
                 <div class="front">
-                    <a href="#residency">
+                    <a href="#panel-9">
                         <h3><i class="fas fa-home"></i> Residency</h3>
                     </a>
                     <p>Learn about our residency programs and opportunities.</p>
@@ -120,19 +522,142 @@
                     <p>Find out more about our residency programs and how to apply.</p>
                 </div>
             </div>
+            
+            <!-- Residency Content Panel -->
+            <div id="panel-9" class="content-panel">
+                <a href="#" class="back-link">← Back</a>
+                <h3>Residency Programs</h3>
+            
+                <h5>1. Overview</h5>
+                <p>Our residency programs provide a platform for individuals to engage with cutting-edge technology at WSpace AI. 
+                    Designed to foster **innovation, collaboration, and skill development**, these programs focus on mobile app development, robotics, and AI.</p>
+            
+                <h5>2. Program Highlights</h5>
+                <ul>
+                    <li>Hands-on experience with **advanced AI and tech solutions**.</li>
+                    <li>Guidance and mentorship from **industry experts**.</li>
+                    <li>Opportunities to contribute to **real-world projects**.</li>
+                    <li>Access to WSpace AI’s **state-of-the-art resources and research labs**.</li>
+                </ul>
+            
+                <h5>3. Application Process</h5>
+                <p>Apply through our **online portal** by submitting:</p>
+                <ul>
+                    <li>Updated **resume/CV**</li>
+                    <li>Cover letter outlining your **goals and interests**</li>
+                    <li>Work samples or project portfolio (if applicable)</li>
+                </ul>
+                <p>We review applications **on a rolling basis**, selecting candidates based on their fit with our program.</p>
+            
+                <h5>4. Eligibility Requirements</h5>
+                <p>The program is open to individuals with backgrounds in **technology, engineering, or related fields**. Ideal candidates should demonstrate:</p>
+                <ul>
+                    <li>Passion for **innovation and AI-driven solutions**</li>
+                    <li>Strong problem-solving and analytical skills</li>
+                    <li>A collaborative and growth-oriented mindset</li>
+                </ul>
+            
+                <h5>5. Benefits of Residency</h5>
+                <ul>
+                    <li>Work on **real-world challenges** and gain **practical experience**.</li>
+                    <li>Expand your professional **network** within the tech industry.</li>
+                    <li>Potential for **future collaborations or employment** with WSpace AI.</li>
+                </ul>
+            
+                <h5>6. Program Duration & Structure</h5>
+                <p>Our residency programs vary in duration, typically ranging from **a few months to a year**. 
+                    The structure includes **mentorship, hands-on projects, and continuous learning opportunities**.</p>
+            
+                <h5>7. FAQs</h5>
+                <p>For details on **specific programs, deadlines, and FAQs**, visit our **Residency FAQs** page or contact us.</p>
+            
+                <h5>8. Contact Us</h5>
+                <p>Have questions? Reach out to our Residency Program Coordinator at **[Your Contact Info]**.</p>
+            </div>
+
+            
+
+
 
             <div class="company-group">
                 <div class="front">
-                    <a href="#careers">
+                    <a href="#panel-10">
                         <h3><i class="fas fa-briefcase"></i> Careers</h3>
                     </a>
-                    <p>Explore career opportunities at WW-Space AI.</p>
+                    <p>Explore career opportunities at WSpace AI.</p>
                 </div>
                 <div class="back">
-                    <p>Check out career opportunities and join our growing team.</p>
+                    <p>Check out job openings and join our growing team.</p>
                 </div>
             </div>
+            
+            <!-- Careers Content Panel -->
+            <div id="panel-10" class="content-panel">
+                <a href="#" class="back-link">← Back</a>
+                <h3>Careers at WSpace AI</h3>
+            
+                <h5>1. Current Openings</h5>
+                <p>We’re always looking for **talented individuals** to join our team in areas like:</p>
+                <ul>
+                    <li>**AI & Machine Learning**</li>
+                    <li>**Software & Mobile App Development**</li>
+                    <li>**Cybersecurity & Data Protection**</li>
+                    <li>**Project Management & Business Development**</li>
+                    <li>**Marketing, Sales & Support**</li>
+                </ul>
+                <p>Browse our **current job openings** and apply for a role that fits your skills and interests.</p>
+            
+                <h5>2. Why Join WSpace AI?</h5>
+                <ul>
+                    <li>Be part of a **cutting-edge AI & technology company**.</li>
+                    <li>Collaborate on **innovative projects with global impact**.</li>
+                    <li>Enjoy a **supportive and dynamic work environment**.</li>
+                    <li>Get access to **career development, training, and mentorship**.</li>
+                </ul>
+            
+                <h5>3. How to Apply</h5>
+                <p>Submit your **resume/CV and cover letter** via our **online application portal**.  
+                   We review applications **on a rolling basis** and will reach out if your qualifications match our current needs.  
+                    Make sure to highlight:</p>
+                <ul>
+                    <li>Your **technical skills & experience**.</li>
+                    <li>How you align with **WSpace AI’s mission & values**.</li>
+                </ul>
+            
+                <h5>4. Internships & Entry-Level Positions</h5>
+                <p>We offer **internships and early-career opportunities** for recent graduates and young professionals.  
+                    These programs provide:</p>
+                <ul>
+                    <li>**Hands-on experience** with AI, robotics, and software development.</li>
+                    <li>**Mentorship from industry experts**.</li>
+                    <li>**Career development support & training**.</li>
+                </ul>
+            
+                <h5>5. Employee Benefits</h5>
+                <ul>
+                    <li>**Competitive salary packages**.</li>
+                    <li>**Health & wellness programs**.</li>
+                    <li>**Flexible work arrangements (remote/hybrid options)**.</li>
+                    <li>**Professional growth & learning opportunities**.</li>
+                </ul>
+            
+                <h5>6. Our Culture</h5>
+                <p>WSpace AI is built on a **culture of innovation, collaboration, and respect**.  
+                   We empower our employees to **take initiative, share ideas, and make an impact** in the tech world.</p>
+            
+                <h5>7. FAQs</h5>
+                <p>Have questions? Visit our **Careers FAQ** page for details on our **hiring process, policies, and growth opportunities**.</p>
+            
+                <h5>8. Contact Us</h5>
+                <p>Need assistance with your application? Contact our HR team at **[Your Contact Info]**.  
+                    We look forward to welcoming you to WSpace AI!</p>
+            </div>
+            
 
         </div>
     </div>
 </section>
+
+</body>
+</html>
+

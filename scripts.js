@@ -235,3 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+//COMPANY SECTION
+
+//content

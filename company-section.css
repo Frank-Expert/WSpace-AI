@@ -18,14 +18,7 @@
     animation: slideDown 1s ease-out forwards 0.3s;
 }
 
-/* Company Container */
-.company-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive Grid */
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
 
 /* Individual Company Cards */
 .company-group {
@@ -41,6 +34,7 @@
     opacity: 0;
     transform: translateY(30px);
     animation: fadeUp 1s ease-out forwards;
+    cursor: pointer;
 }
 
 /* Hover Effect */
@@ -96,28 +90,6 @@
 }
 
 /* Flip Card Effect (Optional) */
-.company-group {
-    perspective: 1000px;
-}
-
-.company-group .front,
-.company-group .back {
-    backface-visibility: hidden;
-    transition: transform 0.6s ease;
-}
-
-.company-group .back {
-    transform: rotateY(180deg);
-    position: absolute;
-}
-
-.company-group:hover .front {
-    transform: rotateY(180deg);
-}
-
-.company-group:hover .back {
-    transform: rotateY(0deg);
-}
 
 /* Scroll Animation */
 @keyframes fadeUp {
@@ -151,4 +123,235 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+
+
+
+
+.company-details {
+    padding: 30px;
+    background: #111; /* Dark Mode */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    min-height: 400px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.about-us-content h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.about-us-content h3 {
+    font-size: 24px;
+    color: #ff6600;
+    margin-top: 20px;
+}
+
+.about-us-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+#back-btn {
+    display: block;
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#back-btn:hover {
+    background: #e65c00;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+/* Prevent body scrolling when a panel is open */
+body:has(.content-panel:target) {
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Content Panel */
+.content-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    scrollbar-width: thin; /* Firefox smooth scrollbar */
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Show the panel when targeted */
+.content-panel:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hide company-container when a panel is opened */
+.content-panel:target ~ #company {
+    display: none;
+}
+
+/* Ensure body doesn't have double scrollbars */
+body {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+}
+
+/* Smooth scrolling for content panel */
+.content-panel::-webkit-scrollbar {
+    width: 6px;
+}
+
+.content-panel::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+/* Ensure .company-container remains a grid */
+.company-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Back button */
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #00f;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Active Panel (When Opened) */
+.content-panel.active {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Panel Heading */
+.content-panel h3 {
+    font-size: 1.8em;
+    color: #00ffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content-panel h4 {
+    font-size: 1.3em;
+    color: #00cccc;
+    margin-top: 15px;
+    text-align: start;
+}
+
+/* Subheadings */
+.content-panel h5 {
+    font-size: 1.3em;
+    color: #00cccc;
+    margin-top: 15px;
+    text-align: start;
+}
+
+/* Paragraphs */
+.content-panel p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #dddddd;
+    text-align: start;
+}
+
+/* Lists */
+.content-panel ul {
+    padding-left: 20px;
+    text-align: start;
+}
+
+.content-panel ul li {
+    font-size: 1.1em;
+    margin: 8px 0;
+    color: #cccccc;
+    text-align: start;
+}
+
+/* Close Button */
+.back-link {
+    display: inline-block;
+    color: #00ffff;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Scrollbar Customization */
+.content-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content-panel::-webkit-scrollbar-thumb {
+    background: #00cccc;
+    border-radius: 10px;
+}
+
+.content-panel::-webkit-scrollbar-track {
+    background: #222;
 }

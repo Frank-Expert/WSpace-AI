@@ -12,6 +12,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     animation: slideInFromTop 1s ease-in-out;
     font-weight: lighter;
+    justify-content: space-between ; /* Ensures proper spacing */
 }
 
 
@@ -45,6 +46,9 @@ body {
 
 .logo {
     flex: 1;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .logo img {
@@ -65,7 +69,7 @@ body {
 
 /* Navbar Container */
 nav {
-    flex: 3;
+    flex: 3.5;
     display: flex;    
     justify-content: flex-end; /* Align navigation to the right */
     flex-wrap: wrap; /* Allow items to wrap in smaller screens */
@@ -135,7 +139,7 @@ nav ul li.hover-trigger {
 nav ul li.hover-trigger .hover-content {
     display: none;
     position: fixed; /* Fix it within the viewport */
-    top: 80px;
+    top: 70px;
     left: 0; /* Align to the left edge */
     width: 100vw; /* Full viewport width */
     background-color: rgb(0, 0, 0);
@@ -202,13 +206,6 @@ nav ul li.hover-trigger .hover-content .hover-box p {
     line-height: 1.2;
 }
 
-/* Ensures no margin on the navbar */
-nav {
-    margin: 0; /* Remove margin between navbar and the content */
-}
-
-
-
 
 
 
@@ -244,11 +241,12 @@ nav {
     width: 100%; /* Default: Full width of flex container */    
     font-size: 14px;
     transition: width 0.3s ease-in-out;
+    width: 250px;
 }
 
 /* Search button */
 .search-bar button {
-    padding: 8px 12px;
+    padding: 10px 12px;
     border: 1px solid #2f67ce;
     background-color: #000;
     color: #fff;
@@ -301,7 +299,7 @@ nav {
 .hamburger-dropdown {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed so it stays in place */
-    top: 95px; /* Start from 110px from the top of the page */
+    top: 80px; /* Start from 110px from the top of the page */
     left: 0;
     background-color: rgb(0, 0, 0);
     width: 120px;
@@ -404,6 +402,17 @@ nav {
     .search-bar input {
         width: 70%; /* Reduce input size to take up less space */
     }
+
+    
+    /* Centering the search bar */
+    .search-bar {
+        flex: 15.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
 
     /* Hero Section */
     .hero-section {
@@ -569,6 +578,17 @@ nav {
         width: 75%; /* Adjust width */
     }
 
+    
+    /* Centering the search bar */
+    .search-bar {
+        flex: 15.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+
     .logo img {
         width: 70px; /* Adjust logo size */
     }
@@ -733,7 +753,7 @@ nav {
 
     .container {
         padding: 0 10px; /* Slightly reduced padding */
-        width: 95%; /* Allows more space on small screens */
+        width: 98%; /* Allows more space on small screens */
     }
 
     .search-bar input {
@@ -751,11 +771,22 @@ nav {
 
     .nav {
         display: none !important; /* Ensure nav is hidden */
+        
     }
 
     .logo img {
         width: 85px; /* Adjust logo size */
     }
+
+    
+    /* Centering the search bar */
+    .search-bar {
+        flex: 15.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 
     /* Hero Section */
     .hero-section {
@@ -888,8 +919,6 @@ nav {
         font-size: 1.3rem !important;        
     }
 
-    
-
 
 }
 
@@ -903,7 +932,7 @@ nav {
 
     .container {
         padding: 0 10px; /* Slightly reduced padding */
-        width: 95%; /* Allows more space on small screens */
+        width: 98%; /* Allows more space on small screens */
     }
 
     nav {
@@ -916,6 +945,15 @@ nav {
 
     .logo img {
         width: 100px; /* Smaller logo size for tablet */
+    }
+
+    /* Centering the search bar */
+    .search-bar {
+        flex: 15.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
     }
 
     /* Hero Section */
@@ -1066,6 +1104,18 @@ nav {
     nav {
         display: flex !important; /* Show navbar for small desktops */
     }
+
+     /* Navbar items */
+    nav ul {
+        display: flex;
+        gap: 0 ; /* Adds spacing between menu items */
+    }
+
+    nav ul li a {
+        font-size: 17px; /* Increase readability */
+        padding: 5px 10px; /* Adjusted padding for touch-friendly interaction */
+    }
+
 
     .hamburger-menu {
         display: none !important; /* Hide hamburger menu */
