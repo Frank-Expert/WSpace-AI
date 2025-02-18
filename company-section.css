@@ -6,6 +6,7 @@
     border-radius: 10px;
     opacity: 0;
     animation: fadeIn 1.5s ease-in-out forwards;
+    width: 1200px;
 }
 
 /* Section Title */
@@ -19,6 +20,14 @@
 }
 
 
+
+/* Company Section Grid Layout */
+#company .company-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+}
 
 /* Individual Company Cards */
 .company-group {
@@ -35,6 +44,18 @@
     transform: translateY(30px);
     animation: fadeUp 1s ease-out forwards;
     cursor: pointer;
+}
+
+/* Animation for company cards */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Hover Effect */
@@ -188,85 +209,38 @@
 
 
 
-/* Prevent body scrolling when a panel is open */
-body:has(.content-panel:target) {
-    overflow: hidden;
-    height: 100vh;
-}
-
-/* Content Panel */
-.content-panel {
-    position: fixed;
+ /* Scoped styles for the Company Section */
+#company .content-panel {
+    position: absolute;
     top: 0;
     left: 0;
-    margin: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #000;
-    color: #fff;
     padding: 20px;
+    z-index: 10;
+    display: none;
     overflow-y: auto;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    scrollbar-width: thin; /* Firefox smooth scrollbar */
-    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;   
     border: 1px solid rgba(0, 255, 255, 0.3);
     box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.6);
+
 }
 
-/* Show the panel when targeted */
-.content-panel:target {
-    opacity: 1;
-    visibility: visible;
+#company .content-panel:target {
+    display: block;
 }
 
-/* Hide company-container when a panel is opened */
-.content-panel:target ~ #company {
-    display: none;
-}
-
-/* Ensure body doesn't have double scrollbars */
-body {
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
-}
-
-/* Smooth scrolling for content panel */
-.content-panel::-webkit-scrollbar {
-    width: 6px;
-}
-
-.content-panel::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-}
-
-/* Ensure .company-container remains a grid */
-.company-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-/* Back button */
-.back-link {
-    display: inline-block;
+#company .back-link {
+    display: block;
     margin-bottom: 20px;
-    color: #00f;
-    text-decoration: underline;
-    cursor: pointer;
+    text-decoration: none;
+    color: #007BFF;
 }
 
-
-
-
+#company .back-link:hover {
+    text-decoration: underline;
+}
 
 
 
@@ -354,4 +328,189 @@ body {
 
 .content-panel::-webkit-scrollbar-track {
     background: #222;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERY*/
+
+/* Media Query for Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    #company {
+        width: 100%; /* Full width on smaller screens */
+        padding: 0;
+    }
+
+    #company h2 {
+        font-size: 1.8rem; /* Smaller font size for better readability */
+        letter-spacing: 0.5px;
+    }
+
+    #company .company-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        padding: 0;
+    }
+
+    .company-group {
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 1rem; /* Adjust font size for mobile screens */
+        margin-bottom: 0px;
+        
+        
+    }
+
+    .company-group h3 {
+        font-size: 1.2rem; /* Adjust icon text size */
+    }
+
+    .company-group p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
+    }
+
+    #back-btn {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    .content-panel {
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    .content-panel h3 {
+        font-size: 1.5em; /* Adjust panel heading for smaller screens */
+    }
+
+    .content-panel h4, .content-panel h5 {
+        font-size: 1.1em; /* Smaller subheading sizes */
+    }
+
+    .content-panel p {
+        font-size: 1em; /* Adjust text size */
+    }
+
+    .content-panel ul li {
+        font-size: 1em; /* Adjust list font size */
+    }
+}
+
+/* Media Query for Medium Screens (Tablets, max-width: 539px and min-width: 481px) */
+@media (max-width: 539px) and (min-width: 481px) {
+    #company {
+        width: 100%; /* Full width on medium screens */
+        padding: 15px;
+    }
+
+    #company h2 {
+        font-size: 2.2rem;
+        letter-spacing: 0.8px;
+    }
+
+    #company .company-container {
+        padding: 15px;
+    }
+
+    .company-group {
+        padding: 18px;
+        border-radius: 8px;
+    }
+
+    .company-group h3 {
+        font-size: 1.3rem; /* Adjust icon text size */
+    }
+
+    .company-group p {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    #back-btn {
+        font-size: 15px;
+        padding: 11px 17px;
+    }
+
+    .content-panel {
+        padding: 15px;
+    }
+
+    .content-panel h3 {
+        font-size: 1.7em; /* Adjust panel heading for medium screens */
+    }
+
+    .content-panel h4, .content-panel h5 {
+        font-size: 1.2em; /* Adjust subheading sizes */
+    }
+
+    .content-panel p {
+        font-size: 1.1em;
+    }
+
+    .content-panel ul li {
+        font-size: 1.1em;
+    }
+}
+
+/* Media Query for Larger Screens (Min-width: 540px) */
+@media (min-width: 540px) {
+    #company {
+        width: 1200px; /* Maintain original width */
+        padding: 20px;
+    }
+
+    #company h2 {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+
+
+    .company-group {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .company-group h3 {
+        font-size: 1.4rem;
+    }
+
+    .company-group p {
+        font-size: 1rem;
+    }
+
+    #back-btn {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+
+    .content-panel {
+        padding: 20px;
+    }
+
+    .content-panel h3 {
+        font-size: 1.8em;
+    }
+
+    .content-panel h4, .content-panel h5 {
+        font-size: 1.3em;
+    }
+
+    .content-panel p {
+        font-size: 1.1em;
+    }
+
+    .content-panel ul li {
+        font-size: 1.1em;
+    }
 }
