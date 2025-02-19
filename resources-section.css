@@ -1379,8 +1379,24 @@ p {
 @media (max-width: 600px) {
     .partner-form-container {
         padding: 20px;
-        width: 90%;
+        width: 100%;
     }
+
+    #resources h2 {
+        font-size: 2rem;
+        
+    }
+    
+    #resources p {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+    
+    
+    
+    
+    
 
     .program-options {
         grid-template-columns: 1fr;

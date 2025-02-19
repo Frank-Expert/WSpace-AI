@@ -19,7 +19,7 @@
 
 #contacts p {
     color: #b8b0b0; /* Gray color for text */
-    text-align: center;
+    text-align: start;
     margin-bottom: 20px;
 }
 
@@ -94,12 +94,17 @@
 /* Adjustments for smaller screens */
 @media (max-width: 600px) {
     #contacts {
-        padding: 20px;
+        padding: 10px;
     }
 
     #contacts h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
+
+    #contacts p {        
+        margin-bottom: 10px;
+    }
+    
 
     #contacts .form-group input,
     #contacts .form-group select {

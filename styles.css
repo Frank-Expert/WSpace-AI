@@ -301,7 +301,7 @@ nav ul li.hover-trigger .hover-content .hover-box p {
 .hamburger-dropdown {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed so it stays in place */
-    top: 60px !important; /* Start from 110px from the top of the page */
+    top: 70px !important; /* Start from 110px from the top of the page */
     left: 0;
     background-color: rgb(0, 0, 0);
     width: 120px;
@@ -394,7 +394,7 @@ nav ul li.hover-trigger .hover-content .hover-box p {
 
     /* Hamburger Dropdown Menu */
     .hamburger-dropdown {
-        top: 68px; /* Start from 110px from the top of the page */
+        top: 60px; /* Start from 110px from the top of the page */
     }
 
     .logo img {

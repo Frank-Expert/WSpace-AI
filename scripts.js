@@ -240,3 +240,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //content
 //LOAD SECTIONS FROM DIFF HTMLS
+function openModal() {
+    document.getElementById('consultationModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('consultationModal').style.display = 'none';
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    var modal = document.getElementById('consultationModal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}

@@ -40,15 +40,66 @@
 
                 
                 
-                <button class="cta-button" onclick="loadSection('resources', '#consultant-form')">
+                <!-- Button to Open the Modal -->
+                <button class="cta-button" onclick="openModal()">
                     Book Your Free Consultation
                 </button>
 
+                <!-- Modal Structure -->
+                <div id="consultationModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h2>Book Your Free Consultation</h2>
+                        
+                        <form id="consultant-form" class="consultant-form">
+                            <!-- Name Field -->
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                            </div>
+
+                            <!-- Phone Number Field (optional) -->
+                            <div class="form-group">
+                                <label for="phone">Phone Number (optional)</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            </div>
+
+                            <!-- Company Name -->
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company" placeholder="Enter your company name">
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Enter subject">
+                            </div>
+
+                            <!-- Project Description -->
+                            <div class="form-group">
+                                <label for="project">Project Description</label>
+                                <textarea id="project" name="project" required placeholder="Describe your project"></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="form-group">
+                                <button type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                
                 
 
-                <a href="resources-section.html#consultant-form" class="cta-button">
-                    Book Your Free Consultation
-                </a>
+                
 
                 
                 
@@ -102,7 +153,9 @@
                     <li class="discount">🎉 <strong>Exclusive Offer:</strong> First-time clients get <span class="highlight-discount">15% off</span> AI-powered automation tools.</li>
                 </ul>
 
-                <a href="#" class="cta-button">Unlock Smarter Pricing</a>
+                <button class="cta-button" onclick="loadSection('contacts')">
+                    Unlock Smarter Pricing
+                </button>
 
                 <!-- Supporting Images -->
                 <div class="container-images">
@@ -213,7 +266,10 @@
                     <li>✅ <strong>Smart AI Analytics</strong> – Leverages machine learning to <span class="highlight-number">increase revenue potential</span> by identifying profitable opportunities.</li>
                 </ul>
 
-                <a href="#" class="cta-button">Read AI Success Stories</a>
+                
+                <button class="cta-button" onclick="loadSection('resources')">
+                    Read AI Success Stories
+                </button>
 
                 <!-- Creative Content Blocks -->
                 <div class="container-text">
@@ -276,7 +332,10 @@
                     <li>✅ <strong>Beta Access to Emerging AI Models</strong> – Gain priority implementation of cutting-edge AI before public release.</li>
                 </ul>
 
-                <a href="#" class="cta-button">Claim Exclusive Offers</a>
+                
+                <button class="cta-button" onclick="loadSection('contacts')">
+                    Claim Exclusive Offers
+                </button>
 
                 <!-- Promotional Content Section -->
                 <div class="container-images">

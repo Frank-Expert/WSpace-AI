@@ -183,6 +183,7 @@
     text-align: center;
     text-decoration: none;
     justify-content: center;
+    cursor: pointer;
     
 }
 
@@ -375,10 +376,141 @@
 
 
 
+/* BOOK FREE CONSULTATION FORM */
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h2 {
+    font-size: 20px;
+}
+
+.modal-content label {
+    color: #00ff88;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #024a74f6;
+    padding: 20px;
+    width: 40%;
+    margin: 10% auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    resize: vertical;
+    height: 150px;
+}
+
+
+.form-group button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 5px;
+    
+    /* Centering */
+    display: block;
+    margin: 0 auto;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Query for Small Screens (Phones) */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Make it take more width */
+        margin: 20% auto; /* Adjust margin for better centering */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .modal-content h2 {
+        font-size: 18px; /* Reduce heading size */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px; /* Adjust input font size */
+        padding: 6px; /* Reduce padding */
+    }
+
+    .form-group button {
+        width: 100%; /* Full-width button */
+        padding: 12px; /* Bigger touch area */
+    }
+
+    .close {
+        font-size: 20px; /* Slightly smaller close button */
+        top: 5px;
+        right: 10px;
+    }
+}
+
+
 
 
 /* Small Mobile View (Up to 480px) */
 @media (max-width: 480px) {
+
+    .marketing-strategies h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        
+    }
+    
+    .marketing-strategies h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
     
     .strategy-item {
         padding: 10px; /* Reduce padding to fit smaller screens */
