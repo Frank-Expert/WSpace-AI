@@ -1,61 +1,193 @@
+/* 🔹 GENERAL STYLES */
+.marketing-strategies {
+    color: #ffffff;
+    padding: 0;
+    margin: 0 auto;
+}
 
-/* Pricing Section */
-/* General Styles */
-
-/* Center the Pricing Section */
-.pricing {
-    background-color: #0c0b0b;
-    padding: 0 20px;
-    border-radius: 10px;
+.container {
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto; /* Centers the container */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.marketing-strategies h2 {
+    font-size: 2.5rem;
+    color: #00ffd5;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.marketing-strategies h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #00ffd5;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.intro-text {
+    font-size: 1.2rem;
+    text-align: start;
+    max-width: 800px;
+    margin: 0 auto ;
+    line-height: 1.6;
+}
+
+.stress {
+    font-weight: 700;
+    color: #ffcc00;
+}
+
+/* 🔹 GRID LAYOUT */
+.strategy-grid {
+    
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* 🔹 STRATEGY ITEM */
+.strategy-item {
+    
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 255, 213, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    position: relative;
+    background: #0a0a0a; /* Dark theme for sophistication */
+    margin: 20px 0;
+    border-left: 4px solid #ffcc00;
+}
+
+
+
+/* 🔹 ICON STYLING */
+.icon {
+    font-size: 5rem;
+    margin-bottom: 15px;
     display: block;
+    text-align: center;
+}
+
+
+
+/* 🔹 PARAGRAPHS */
+.strategy-item p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #cccccc;
+}
+
+/* 🔹 LIST STYLING */
+.key-points {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.key-points li {
+    font-size: 1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.key-points li:last-child {
+    border-bottom: none;
+}
+
+/* 🔹 HIGHLIGHTED TEXT */
+.highlight {
+    color: #ffcc00;
+    font-weight: 600;
+}
+
+.highlight-number {
+    color: #00ff88;
+    font-weight: 700;
+}
+
+.highlight-discount {
+    color: #ff4444;
+    font-weight: 700;
+}
+
+.impact {
+    color: #00bcd4; /* Slightly different color for an engaging visual effect */
+    font-style: italic;
+}
+
+.consultation-benefits {
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Images Wrapper */
+
+/* Images Wrapper */
+.container-images {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Image Container */
+.image-container {
+    display: inline-block;
+    max-width: 450px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Image Styling */
+.strategy-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Image Caption */
+.image-caption {
+    font-size: 0.7em;
+    color: #bbb;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
+    text-align: start;
+    font-style: italic;
+}
+
+/* 🔹 CTA BUTTONS */
+.cta-button {
+    display: inline-block;
+    background: #00ffd5;
+    color: #121212;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+    justify-content: center;
     
 }
 
-.pricing h1 {
-    font-size: 36px;
-    color: #cc3e34;
-    text-align: center;    
-    animation: fadeInUp 1s ease-in-out;
-}
-
-
-/* Hover Effect for h3 */
-.pricing-section .service-type h3:hover {
-    color: #2980b9; /* Darker blue on hover */
-    transform: translateY(-3px); /* Slight upward movement on hover */
-}
-
-/* Specific Styles for Software Development Section */
-#software-development .service-type h3 {
-    color: #3498db; /* Blue color for consistency with the section border */
-}
-
-
-.pricing p {
-    font-size: 18px;
-    color: #d1bcbc;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Contact Sales Button */
-#contact-sales-btn {
-    display: block;
-    margin: 0 auto 40px;
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 12px 25px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#contact-sales-btn:hover {
-    background-color: #c0392b;
+.cta-button:hover {
+    background: #00ccaa;
     transform: scale(1.05);
 }
 
@@ -64,184 +196,181 @@
 
 
 
+/* Container for the creative text section */
+/* 📌 Grid Container for ROI Section */
+.container-text {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-adjusting columns */
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
 
-
-
-
-
-
-/* Pricing Sections */
-
-/* Pricing Sections */
-/* Container styling for pricing section */
-#pricing-section {
-    margin-bottom: 30px; /* Space between pricing sections */
 }
 
-/* Specific table styling for each service type */
-#pricing-section .pricing-details table {
+/* Table-style text container */
+.table-format {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #00ff8871;
+}
+
+/* Styling for the table */
+.membership-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Hide overflow */
+    margin-top: 10px;
 }
 
-/* Styling table headers */
-#pricing-section .pricing-details th {
-    background-color: #3498db;
-    color: #eee5e5;
+.membership-table th, .membership-table td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #777575;
+    border-bottom: 1px solid #444;
+    color: #ddd;
+}
+
+.membership-table th {
+    background: #ffcc00;
+    color: #121212;
+}
+
+/* Text block format */
+.text-block {
+    
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #00ff8871;
+}
+
+/* Headings */
+.text-container h4 {
+    font-size: 22px;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+/* Captions and descriptions */
+.text-caption {
+    font-size: 18px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.key-points li {
+    font-size: 17px;
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+
+
+/* Styling for ROI table */
+.roi-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.roi-table th, .roi-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    color: #ddd;
+}
+
+.roi-table th {
+    background: #ff5733;
+    color: #121212;
+}
+
+
+
+
+
+
+/* 📌 Thought Leadership Quote Section */
+.thought-leadership-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Equal spacing */
+    margin-top: 40px;
+    width: 100%;
+    flex-wrap: wrap; /* Allows items to move to the next row */
+}
+
+/* 📌 Thought Boxes (Common Styling) */
+.thought-box {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    flex-grow: 1; /* Ensures equal width */
+    max-width: 100%; /* Prevents overflow */
+}
+
+/* 📌 Circular Shape */
+.circle {
+    background: #054558;
+    border-radius: 50%;
+}
+
+/* 📌 Irregular Polygon Shape */
+.irregular {
+    background: #042368;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
+
+/* 📌 Quote Author */
+.quote-author {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+
+
+
+/* Hands-On AI Demos Table */
+.demo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.demo-table th, .demo-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.demo-table th {
+    background-color: #333;
+    color: #fff;
     font-weight: bold;
 }
 
-/* Styling table cells */
-#pricing-section .pricing-details td {
-    padding: 10px;
-    border-bottom: 1px solid #585656;
-    color: #ada5a5;
-}
-
-/* Unique styling for table rows */
-#pricing-section .pricing-details tr:nth-child(even) {
-    background-color: transparent;
-}
-
-/* Table caption styling */
-#pricing-section .pricing-details caption {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #007bff; /* Different color for captions */
-}
-
-/* Heading and paragraph styling */
-#pricing-section h2 {
-    color: #007bff; /* Blue color for section headings */
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    border-top: 2px solid #3498db; /* Underline effect */
-    padding-top: 4px;
-}
-
-#pricing-section p {
-    color: #cec9c9; /* Dark color for paragraphs */
-    line-height: 1.6;
-    margin: 5px 0;
-}
-
-/* Text alignment for pricing details */
-#pricing-section .pricing-details p {
-    text-align: left;
+.demo-table tr:nth-child(even) {
+    background-color: #181515;
 }
 
 
-
-
-
-
-
-
-
-
-
-/* Pricing Models Table */
-#models {    
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#models table {
-    width: 100%;
-    border-collapse: collapse;
-    animation: fadeIn 1s ease-in-out;
-}
-
-#models th, #models td {
-    padding: 15px;
-    text-align: left;
-}
-
-#models thead {
-    background-color: #3498db;
-    color: #fff;
-}
-
-#models th {
+/* Call-to-Action Description */
+.cta-description {
     font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #222;
 }
-
-#models td {
-    font-size: 16px;
-    color: #a9b1b0;
-}
-
-/* FAQ Section */
-#faq ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#faq li {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-#faq strong {
-    color: #3498db;
-}
-
-/* Start Creating Button */
-#start-creating #get-started-btn {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 12px 25px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: block;
-    margin: 20px auto;
-}
-
-#start-creating #get-started-btn:hover {
-    background-color: #2980b9;
-    transform: scale(1.05);
-}
-
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
-
-
-
-
 
 
 
@@ -250,358 +379,66 @@
 
 /* Small Mobile View (Up to 480px) */
 @media (max-width: 480px) {
-    .pricing {
-        padding: 0 10px;
-    }
-
-    .pricing h1 {
-        font-size: 20px;
-    }
-
-    /* Contact Sales Button */
-    #contact-sales-btn {        
-        margin: 0 auto 10px;        
-    }
-
-
-    #pricing-section h2 {        
-        font-size: 1.2em;     
-    }
-
-    .pricing p {
-        font-size: 12px;   
-        margin-bottom: 10px;
-    }
-
-
-    #contact-sales-btn {
-        font-size: 12px;
-        padding: 10px 10px;
-    }
-
-    #models th, #models td {
-        font-size: 12px;
-        padding: 10px;
-    }
-
-    .modal-content {
-        width: 90%;
-        padding: 10px;
-    }
-
-    .modal-content h2 {
-        font-size: 15px;
-    }
-
-    .modal-content p {
-        font-size: 16px;
-    }
-
-     /* FAQ Section */
-    #faq ul {
-        padding-left: 20px;
-    }
-
-    #faq li {
-        font-size: 12px;
-        margin-bottom: 10px;
-    }
-
-    #faq strong {
-        font-size: 14px;
-    }
-
-    /* Start Creating Button */
-    #start-creating #get-started-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-        
-    }
     
+    .strategy-item {
+        padding: 10px; /* Reduce padding to fit smaller screens */
+    }
+
+
+    /*Thought Leadership & AI Mastery*/
+    .thought-leadership-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .thought-box {
+        max-width: 250px; /* Reduce size for smaller screens */
+        width: auto;
+        max-height: 250px;
+        font-size: 16px; /* Adjust text size */
+        padding: 15px;
+    }
+
+
+    /*Hands-On AI Demos & Prototyping*/
+    .demo-table {
+        font-size: 14px; /* Decrease table font size */
+    }
+
+    .demo-table th, .demo-table td {
+        padding: 8px; /* Reduce padding to fit smaller screens */
+        font-size: 14px; /* Adjust text size */
+    }
+
+    .demo-table th {
+        font-size: 15px; /* Keep headers slightly larger */
+    }
+
+    .cta-description {
+        font-size: 16px; /* Reduce CTA text size for better readability */
+    }
 
 }
 
 /* Mobile View (481px - 768px) */
 @media (max-width: 768px) and (min-width: 481px) {
-    .pricing {
-        padding: 0 10px;
-    }
-
-    .pricing h1 {
-        font-size: 22px;
-    }
-
-    /* Contact Sales Button */
-    #contact-sales-btn {        
-        margin: 0 auto 10px;        
-    }
+    
 
 
-    #pricing-section h2 {        
-        font-size: 1.2em;     
-    }
-
-    .pricing p {
-        font-size: 12px;   
-        margin-bottom: 10px;
-    }
-
-
-    #contact-sales-btn {
-        font-size: 12px;
-        padding: 10px 10px;
-    }
-
-    #models th, #models td {
-        font-size: 12px;
-        padding: 10px;
-    }
-
-    .modal-content {
-        width: 90%;
-        padding: 10px;
-    }
-
-    .modal-content h2 {
-        font-size: 15px;
-    }
-
-    .modal-content p {
-        font-size: 16px;
-    }
-
-     /* FAQ Section */
-    #faq ul {
-        padding-left: 20px;
-    }
-
-    #faq li {
-        font-size: 12px;
-        margin-bottom: 10px;
-    }
-
-    #faq strong {
-        font-size: 14px;
-    }
-
-    /* Start Creating Button */
-    #start-creating #get-started-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-        
-    }
     
 }
 
 /* Tablet View (769px - 1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
-    .pricing {
-        padding: 0 10px;
-    }
-
-    .pricing h1 {
-        font-size: 24px;
-    }
-
-    /* Contact Sales Button */
-    #contact-sales-btn {        
-        margin: 0 auto 10px;        
-    }
-
-
-    #pricing-section h2 {        
-        font-size: 1.3em;     
-    }
-
-    .pricing p {
-        font-size: 14px;   
-        margin-bottom: 10px;
-    }
-
-
-    #contact-sales-btn {
-        font-size: 14px;
-        padding: 10px 10px;
-    }
-
-    #models th, #models td {
-        font-size: 12px;
-        padding: 10px;
-    }
-
-    .modal-content {
-        width: 90%;
-        padding: 10px;
-    }
-
-    .modal-content h2 {
-        font-size: 15px;
-    }
-
-    .modal-content p {
-        font-size: 16px;
-    }
-
-     /* FAQ Section */
-    #faq ul {
-        padding-left: 20px;
-    }
-
-    #faq li {
-        font-size: 12px;
-        margin-bottom: 10px;
-    }
-
-    #faq strong {
-        font-size: 14px;
-    }
-
-    /* Start Creating Button */
-    #start-creating #get-started-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-        
-    }
+    
 }
 
 /* Small Desktop View (1025px - 1199px) */
 @media (max-width: 1199px) and (min-width: 1025px) {
-    .pricing {
-        padding: 0 10px;
-    }
-
-    .pricing h1 {
-        font-size: 26px;
-    }
-
-    /* Contact Sales Button */
-    #contact-sales-btn {        
-        margin: 0 auto 10px;        
-    }
-
-
-    #pricing-section h2 {        
-        font-size: 1.4em;     
-    }
-
-    .pricing p {
-        font-size: 14px;   
-        margin-bottom: 10px;
-    }
-
-
-    #contact-sales-btn {
-        font-size: 14px;
-        padding: 10px 10px;
-    }
-
-    #models th, #models td {
-        font-size: 12px;
-        padding: 10px;
-    }
-
-    .modal-content {
-        width: 90%;
-        padding: 10px;
-    }
-
-    .modal-content h2 {
-        font-size: 15px;
-    }
-
-    .modal-content p {
-        font-size: 16px;
-    }
-
-     /* FAQ Section */
-    #faq ul {
-        padding-left: 20px;
-    }
-
-    #faq li {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-
-    #faq strong {
-        font-size: 16px;
-    }
-
-    /* Start Creating Button */
-    #start-creating #get-started-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-        
-    }
+    
 }
 
 /* Large Desktop View (1200px and above) */
 @media (min-width: 1200px) {
-    .pricing {
-        padding: 0 10px;
-    }
-
-    .pricing h1 {
-        font-size: 28px;
-    }
-
-    /* Contact Sales Button */
-    #contact-sales-btn {        
-        margin: 0 auto 10px;        
-    }
-
-
-    #pricing-section h2 {        
-        font-size: 1.5em;     
-    }
-
-    .pricing p {
-        font-size: 14px;   
-        margin-bottom: 10px;
-    }
-
-
-    #contact-sales-btn {
-        font-size: 15px;
-        padding: 10px 10px;
-    }
-
-    #models th, #models td {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .modal-content {
-        width: 90%;
-        padding: 10px;
-    }
-
-    .modal-content h2 {
-        font-size: 15px;
-    }
-
-    .modal-content p {
-        font-size: 16px;
-    }
-
-     /* FAQ Section */
-    #faq ul {
-        padding-left: 20px;
-    }
-
-    #faq li {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-
-    #faq strong {
-        font-size: 16px;
-    }
-
-    /* Start Creating Button */
-    #start-creating #get-started-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-        
-    }
+    
 }

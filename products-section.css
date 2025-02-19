@@ -77,10 +77,6 @@
     transform: translateX(5px);
 }
 
-.product-group:hover {
-    transform: translateY(-10px);
-    color: #ff6b6b;
-}
 
 /* Animations */
 @keyframes fadeInSlide {
@@ -96,6 +92,18 @@
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+.product-group h3 + p {
+    font-style: italic;
+    font-size: 0.875rem; /* Small text (14px if base is 16px) */
+    color: #777; /* Optional: subtle gray for better readability */
+    margin-top: 4px; /* Adjust spacing */
 }
 
 

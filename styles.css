@@ -52,7 +52,7 @@ body {
 }
 
 .logo img {
-    width: 50px !important; /* Adjusted width for smaller logo */
+    width: 60px !important; /* Adjusted width for smaller logo */
     transition: transform 0.5s ease;
 }
 

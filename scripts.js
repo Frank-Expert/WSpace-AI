@@ -239,3 +239,4 @@ document.addEventListener('DOMContentLoaded', () => {
 //COMPANY SECTION
 
 //content
+//LOAD SECTIONS FROM DIFF HTMLS
