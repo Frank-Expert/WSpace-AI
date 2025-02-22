@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Default description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSpace AI</title>
+    <link rel="icon" type="image/png" href="logo/w-space-ai.jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+    <meta name="description" content="WSpace AI: Revolutionizing engineering, research, and business with cutting-edge AI-driven solutions for various industries including FinTech, healthcare, and cybersecurity.">
+    <meta name="keywords" content="AI solutions, machine learning, FinTech, healthcare AI, cybersecurity AI, business automation, AI-powered tools, AI research">
+    <meta name="author" content="WSpace AI">
+    <meta property="og:title" content="WSpace AI - Innovating with AI for Better Future">
+    <meta property="og:description" content="Explore WSpace AI's groundbreaking services in AI-driven tools, machine learning models, and custom AI solutions for industries like finance, engineering, and more.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Frank-Expert/WSpace-AI/main/logo/w-space-ai.jpeg">
+    <meta property="og:url" content="https://frank-expert.github.io/WSpace-AI/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="WSpace AI - Innovating with AI for Better Future">
+    <meta name="twitter:description" content="Explore WSpace AI's groundbreaking services in AI-driven tools, machine learning models, and custom AI solutions.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Frank-Expert/WSpace-AI/main/logo/w-space-ai.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    
+    <meta name="twitter:image" content="https://www.yourwebsite.com/path/to/image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    
+</head>
+
+<body>
+
+    <!-- Loader Section (visible while loading) -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <img src="logo/w-space-ai.jpeg" alt="WSpace AI Logo" class="loader-logo">
+            <p class="loader-text">Building Intelligence for a Smatter Future</p>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo/w-space-ai.jpeg" alt="WSpace AI Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" onclick="loadSection('home')">Home</a></li>
+                    
+                    <!-- Services Navigation Bar Hover Menu -->
+                    <li class="hover-trigger services-hover">
+                        <a href="#services" onclick="loadSection('services')">Services</a>
+                        <div class="hover-content">
+                            <div class="hover-box" onclick="location.href='#mobile-apps'">
+                                <h3>Mobile Apps Development</h3>
+                                <p>Design and develop mobile apps for your business/company/organization.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#desktop-apps'">
+                                <h3>Desktop Apps Development</h3>
+                                <p>Design and develop desktop Windows apps.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#macos-apps'">
+                                <h3>MacOS IDE Apps Development</h3>
+                                <p>Design and develop Mac OS IDE Apps, iPhone apps, and Apple apps.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#web-development'">
+                                <h3>Website Creation</h3>
+                                <p>Web development solutions for your business/company.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#cyber-security'">
+                                <h3>Cyber Security Services</h3>
+                                <p>We offer cyber security services, protect your website, apps, or programs from hackers and malicious attacks.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#blockchain'">
+                                <h3>Blockchain</h3>
+                                <p>Blockchain solutions for secure and transparent business processes.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#robotics-ai'">
+                                <h3>Robotics & Artificial Intelligence</h3>
+                                <p>Innovative robotics and AI machine learning solutions for modern challenges.</p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- Products Navigation Bar Hover Menu -->
+                    <li class="hover-trigger products-hover">
+                        <a href="#products" onclick="loadSection('products')">Products</a>
+                        <div class="hover-content">
+                            <div class="hover-box" onclick="location.href='#salome'">
+                                <h3>Salome v 3.5</h3>
+                                <ul>
+                                    <li>For Everyone</li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#api'">
+                                <h3>API</h3>
+                                <ul>
+                                    <li>Platform Overview</li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#explore-more'">
+                                <h3>Explore More</h3>
+                                <ul>
+                                    <li>Future AI for Business</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- Pricing Navigation Bar Hover Menu -->
+                    <li class="hover-trigger pricing-hover">
+                        <a href="#pricing" onclick="loadSection('pricing')">Pricing</a>
+                        <div class="hover-content">
+                            <!-- Software Development Section -->
+                            <div class="hover-box" onclick="location.href='#software-development'">
+                                <h2>Software Development</h2>
+                                <p>Innovative website creation services designed to engage users.</p>
+                                
+                            </div>
+                    
+                            <!-- Website Creation Section -->
+                            <div class="hover-box" onclick="location.href='#website-creation'">
+                                <h2>Website Creation</h2>
+                                <p>Innovative website creation services designed to engage users.</p>
+                            </div>
+                    
+                            <!-- Cyber Security Services Section -->
+                            <div class="hover-box" onclick="location.href='#cyber-security'">
+                                <h2>Cyber Security Services</h2>
+                                <p>Comprehensive cyber security services to protect your data.</p>
+                            </div>
+                    
+                            <!-- Blockchain Section -->
+                            <div class="hover-box" onclick="location.href='#blockchain'">
+                                <h2>Blockchain</h2>
+                                <p>Blockchain development services to secure and enhance your projects.</p>
+                            </div>
+                    
+                            <!-- Robotics & AI Machine Learning Section -->
+                            <div class="hover-box" onclick="location.href='#robotics-ai'">
+                                <h2>Robotics & AI Machine Learning</h2>
+                                <p>Advanced robotics and AI machine learning solutions for your business.</p>
+                            </div>
+                    
+                            <!-- Latest Models Section -->
+                            <div class="hover-box" onclick="location.href='#models'">
+                                <h2>Latest Models</h2>
+                                <p>Explore the latest models in AI and machine learning technology.</p>
+                            </div>
+                    
+                            <!-- FAQ Section -->
+                            <div class="hover-box" onclick="location.href='#faq'">
+                                <h2>FAQ</h2>
+                                <ul>
+                                    <li><strong>What’s a token?</strong> Tokens are pieces of words where 1,000 tokens are about 750 words.</li>
+                                </ul>
+                            </div>
+                    
+                            <!-- Contact Sales Button -->
+                            <div class="hover-box" onclick="location.href='#contact-sales'">
+                                <h2>Contact sales</h2>
+                                <button id="contact-sales-btn">Contact Sales</button>
+
+                            </div>
+                        </div>
+                    </li>
+                    
+                    
+                    <!-- Research Navigation Bar Hover Menu -->
+                    <li class="hover-trigger research-hover">
+                        <a href="#research" onclick="loadSection('research')">Research</a>
+                        <div class="hover-content">
+                            <div class="hover-box" onclick="location.href='#vision'">
+                                <h3>Our Vision</h3>
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#mission'">
+                                <h3>Our Mission</h3>
+                                <p>To deliver high-quality, reliable, and innovative software solutions.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#goals'">
+                                <h3>Our Goals</h3>
+                                <p>To continuously evolve and improve our services.</p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- Resources Navigation Bar Hover Menu -->
+                    <li class="hover-trigger resource-hover">
+                        <a href="#resources" onclick="loadSection('resources')">Resources</a>
+                        <div class="hover-content">
+                            <!-- Blog Section -->
+                            <div class="hover-box" onclick="location.href='#blog'">
+                                <h3>Blog</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                    
+                            <!-- WSpace AI Academy Section -->
+                            <div class="hover-box" onclick="location.href='#wspace-ai-academy'">
+                                <h3>WSpace AI Academy</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                    
+                            <!-- Guides & Tutorials Section -->
+                            <div class="hover-box" onclick="location.href='#guides-tutorials'">
+                                <h3>Guides & Tutorials</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                    
+                            <!-- Webinars Section -->
+                            <div class="hover-box" onclick="location.href='#webinars'">
+                                <h3>Webinars</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                    
+                            <!-- Help Center Section -->
+                            <div class="hover-box" onclick="location.href='#help-center'">
+                                <h3>Help Center</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                    
+                            <!-- Community Section -->
+                            <div class="hover-box" onclick="location.href='#community'">
+                                <h3>Community</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                    
+                            <!-- Hire a Consultant Section -->
+                            <div class="hover-box" onclick="location.href='#hire-a-consultant'">
+                                <h3>Hire a Consultant</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                    
+                            <!-- Become a Partner Section -->
+                            <div class="hover-box" onclick="location.href='#become-a-partner'">
+                                <h3>Become a Partner</h3>
+                                <!-- You can add a short description here -->
+                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li><a href="#contacts" onclick="loadSection('contacts')">Contacts</a></li>
+
+                    <!-- Company Navigation Bar Hover Menu -->
+                    <li class="hover-trigger company-hover">
+                        <a href="#company" onclick="loadSection('company')">Company</a>
+                        <div class="hover-content">
+                            <div class="hover-box" onclick="location.href='#about'">
+                                <h3>About Us</h3>
+                                <p>Learn more about WSpace AI and our journey</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#faqs'">
+                                <h3>FAQs</h3>
+                                <p>Find answers to commonly asked questions</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#policies'">
+                                <h3>Policies</h3>
+                                <p>Read about our company policies</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#privacy'">
+                                <h3>Privacy</h3>
+                                <p>Understand how we protect your data</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#terms'">
+                                <h3>Terms and Conditions</h3>
+                                <p>Review the terms of our services</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#careers'">
+                                <h3>Careers</h3>
+                                <p>Explore career opportunities at WSpace AI</p>
+                            </div>
+                            <!-- New Content Added -->
+                            <div class="hover-box" onclick="location.href='#news'">
+                                <h3>News</h3>
+                                <p>Stay updated with the latest news from WW-Space AI.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#charter'">
+                                <h3>Our Charter</h3>
+                                <p>Read our mission, vision, and guiding principles.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#security'">
+                                <h3>Security and Privacy</h3>
+                                <p>Discover our security measures to protect your data.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#residency'">
+                                <h3>Residency</h3>
+                                <p>Learn about our residency programs and opportunities.</p>
+                            </div>
+                            <div class="hover-box" onclick="location.href='#careers'">
+                                <h3>Careers</h3>
+                                <p>Check out career opportunities and join our growing team.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                
+            </nav>
+
+            <!-- Hamburger Menu Icon -->
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" onclick="toggleHamburgerMenu()">
+                <div class="hamburger-icon-bar"></div>
+                <div class="hamburger-icon-bar"></div>
+                <div class="hamburger-icon-bar"></div>
+            </div>
+
+            <!-- Hamburger Menu Dropdown -->
+            <div class="hamburger-dropdown" id="hamburger-dropdown">
+                <ul>
+                    <li><a href="#home" onclick="loadSection('home')">Home</a></li>
+
+                    <!-- Services with Sub-items -->
+                    <li class="has-submenu">
+                        <a href="#services" onclick="loadSection('services')">Services</a>
+                        <ul class="submenu">
+                            <li><a href="#mobile-apps" onclick="location.href='#mobile-apps'">Mobile Apps Development</a></li>
+                            <li><a href="#desktop-apps" onclick="location.href='#desktop-apps'">Desktop Apps Development</a></li>
+                            <li><a href="#macos-apps" onclick="location.href='#macos-apps'">MacOS IDE Apps Development</a></li>
+                            <li><a href="#web-development" onclick="location.href='#web-development'">Website Creation</a></li>
+                            <li><a href="#cyber-security" onclick="location.href='#cyber-security'">Cyber Security Services</a></li>
+                            <li><a href="#blockchain" onclick="location.href='#blockchain'">Blockchain</a></li>
+                            <li><a href="#robotics-ai" onclick="location.href='#robotics-ai'">Robotics & Artificial Intelligence</a></li>                            
+                            <li><a href="#contacts" onclick="location.href = '#contacts'">Contacts</a></li>                            
+                        </ul>
+                    </li>
+
+                    <!-- Products with Sub-items -->
+                    <li class="has-submenu">
+                        <a href="#products" onclick="loadSection('products')">Products</a>
+                        <ul class="submenu">
+                            <li><a href="#salome" onclick="location.href='#salome'">Salome v 3.5</a></li>
+                            <li><a href="#api" onclick="location.href='#api'">API</a></li>
+                            <li><a href="#explore-more" onclick="location.href='#explore-more'">Explore More</a></li>
+                        </ul>
+                    </li>                   
+
+                    <!-- Pricing with Sub-items -->
+                    <li class="has-submenu">
+                        <a href="#pricing" onclick="loadSection('pricing')">Pricing</a>
+                        <ul class="submenu">
+                            <li><a href="#software-development" onclick="location.href='#software-development'">Software Development</a></li>
+                            <li><a href="#website-creation" onclick="location.href='#website-creation'">Website Creation</a></li>
+                            <li><a href="#cyber-security" onclick="location.href='#cyber-security'">Cyber Security Services</a></li>
+                            <li><a href="#blockchain" onclick="location.href='#blockchain'">Blockchain</a></li>
+                            <li><a href="#robotics-ai" onclick="location.href='#robotics-ai'">Robotics & AI Machine Learning</a></li>
+                            <li><a href="#models" onclick="location.href='#models'">Latest Models</a></li>
+                            <li><a href="#faq" onclick="location.href='#faq'">FAQ</a></li>
+                            <li><a href="#contact-sales" onclick="location.href='#contact-sales'">Contact Sales</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Research with Sub-items -->
+                    <li class="has-submenu">
+                        <a href="#research" onclick="loadSection('research')">Research</a>
+                        <ul class="submenu">
+                            <li><a href="#vision" onclick="location.href='#vision'">Our Vision</a></li>
+                            <li><a href="#mission" onclick="location.href='#mission'">Our Mission</a></li>
+                            <li><a href="#goals" onclick="location.href='#goals'">Our Goals</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Resources with Sub-items -->
+                    <li class="has-submenu">
+                        <a href="#resources" onclick="loadSection('resources')">Resources</a>
+                        <ul class="submenu">
+                            <li><a href="#blog" onclick="location.href='#blog'">Blog</a></li>
+                            <li><a href="#wspace-ai-academy" onclick="location.href='#wspace-ai-academy'">WSpace AI Academy</a></li>
+                            <li><a href="#guides-tutorials" onclick="location.href='#guides-tutorials'">Guides & Tutorials</a></li>
+                            <li><a href="#webinars" onclick="location.href='#webinars'">Webinars</a></li>
+                            <li><a href="#help-center" onclick="location.href='#help-center'">Help Center</a></li>
+                            <li><a href="#community" onclick="location.href='#community'">Community</a></li>
+                            <li><a href="#hire-a-consultant" onclick="location.href='#hire-a-consultant'">Hire a Consultant</a></li>
+                            <li><a href="#become-a-partner" onclick="location.href='#become-a-partner'">Become a Partner</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Contacts -->
+                    <li><a href="#contacts" onclick="loadSection('contacts')">Contacts</a></li>
+
+
+                    <!-- Company with Sub-items -->
+                    <li class="has-submenu">
+                        <a href="#company" onclick="loadSection('company')">Company</a>
+                        <ul class="submenu">
+                            <li><a href="#about" onclick="location.href='#about'">About Us</a></li>
+                            <li><a href="#faqs" onclick="location.href='#faqs'">FAQs</a></li>
+                            <li><a href="#policies" onclick="location.href='#policies'">Policies</a></li>
+                            <li><a href="#privacy" onclick="location.href='#privacy'">Privacy</a></li>
+                            <li><a href="#terms" onclick="location.href='#terms'">Terms and Conditions</a></li>
+                            <li><a href="#careers" onclick="location.href='#careers'">Careers</a></li>
+                            <li><a href="#news" onclick="location.href='#news'">News</a></li>
+                            <li><a href="#charter" onclick="location.href='#charter'">Our Charter</a></li>
+                            <li><a href="#security" onclick="location.href='#security'">Security and Privacy</a></li>
+                            <li><a href="#residency" onclick="location.href='#residency'">Residency</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+            
+        </div>
+    </header>
+
+
+        <main id="main-content">     
+            
+        </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> WSpace AI. All rights reserved.</p>    
+        <section id="developer-contacts">              
+            <div class="social-icons">
+                <p><a href="tel:+254716770021" class="icon phone"><i class="fas fa-phone"></i></a></p>
+                <p><a href="mailto:ambetsafrankline@gmail.com" class="icon email"><i class="fas fa-envelope"></i></a></p>
+                <a href="https://www.linkedin.com/in/yourprofile" class="icon linkedin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/yourprofile" class="icon x" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.tiktok.com/@yourprofile" class="icon tiktok" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/c/yourchannel" class="icon youtube" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </section>
+    </footer>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="/sections/home-section.js"></script> <!-- At the end of body -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+</body>
+
+</html>
