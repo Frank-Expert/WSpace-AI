@@ -1,0 +1,364 @@
+/* General Section Styling */
+#services {
+    width: 100%; /* Adjust the width to 90% of the viewport width */
+    max-width: 1000px; /* Maximum width to maintain a clean layout on large screens */
+    margin: 30px auto; /* Auto margin on the left and right to center it */
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1297d4;    
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Service Card Container */
+.service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    flex-wrap: wrap;
+    flex-direction: column; /* Ensures content stacks vertically */
+    max-width: 1200px;
+    border: 1px solid #1276d4;
+    cursor: pointer;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.service img {    
+    width: 60%;
+    height: auto;    
+    margin-bottom: 20px; /* Ensures the image is placed above text */
+    object-fit: cover;
+}
+
+/* Text Content Styling */
+.service h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #c7c42b;
+    margin-bottom: 15px; /* Space between heading and text */
+    text-transform: capitalize;
+}
+
+.service p {
+    font-size: 1.2rem;
+    color: #e9e5e5;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-weight: 300 ;
+    letter-spacing: 0.5px;
+}
+
+/* Styling for unordered list */
+.service ul {
+    padding-left: 30px; /* Space for the numbers */
+    margin-bottom: 20px;
+    list-style-type: none; /* Remove default bullets */
+    counter-reset: list-counter; /* Initialize the counter */
+}
+
+/* Styling for list items */
+.service ul li {
+    font-size: 1.2rem;
+    color: #9e9a9a;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    position: relative; /* Necessary for the bullet positioning */
+    padding-left: 25px; /* Adjust padding to create space for the number */
+}
+
+/* Custom Numbering for List Items */
+.service ul li::before {
+    content:counter(outside); /* Display the counter value followed by a dot */
+    position: absolute;
+    left: 0; /* Position the number to the far left */
+    color: #f1c40f; /* Number color (yellow) */
+    font-size: 1.3rem; /* Size of the number */
+    top: 0; /* Align the number with the top of the list item */
+    counter-increment: list-counter; /* Increment the counter for each list item */
+}
+
+/* Styling for strong text within list items */
+.service ul li strong {
+    font-weight: bold;
+    color: #cfc8c8;
+    margin-left: 5px; /* Adds a small gap between the number and the strong text */
+}
+
+
+/* Button Style (Optional) */
+.service a {
+    text-decoration: none;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.service a:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+/* Small Mobile View (Up to 480px) */
+@media (max-width: 480px) {
+    #services {        
+        margin: 0 auto;
+    }
+
+    .service {
+        max-width: 100%; /* Full width on very small screens */
+        margin-bottom: 10px; /* Adjust bottom margin */
+        padding: 8px; /* Adjust padding for small screens */
+    }
+
+    #services h2 {
+        font-size: 1.4rem;        
+    }
+
+    .service img {
+        width: 80%; /* Larger images on small screens */
+    }
+
+    .service h3 {
+        font-size: 1.2rem; /* Smaller font for titles */
+    }
+
+    .service p {
+        font-size: 1rem; /* Adjust font size for readability */
+        line-height: 1.4;
+    }
+
+    .service ul li {
+        font-size: 1rem; /* Smaller list items */
+        line-height: 1.4;
+    }
+
+    .service a {
+        padding: 8px 10px; /* Adjust button padding */
+    }
+}
+
+/* Mobile View (Between 481px and 539px) */
+@media (max-width: 539px) and (min-width: 481px) {
+    #services {        
+        margin: 0 auto;
+    }
+
+    .service {
+        max-width: 100%; /* Full width on very small screens */
+        margin-bottom: 10px; /* Adjust bottom margin */
+        padding: 8px; /* Adjust padding for small screens */
+    }
+
+    #services h2 {
+        font-size: 1.5rem;        
+    }
+
+    .service img {
+        width: 80%; /* Larger images on small screens */
+    }
+
+    .service h3 {
+        font-size: 1.2rem; /* Smaller font for titles */
+    }
+
+    .service p {
+        font-size: 1rem; /* Adjust font size for readability */
+        line-height: 1.4;
+    }
+
+    .service ul li {
+        font-size: 1rem; /* Smaller list items */
+        line-height: 1.4;
+    }
+
+    .service a {
+        padding: 8px 10px; /* Adjust button padding */
+    }
+}
+
+/* Mobile to Small Tablet View (Between 540px and 768px) */
+@media (max-width: 768px) and (min-width: 540px) {
+    #services {        
+        margin: 0 auto;
+    }
+
+    .service {
+        max-width: 100%; /* Full width on very small screens */
+        margin-bottom: 10px; /* Adjust bottom margin */
+        padding: 8px; /* Adjust padding for small screens */
+    }
+
+    #services h2 {
+        font-size: 1.6rem;        
+    }
+
+    .service img {
+        width: 80%; /* Larger images on small screens */
+    }
+
+    .service h3 {
+        font-size: 1.2rem; /* Smaller font for titles */
+    }
+
+    .service p {
+        font-size: 1rem; /* Adjust font size for readability */
+        line-height: 1.4;
+    }
+
+    .service ul li {
+        font-size: 1rem; /* Smaller list items */
+        line-height: 1.4;
+    }
+
+    .service a {
+        padding: 8px 10px; /* Adjust button padding */
+    }
+}
+
+/* Tablet View (Between 769px and 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    #services {        
+        margin: 0 auto;
+    }
+
+    .service {
+        max-width: 100%; /* Full width on very small screens */
+        margin-bottom: 10px; /* Adjust bottom margin */
+        padding: 8px; /* Adjust padding for small screens */
+    }
+
+    #services h2 {
+        font-size: 1.7rem;        
+    }
+
+    .service img {
+        width: 80%; /* Larger images on small screens */
+    }
+
+    .service h3 {
+        font-size: 1.2rem; /* Smaller font for titles */
+    }
+
+    .service p {
+        font-size: 1.1rem; /* Adjust font size for readability */
+        line-height: 1.5;
+    }
+
+    .service ul li {
+        font-size: 1rem; /* Smaller list items */
+        line-height: 1.4;
+    }
+
+    .service a {
+        padding: 8px 10px; /* Adjust button padding */
+    }
+}
+
+/* Small Desktop View (Between 1025px and 1199px) */
+@media (max-width: 1199px) and (min-width: 1025px) {
+    #services {        
+        margin: 0 auto;
+        
+    }
+
+    .service {
+        max-width: 100%; /* Full width on very small screens */
+        margin-bottom: 10px; /* Adjust bottom margin */
+        padding: 8px; /* Adjust padding for small screens */
+    }
+
+    #services h2 {
+        font-size: 1.7rem;        
+    }
+
+    .service img {
+        width: 80%; /* Larger images on small screens */
+    }
+
+    .service h3 {
+        font-size: 1.3rem; /* Smaller font for titles */
+    }
+
+    .service p {
+        font-size: 1.1rem; /* Adjust font size for readability */
+        line-height: 1.4;
+    }
+
+    .service ul li {
+        font-size: 1rem; /* Smaller list items */
+        line-height: 1.4;
+    }
+
+    .service a {
+        padding: 8px 10px; /* Adjust button padding */
+    }
+}
+
+/* Large Desktop View (Above 1200px) */
+@media (min-width: 1200px) {
+    #services {        
+        margin: 0 auto;
+    }
+
+    .service {
+        max-width: 100%; /* Full width on very small screens */
+        margin-bottom: 10px; /* Adjust bottom margin */
+        padding: 8px; /* Adjust padding for small screens */
+    }
+
+    #services h2 {
+        font-size: 1.7rem;        
+    }
+
+    .service img {
+        width: 80%; /* Larger images on small screens */
+    }
+
+    .service h3 {
+        font-size: 1.3rem; /* Smaller font for titles */
+    }
+
+    .service p {
+        font-size: 1.2rem; /* Adjust font size for readability */
+        line-height: 1.5;
+    }
+
+    .service ul li {
+        font-size: 1rem; /* Smaller list items */
+        line-height: 1.5;
+    }
+
+    .service a {
+        padding: 8px 10px; /* Adjust button padding */
+    }
+}
+
+/* Extra Large Desktop View (Above 1500px) */
+
+
+

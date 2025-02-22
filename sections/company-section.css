@@ -1,0 +1,516 @@
+/* Company Section */
+#company {
+    padding: 10px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    width: 1200px;
+}
+
+/* Section Title */
+#company h2 {
+    font-size: 2.5rem;
+    color: #10fa10;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: slideDown 1s ease-out forwards 0.3s;
+}
+
+
+
+/* Company Section Grid Layout */
+#company .company-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+}
+
+/* Individual Company Cards */
+.company-group {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease-out forwards;
+    cursor: pointer;
+}
+
+/* Animation for company cards */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover Effect */
+.company-group:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Icons - Assigning Unique Colors */
+.company-group h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.company-group h3 i {
+    font-size: 3.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect on Icons */
+.company-group:hover h3 i {
+    transform: rotate(10deg) scale(1.2);
+}
+
+/* Icon Colors */
+.company-group h3 i.fa-building { color: #ffcc00; }      /* About Us - Yellow */
+.company-group h3 i.fa-question-circle { color: #ff5733; } /* FAQs - Orange */
+.company-group h3 i.fa-file-alt { color: #3399ff; }        /* Policies - Blue */
+.company-group h3 i.fa-lock { color: #00cc99; }           /* Privacy - Teal */
+.company-group h3 i.fa-gavel { color: #9933ff; }          /* Terms - Purple */
+.company-group h3 i.fa-newspaper { color: #ff6699; }      /* News - Pink */
+.company-group h3 i.fa-scroll { color: #ff3300; }         /* Charter - Red */
+.company-group h3 i.fa-shield-alt { color: #00ffcc; }     /* Security - Cyan */
+.company-group h3 i.fa-home { color: #ff6600; }          /* Residency - Dark Orange */
+.company-group h3 i.fa-briefcase { color: #33cc33; }      /* Careers - Green */
+
+/* Description */
+.company-group p {
+    font-size: 1rem;
+    color: #bbb;
+    line-height: 1.4;
+    text-align: start;
+}
+
+/* Links */
+.company-group a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Flip Card Effect (Optional) */
+
+/* Scroll Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide Down Title */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+.company-details {
+    padding: 30px;
+    background: #111; /* Dark Mode */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    min-height: 400px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.about-us-content h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.about-us-content h3 {
+    font-size: 24px;
+    color: #ff6600;
+    margin-top: 20px;
+}
+
+.about-us-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+#back-btn {
+    display: block;
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#back-btn:hover {
+    background: #e65c00;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+ /* Scoped styles for the Company Section */
+#company .content-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    padding: 20px;
+    z-index: 10;
+    display: none;
+    overflow-y: auto;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;   
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.6);
+
+}
+
+#company .content-panel:target {
+    display: block;
+}
+
+#company .back-link {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+#company .back-link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Active Panel (When Opened) */
+.content-panel.active {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Panel Heading */
+.content-panel h3 {
+    font-size: 1.8em;
+    color: #00ffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content-panel h4 {
+    font-size: 1.3em;
+    color: #00cccc;
+    margin-top: 15px;
+    text-align: start;
+}
+
+/* Subheadings */
+.content-panel h5 {
+    font-size: 1.3em;
+    color: #00cccc;
+    margin-top: 15px;
+    text-align: start;
+}
+
+/* Paragraphs */
+.content-panel p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #dddddd;
+    text-align: start;
+}
+
+/* Lists */
+.content-panel ul {
+    padding-left: 20px;
+    text-align: start;
+}
+
+.content-panel ul li {
+    font-size: 1.1em;
+    margin: 8px 0;
+    color: #cccccc;
+    text-align: start;
+}
+
+/* Close Button */
+.back-link {
+    display: inline-block;
+    color: #00ffff;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Scrollbar Customization */
+.content-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content-panel::-webkit-scrollbar-thumb {
+    background: #00cccc;
+    border-radius: 10px;
+}
+
+.content-panel::-webkit-scrollbar-track {
+    background: #222;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERY*/
+
+/* Media Query for Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    #company {
+        width: 100%; /* Full width on smaller screens */
+        padding: 0;
+    }
+
+    #company h2 {
+        font-size: 1.8rem; /* Smaller font size for better readability */
+        letter-spacing: 0.5px;
+    }
+
+    #company .company-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        padding: 0;
+    }
+
+    .company-group {
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 1rem; /* Adjust font size for mobile screens */
+        margin-bottom: 0px;
+        
+        
+    }
+
+    .company-group h3 {
+        font-size: 1.2rem; /* Adjust icon text size */
+    }
+
+    .company-group p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
+    }
+
+    #back-btn {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    .content-panel {
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    .content-panel h3 {
+        font-size: 1.5em; /* Adjust panel heading for smaller screens */
+    }
+
+    .content-panel h4, .content-panel h5 {
+        font-size: 1.1em; /* Smaller subheading sizes */
+    }
+
+    .content-panel p {
+        font-size: 1em; /* Adjust text size */
+    }
+
+    .content-panel ul li {
+        font-size: 1em; /* Adjust list font size */
+    }
+}
+
+/* Media Query for Medium Screens (Tablets, max-width: 539px and min-width: 481px) */
+@media (max-width: 539px) and (min-width: 481px) {
+    #company {
+        width: 100%; /* Full width on medium screens */
+        padding: 15px;
+    }
+
+    #company h2 {
+        font-size: 2.2rem;
+        letter-spacing: 0.8px;
+    }
+
+    #company .company-container {
+        padding: 15px;
+    }
+
+    .company-group {
+        padding: 18px;
+        border-radius: 8px;
+    }
+
+    .company-group h3 {
+        font-size: 1.3rem; /* Adjust icon text size */
+    }
+
+    .company-group p {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    #back-btn {
+        font-size: 15px;
+        padding: 11px 17px;
+    }
+
+    .content-panel {
+        padding: 15px;
+    }
+
+    .content-panel h3 {
+        font-size: 1.7em; /* Adjust panel heading for medium screens */
+    }
+
+    .content-panel h4, .content-panel h5 {
+        font-size: 1.2em; /* Adjust subheading sizes */
+    }
+
+    .content-panel p {
+        font-size: 1.1em;
+    }
+
+    .content-panel ul li {
+        font-size: 1.1em;
+    }
+}
+
+/* Media Query for Larger Screens (Min-width: 540px) */
+@media (min-width: 540px) {
+    #company {
+        width: 1200px; /* Maintain original width */
+        padding: 20px;
+    }
+
+    #company h2 {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+
+
+    .company-group {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .company-group h3 {
+        font-size: 1.4rem;
+    }
+
+    .company-group p {
+        font-size: 1rem;
+    }
+
+    #back-btn {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+
+    .content-panel {
+        padding: 20px;
+    }
+
+    .content-panel h3 {
+        font-size: 1.8em;
+    }
+
+    .content-panel h4, .content-panel h5 {
+        font-size: 1.3em;
+    }
+
+    .content-panel p {
+        font-size: 1.1em;
+    }
+
+    .content-panel ul li {
+        font-size: 1.1em;
+    }
+}
