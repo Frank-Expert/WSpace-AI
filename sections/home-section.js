@@ -1,29 +1,25 @@
-// Hero Images Loop
-// Hero Images Loop
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
     console.log("📌 DOM fully loaded");
 
-    let retryCount = 0;
-    const maxRetries = 10; // Prevent infinite loop
+    // Wait for the home section to be added to the DOM before running the hero slider script
+    const observer = new MutationObserver((mutations, obs) => {
+        const homeSection = document.querySelector(".hero-section");
+        if (homeSection) {
+            console.log("🎯 Home section detected! Initializing hero slider...");
+            obs.disconnect(); // Stop observing once found
+            initializeHeroSlider();
+        }
+    });
+
+    // Observe changes in the body to detect when home-section is loaded
+    observer.observe(document.body, { childList: true, subtree: true });
 
     function initializeHeroSlider() {
         const heroSlider = document.querySelector(".hero-section .container");
-
         if (!heroSlider) {
-            retryCount++;
-
-            if (retryCount === 1) {
-                console.warn("⏳ Hero slider not found. Waiting for it to load...");
-            }
-
-            if (retryCount < maxRetries) {
-                setTimeout(initializeHeroSlider, 500); // Retry after 500ms
-            } else {
-                console.error("❌ Hero slider failed to load after multiple attempts!");
-            }
+            console.error("❌ Hero slider container not found!");
             return;
         }
-
         console.log("✅ Hero slider found!");
 
         const slides = document.querySelectorAll('.slide');
@@ -114,7 +110,4 @@ document.addEventListener('DOMContentLoaded', function () {
         showSlide(currentIndex);
         startSlideTimer();
     }
-
-    initializeHeroSlider(); // Start checking for hero slider
 });
-

@@ -22,7 +22,12 @@
 }
 
 /* Product Group Styling */
-.product-group {
+.omniAI,
+.carbonTrack,
+.DiSPA,
+.roboOptimize,
+.api,
+.exploreMore {
     display: inline-block;
     margin: 0 30px;
     text-align: left;
@@ -32,8 +37,12 @@
     vertical-align: top; /* Ensures all items align at the top */
 }
 
-
-.product-group h3 {
+.omniAI h3,
+.carbonTrack h3,
+.DiSPA h3,
+.roboOptimize h3,
+.api h3,
+.exploreMore h3 {
     font-size: 18px;
     margin-bottom: 20px;
     color: #00bfff;
@@ -43,12 +52,22 @@
     animation: slideInLeft 1.8s ease-in-out;
 }
 
-.product-group ul {
+.omniAI ul,
+.carbonTrack ul,
+.DiSPA ul,
+.roboOptimize ul,
+.api ul,
+.exploreMore ul {
     list-style-type: none;
     padding: 0;
 }
 
-.product-group ul li {
+.omniAI ul li,
+.carbonTrack ul li,
+.DiSPA ul li,
+.roboOptimize ul li,
+.api ul li,
+.exploreMore ul li {
     font-size: 14px;
     margin: 10px 0;
     color: #ddd;
@@ -60,7 +79,12 @@
     animation: fadeInUp 2s ease-in-out;
 }
 
-.product-group ul li::before {
+.omniAI ul li::before ,
+.carbonTrack ul li::before ,
+.DiSPA ul li::before ,
+.roboOptimize ul li::before ,
+.api ul li::before ,
+.exploreMore ul li::before  {
     content: '→';
     position: absolute;
     left: 0;
@@ -68,12 +92,21 @@
     transition: transform 0.3s ease;
 }
 
-.product-group ul li:hover {
+.omniAI ul li:hover ,
+.carbonTrack ul li:hover ,
+.DiSPA ul li:hover ,
+.api ul li:hover ,
+.exploreMore ul li:hover  {
     color: #ff6b6b;
     transform: translateX(10px);
 }
 
-.product-group ul li:hover::before {
+.omniAI ul li:hover::before,
+.carbonTrack ul li:hover::before,
+.DiSPA ul li:hover::before,
+.roboOptimize ul li:hover::before,
+.api ul li:hover::before,
+.exploreMore ul li:hover::before {
     transform: translateX(5px);
 }
 
@@ -98,8 +131,12 @@
 
 
 
-
-.product-group h3 + p {
+.omniAI h3 + p,
+.carbonTrack h3 + p,
+.DiSPA h3 + p,
+.roboOptimize h3 + p,
+.api h3 + p,
+.exploreMore h3 + p {
     font-style: italic;
     font-size: 0.875rem; /* Small text (14px if base is 16px) */
     color: #777; /* Optional: subtle gray for better readability */
@@ -122,17 +159,31 @@
         margin-bottom: 0;
     }
 
-    .product-group {
+    .omniAI,
+    .carbonTrack,
+    .DiSPA,
+    .api,
+    .exploreMore {
         margin: 0 15px;
         padding: 10px;
     }
 
-    .product-group h3 {
+    .omniAI h3,
+    .carbonTrack h3,
+    .DiSPA h3,
+    .roboOptimize h3,
+    .api h3,
+    .exploreMore h3 {
         font-size: 15px;
         margin-bottom: 15px;
     }
 
-    .product-group ul li {
+    .omniAI  ul li ,
+    .carbonTrack  ul li ,
+    .DiSPA  ul li ,
+    .roboOptimize ul li,
+    .api  ul li ,
+    .exploreMore  ul li  {
         font-size: 12px;
         margin: 8px 0;
     }
@@ -149,17 +200,31 @@
         margin-bottom: 0;
     }
 
-    .product-group {
+    .omniAI,
+    .carbonTrack,
+    .DiSPA,
+    .api,
+    .exploreMore {
         margin: 0 15px;
         padding: 10px;
     }
 
-    .product-group h3 {
+    .omniAI h3,
+    .carbonTrack h3,
+    .DiSPA h3,
+    .roboOptimize h3,
+    .api h3,
+    .exploreMore h3 {
         font-size: 16px;
         margin-bottom: 15px;
     }
 
-    .product-group ul li {
+    .omniAI ul li,
+    .carbonTrack ul li,
+    .DiSPA ul li,
+    .roboOptimize ul li,
+    .api ul li,
+    .exploreMore ul li {
         font-size: 12px;
         margin: 8px 0;
     }
@@ -176,17 +241,32 @@
         margin-bottom: 0;
     }
 
-    .product-group {
+    .omniAI,
+    .carbonTrack,
+    .DiSPA,
+    .roboOptimize,
+    .api,
+    .exploreMore {
         margin: 0 15px;
         padding: 10px;
     }
 
-    .product-group h3 {
+    .omniAI h3 ,
+    .carbonTrack h3 ,
+    .DiSPA h3 ,
+    .roboOptimize h3,
+    .api h3 ,
+    .exploreMore h3  {
         font-size: 17px;
         margin-bottom: 15px;
     }
 
-    .product-group ul li {
+    .omniAI ul li,
+    .carbonTrack ul li,
+    .DiSPA ul li,
+    .roboOptimize ul li,
+    .api ul li,
+    .exploreMore ul li{
         font-size: 13px;
         margin: 8px 0;
     }
@@ -203,17 +283,32 @@
         margin-bottom: 0;
     }
 
-    .product-group {
+    .omniAI,
+    .carbonTrack,
+    .DiSPA,
+    .roboOptimize,
+    .api,
+    .exploreMore {
         margin: 0 15px;
         padding: 10px;
     }
 
-    .product-group h3 {
+    .omniAI h3,
+    .carbonTrack h3,
+    .DiSPA h3,
+    .roboOptimize h3,
+    .api h3,
+    .exploreMore h3 {
         font-size: 18px;
         margin-bottom: 15px;
     }
 
-    .product-group ul li {
+    .omniAI ul li,
+    .carbonTrack ul li,
+    .DiSPA ul li,
+    .roboOptimize ul li,
+    .api ul li,
+    .exploreMore ul li {
         font-size: 14px;
         margin: 8px 0;
     }
@@ -230,17 +325,32 @@
         margin-bottom: 0;
     }
 
-    .product-group {
+    .omniAI,
+    .carbonTrack,
+    .DiSPA,
+    .roboOptimize,
+    .api,
+    .exploreMore{
         margin: 0 15px;
         padding: 10px;
     }
 
-    .product-group h3 {
+    .omniAI h3,
+    .carbonTrack h3,
+    .DiSPA h3,
+    .roboOptimize h3,
+    .api h3,
+    .exploreMore h3 {
         font-size: 18px;
         margin-bottom: 15px;
     }
 
-    .product-group ul li {
+    .omniAI ul li,
+    .carbonTrack ul li,
+    .DiSPA ul li,
+    .roboOptimize ul li,
+    .api ul li,
+    .exploreMore ul li {
         font-size: 14px;
         margin: 8px 0;
     }
@@ -257,17 +367,32 @@
         margin-bottom: 0;
     }
 
-    .product-group {
+    .omniAI,
+    .carbonTrack,
+    .DiSPA,
+    .roboOptimize,
+    .api,
+    .exploreMore {
         margin: 0 15px;
         padding: 10px;
     }
 
-    .product-group h3 {
+    .omniAI h3,
+    .carbonTrack h3,
+    .DiSPA h3,
+    .roboOptimize h3,
+    .api h3,
+    .exploreMore h3 {
         font-size: 18px;
         margin-bottom: 15px;
     }
 
-    .product-group ul li {
+    .omniAI ul li,
+    .carbonTrack ul li, 
+    .DiSPA ul li,
+    .roboOptimize ul li,
+    .api ul li,
+    .exploreMore ul li {
         font-size: 14px;
         margin: 8px 0;
     }

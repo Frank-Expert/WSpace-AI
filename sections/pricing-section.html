@@ -12,14 +12,13 @@
             <span class="stress">No hidden fees. No unnecessary costs. Only measurable impact.</span>
         </p>
 
-        <button id="talk-button" class="talk-button" onclick="loadSection('contacts')">
-            Get Started
+        <button class="talk-button" onclick="loadAndShowSection('contacts-section.html', 'contacts')">
+            Talk to an Expert
         </button>
-        
 
-        <div class="strategy-grid">
+        <div class="strategy-item">
             <!-- Precision AI & Tech Consultation -->
-            <div class="strategy-item">
+            <div class="precision-ai">
                 <div class="icon">🔍</div>
                 <h3>Precision AI & Tech Consultation</h3>
                 
@@ -36,14 +35,10 @@
                     <li class="discount">🎉 <strong>Limited-Time Offer:</strong> <span class="highlight-discount">Get up to 20% off</span> your first AI-powered solution.</li>
                 </ul>
 
-                
-                
-                <!-- Button to Open the Modal -->
-                <button class="cta-button" onclick="openModal()">
+                <!-- Button to Open the Modal with Loading Effect -->
+                <button class="cta-button" onclick="openModalWithLoading()">
                     Book Your Free Consultation
                 </button>
-
-                
 
                 <!-- Modal Structure -->
                 <div id="consultationModal" class="modal">
@@ -96,16 +91,6 @@
                     </div>
                 </div>
 
-                
-                
-
-                
-
-                
-                
-                
-
-                
 
                 <!-- Supporting Images -->
                 <div class="container-images">
@@ -128,10 +113,8 @@
             </div>
 
 
-
             <!-- Value-Based Pricing -->
-            <!-- Value-Based Pricing -->
-            <div class="strategy-item">
+            <div class="value-based-pricing">
                 <div class="icon">💡</div>
                 <h3>Value-Based Pricing for AI, Web & Cybersecurity</h3>
                 
@@ -153,7 +136,8 @@
                     <li class="discount">🎉 <strong>Exclusive Offer:</strong> First-time clients get <span class="highlight-discount">15% off</span> AI-powered automation tools.</li>
                 </ul>
 
-                <button class="cta-button" onclick="loadSection('contacts')">
+
+                <button class="cta-button" onclick="loadAndShowSection('contacts-section.html', 'contacts')">
                     Unlock Smarter Pricing
                 </button>
 
@@ -177,9 +161,9 @@
                 </div>
             </div>
 
+
             <!-- Elite AI & Robotics Memberships -->
-            <!-- Elite AI & Robotics Memberships -->
-            <div class="strategy-item">
+            <div class="elite-memberships">
                 <div class="icon">🎟️</div>
                 <h3>Elite AI & Robotics Memberships</h3>
 
@@ -201,9 +185,10 @@
                     <li class="discount">🎉 <strong>Loyalty Perks:</strong> Save <span class="highlight-discount">up to 25%</span> on AI-driven enterprise solutions.</li>
                 </ul>
 
-                <a href="#" class="cta-button">Join the AI Innovation Hub</a>
-
-                <!-- Supporting Images -->
+                <button class="join-community-btn" onclick="loadAndShowSection('resources-section.html', 'community')">
+                    Join the Community
+                </button>
+ 
             <!-- Supporting Creative Content -->
                 <div class="container-text">
                     <!-- First Block: Styled as a Table -->
@@ -248,8 +233,7 @@
 
 
             <!-- ROI-Driven AI & Business Growth -->
-            <!-- ROI-Driven AI & Business Growth -->
-            <div class="strategy-item">
+            <div class="roi-driven-ai">
                 <div class="icon">📊</div>
                 <h3>ROI-Driven AI & Business Growth</h3>
 
@@ -266,11 +250,10 @@
                     <li>✅ <strong>Smart AI Analytics</strong> – Leverages machine learning to <span class="highlight-number">increase revenue potential</span> by identifying profitable opportunities.</li>
                 </ul>
 
-                
-                <button class="cta-button" onclick="loadSection('resources')">
+                <button class="cta-button" onclick="loadAndShowSection('resources-section.html', 'container')">
                     Read AI Success Stories
                 </button>
-
+                
                 <!-- Creative Content Blocks -->
                 <div class="container-text">
                     <!-- Left Side: AI Growth Insights (Styled as a Table) -->
@@ -312,10 +295,8 @@
                 </div>
             </div>
 
-
-            <!-- Limited-Time Offers -->
             <!-- Limited-Time AI & Tech Offers -->
-            <div class="strategy-item">
+            <div class="limited-offers">
                 <div class="icon">🚀</div>
                 <h3>Limited-Time AI & Tech Offers</h3>
 
@@ -332,11 +313,10 @@
                     <li>✅ <strong>Beta Access to Emerging AI Models</strong> – Gain priority implementation of cutting-edge AI before public release.</li>
                 </ul>
 
-                
-                <button class="cta-button" onclick="loadSection('contacts')">
+                <button class="talk-button" onclick="loadAndShowSection('contacts-section.html', 'contacts')">
                     Claim Exclusive Offers
                 </button>
-
+                
                 <!-- Promotional Content Section -->
                 <div class="container-images">
                     <!-- Offer 1: AI Cybersecurity -->
@@ -359,10 +339,8 @@
                 </div>
             </div>
 
-
-            <!-- Thought Leadership -->
             <!-- Thought Leadership & AI Mastery -->
-            <div class="strategy-item">
+            <div class="thought-leadership">
                 <div class="icon">📚</div>
                 <h3>Thought Leadership & AI Mastery</h3>
 
@@ -401,9 +379,8 @@
             </div>
 
 
-            <!-- Hands-On AI Demos -->
             <!-- Hands-On AI Demos & Prototyping -->
-            <div class="strategy-item">
+            <div class="ai-demos">
                 <div class="icon">🆓</div>
                 <h3>Hands-On AI Demos & Prototyping</h3>
 

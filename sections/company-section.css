@@ -30,7 +30,18 @@
 }
 
 /* Individual Company Cards */
-.company-group {
+/* Individual Company Cards */
+.about,
+.faqs,
+.policies,
+.company-group,
+.privacy,
+.terms,
+.careers,
+.news,
+.charter,
+.security,
+.residency {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 20px;
@@ -59,13 +70,33 @@
 }
 
 /* Hover Effect */
-.company-group:hover {
+.about:hover,
+.faqs:hover,
+.policies:hover,
+.company-group:hover,
+.privacy:hover,
+.terms:hover,
+.careers:hover,
+.news:hover,
+.charter:hover,
+.security:hover,
+.residency:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
 /* Icons - Assigning Unique Colors */
-.company-group h3 {
+.about h3,
+.faqs h3,
+.policies h3,
+.company-group h3,
+.privacy h3,
+.terms h3,
+.careers h3,
+.news h3,
+.charter h3,
+.security h3,
+.residency h3 {
     font-size: 1.4rem;
     margin-bottom: 10px;
     display: flex;
@@ -74,30 +105,66 @@
     gap: 8px;
 }
 
-.company-group h3 i {
+
+.about h3 i,
+.faqs h3 i,
+.policies h3 i,
+.company-group h3 i,
+.privacy h3 i,
+.terms h3 i,
+.careers h3 i,
+.news h3 i,
+.charter h3 i,
+.security h3 i,
+.residency h3 i {
     font-size: 3.5rem;
     transition: transform 0.3s ease;
 }
 
+
 /* Hover Effect on Icons */
-.company-group:hover h3 i {
+.about:hover h3 i,
+.faqs:hover h3 i,
+.policies:hover h3 i,
+.company-group:hover h3 i,
+.privacy:hover h3 i,
+.terms:hover h3 i,
+.careers:hover h3 i,
+.news:hover h3 i,
+.charter:hover h3 i,
+.security:hover h3 i,
+.residency:hover h3 i {
     transform: rotate(10deg) scale(1.2);
 }
 
+
+
 /* Icon Colors */
-.company-group h3 i.fa-building { color: #ffcc00; }      /* About Us - Yellow */
-.company-group h3 i.fa-question-circle { color: #ff5733; } /* FAQs - Orange */
-.company-group h3 i.fa-file-alt { color: #3399ff; }        /* Policies - Blue */
-.company-group h3 i.fa-lock { color: #00cc99; }           /* Privacy - Teal */
-.company-group h3 i.fa-gavel { color: #9933ff; }          /* Terms - Purple */
-.company-group h3 i.fa-newspaper { color: #ff6699; }      /* News - Pink */
-.company-group h3 i.fa-scroll { color: #ff3300; }         /* Charter - Red */
-.company-group h3 i.fa-shield-alt { color: #00ffcc; }     /* Security - Cyan */
-.company-group h3 i.fa-home { color: #ff6600; }          /* Residency - Dark Orange */
-.company-group h3 i.fa-briefcase { color: #33cc33; }      /* Careers - Green */
+.about h3 i.fa-building { color: #ffcc00; }      /* About Us - Yellow */
+.faqs h3 i.fa-question-circle { color: #ff5733; } /* FAQs - Orange */
+.policies h3 i.fa-file-alt { color: #3399ff; }        /* Policies - Blue */
+.privacy h3 i.fa-lock { color: #00cc99; }           /* Privacy - Teal */
+.terms h3 i.fa-gavel { color: #9933ff; }          /* Terms - Purple */
+.news h3 i.fa-newspaper { color: #ff6699; }      /* News - Pink */
+.charter h3 i.fa-scroll { color: #ff3300; }         /* Charter - Red */
+.security h3 i.fa-shield-alt { color: #00ffcc; }     /* Security - Cyan */
+.residency h3 i.fa-home { color: #ff6600; }          /* Residency - Dark Orange */
+.careers h3 i.fa-briefcase { color: #33cc33; }      /* Careers - Green */
+
+
 
 /* Description */
-.company-group p {
+.about p,
+.faqs p,
+.policies p,
+.company-group p,
+.privacy p,
+.terms p,
+.careers p,
+.news p,
+.charter p,
+.security p,
+.residency p {
     font-size: 1rem;
     color: #bbb;
     line-height: 1.4;
@@ -105,7 +172,17 @@
 }
 
 /* Links */
-.company-group a {
+.about a,
+.faqs a,
+.policies a,
+.company-group a,
+.privacy a,
+.terms a,
+.careers a,
+.news a,
+.charter a,
+.security a,
+.residency a {
     text-decoration: none;
     color: inherit;
 }
@@ -364,23 +441,51 @@
         padding: 0;
     }
 
-    .company-group {
+    .about,
+    .faqs,
+    .policies,
+    .company-group,
+    .privacy,
+    .terms,
+    .careers,
+    .news,
+    .charter,
+    .security,
+    .residency {
         padding: 10px;
         border-radius: 8px;
         font-size: 1rem; /* Adjust font size for mobile screens */
         margin-bottom: 0px;
-        
-        
     }
-
-    .company-group h3 {
+    
+    .about h3,
+    .faqs h3,
+    .policies h3,
+    .company-group h3,
+    .privacy h3,
+    .terms h3,
+    .careers h3,
+    .news h3,
+    .charter h3,
+    .security h3,
+    .residency h3 {
         font-size: 1.2rem; /* Adjust icon text size */
     }
-
-    .company-group p {
+    
+    .about p,
+    .faqs p,
+    .policies p,
+    .company-group p,
+    .privacy p,
+    .terms p,
+    .careers p,
+    .news p,
+    .charter p,
+    .security p,
+    .residency p {
         font-size: 0.9rem; /* Adjust paragraph font size */
     }
-
+    
     #back-btn {
         font-size: 14px;
         padding: 10px 16px;
@@ -424,19 +529,49 @@
         padding: 15px;
     }
 
-    .company-group {
+    .about,
+    .faqs,
+    .policies,
+    .company-group,
+    .privacy,
+    .terms,
+    .careers,
+    .news,
+    .charter,
+    .security,
+    .residency {
         padding: 18px;
         border-radius: 8px;
     }
-
-    .company-group h3 {
+    
+    .about h3,
+    .faqs h3,
+    .policies h3,
+    .company-group h3,
+    .privacy h3,
+    .terms h3,
+    .careers h3,
+    .news h3,
+    .charter h3,
+    .security h3,
+    .residency h3 {
         font-size: 1.3rem; /* Adjust icon text size */
     }
-
-    .company-group p {
+    
+    .about p,
+    .faqs p,
+    .policies p,
+    .company-group p,
+    .privacy p,
+    .terms p,
+    .careers p,
+    .news p,
+    .charter p,
+    .security p,
+    .residency p {
         font-size: 1rem; /* Adjust font size */
     }
-
+    
     #back-btn {
         font-size: 15px;
         padding: 11px 17px;
@@ -475,20 +610,49 @@
         letter-spacing: 1px;
     }
 
-
-    .company-group {
+    .about,
+    .faqs,
+    .policies,
+    .company-group,
+    .privacy,
+    .terms,
+    .careers,
+    .news,
+    .charter,
+    .security,
+    .residency {
         padding: 20px;
         border-radius: 10px;
     }
-
-    .company-group h3 {
+    
+    .about h3,
+    .faqs h3,
+    .policies h3,
+    .company-group h3,
+    .privacy h3,
+    .terms h3,
+    .careers h3,
+    .news h3,
+    .charter h3,
+    .security h3,
+    .residency h3 {
         font-size: 1.4rem;
     }
-
-    .company-group p {
+    
+    .about p,
+    .faqs p,
+    .policies p,
+    .company-group p,
+    .privacy p,
+    .terms p,
+    .careers p,
+    .news p,
+    .charter p,
+    .security p,
+    .residency p {
         font-size: 1rem;
     }
-
+    
     #back-btn {
         font-size: 16px;
         padding: 12px 18px;
