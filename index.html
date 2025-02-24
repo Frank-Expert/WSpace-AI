@@ -34,6 +34,10 @@
 
 <body>
 
+    <div id="loading-spinner" class="hidden">
+        <div class="spinner"></div>
+    </div>
+
     <!-- Loader Section (visible while loading) -->
     <div id="loader" class="loader">
         <div class="loader-content">
@@ -54,375 +58,386 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home" onclick="loadSection('home')">Home</a></li>
-                    
+                    <li><a href="#home" onclick="loadAndShowSection('home-section.html', 'home')">Home</a></li>
+
                     <!-- Services Navigation Bar Hover Menu -->
                     <li class="hover-trigger services-hover">
-                        <a href="#services" onclick="loadSection('services')">Services</a>
+                        <a href="#services" onclick="loadAndShowSection('services-section.html', 'services')">Services</a>
                         <div class="hover-content">
-                            <div class="hover-box" onclick="location.href='#mobile-apps'">
-                                <h3>Mobile Apps Development</h3>
-                                <p>Design and develop mobile apps for your business/company/organization.</p>
+                            <div class="hover-box" onclick="loadAndShowSection('services-section.html', 'custom-software-solutions')">
+                                <h3>Custom Software Solutions</h3>
+                                <p>Tailor-made software solutions, including ERP, inventory management, and more.</p>
                             </div>
-                            <div class="hover-box" onclick="location.href='#desktop-apps'">
-                                <h3>Desktop Apps Development</h3>
-                                <p>Design and develop desktop Windows apps.</p>
-                            </div>
-                            <div class="hover-box" onclick="location.href='#macos-apps'">
-                                <h3>MacOS IDE Apps Development</h3>
-                                <p>Design and develop Mac OS IDE Apps, iPhone apps, and Apple apps.</p>
-                            </div>
-                            <div class="hover-box" onclick="location.href='#web-development'">
-                                <h3>Website Creation</h3>
-                                <p>Web development solutions for your business/company.</p>
-                            </div>
-                            <div class="hover-box" onclick="location.href='#cyber-security'">
+                            <div class="hover-box" onclick="loadAndShowSection('services-section.html', 'cyber-security-services')">
                                 <h3>Cyber Security Services</h3>
-                                <p>We offer cyber security services, protect your website, apps, or programs from hackers and malicious attacks.</p>
+                                <p>Protect your apps, websites, and business from cyber threats using AI-powered security.</p>
                             </div>
-                            <div class="hover-box" onclick="location.href='#blockchain'">
-                                <h3>Blockchain</h3>
-                                <p>Blockchain solutions for secure and transparent business processes.</p>
+                            <div class="hover-box" onclick="loadAndShowSection('services-section.html', 'blockchain-solutions')">
+                                <h3>Blockchain Solutions</h3>
+                                <p>Blockchain-powered solutions for secure and transparent business operations.</p>
                             </div>
-                            <div class="hover-box" onclick="location.href='#robotics-ai'">
-                                <h3>Robotics & Artificial Intelligence</h3>
-                                <p>Innovative robotics and AI machine learning solutions for modern challenges.</p>
+                            <div class="hover-box" onclick="loadAndShowSection('services-section.html', 'ai-ml-model-development')">
+                                <h3>AI & ML Model Development</h3>
+                                <p>Custom AI and machine learning models for predictive analytics and automation.</p>
+                            </div>
+                            <div class="hover-box" onclick="loadAndShowSection('services-section.html', 'ai-driven-robotics-solutions')">
+                                <h3>AI-Driven Robotics</h3>
+                                <p>Innovative robotics powered by AI for industrial automation and more.</p>
+                            </div>
+                            <div class="hover-box" onclick="loadAndShowSection('services-section.html', 'edge-computing-ai-integration')">
+                                <h3>Edge Computing & AI</h3>
+                                <p>Faster AI processing and data analysis with edge computing technology.</p>
+                            </div>
+                            <div class="hover-box" onclick="loadAndShowSection('services-section.html', 'computer-vision-solutions')">
+                                <h3>Computer Vision</h3>
+                                <p>AI-powered vision systems for healthcare, automation, and security.</p>
+                            </div>
+                            <div class="hover-box" onclick="loadAndShowSection('services-section.html', 'nlp-solutions')">
+                                <h3>Natural Language Processing (NLP)</h3>
+                                <p>AI-driven chatbots, sentiment analysis, language translation, and more.</p>
                             </div>
                         </div>
                     </li>
-                    
+
                     <!-- Products Navigation Bar Hover Menu -->
                     <li class="hover-trigger products-hover">
-                        <a href="#products" onclick="loadSection('products')">Products</a>
+                        <a href="#products" onclick="loadAndShowSection('products-section.html', 'products')">Products</a>
                         <div class="hover-content">
-                            <div class="hover-box" onclick="location.href='#salome'">
-                                <h3>Salome v 3.5</h3>
+                            <div class="hover-box" onclick="loadAndShowSection('products-section.html', 'omniAI')">
+                                <h3>OmniAI</h3>
                                 <ul>
-                                    <li>For Everyone</li>
-                                    
+                                    <li>Revolutionary AI with Human-Level Intelligence</li>
                                 </ul>
                             </div>
-                            <div class="hover-box" onclick="location.href='#api'">
+                            <div class="hover-box" onclick="loadAndShowSection('products-section.html', 'carbonTrack')">
+                                <h3>CarbonTrack</h3>
+                                <ul>
+                                    <li>AI-Powered Carbon Footprint Tracking</li>
+                                </ul>
+                            </div>
+                            <div class="hover-box" onclick="loadAndShowSection('products-section.html', 'DiSPA')">
+                                <h3>DiSPA</h3>
+                                <ul>
+                                    <li>AI-Driven Healthcare Intelligence</li>
+                                </ul>
+                            </div>
+                            <div class="hover-box" onclick="loadAndShowSection('products-section.html', 'roboOptimize')">
+                                <h3>RoboOptimize</h3>
+                                <ul>
+                                    <li>AI-Enhanced Robotics Optimization</li>
+                                </ul>
+                            </div>
+                            <div class="hover-box" onclick="loadAndShowSection('products-section.html', 'api')">
                                 <h3>API</h3>
                                 <ul>
-                                    <li>Platform Overview</li>
-                                    
+                                    <li>Comprehensive AI-Powered API Solutions</li>
                                 </ul>
                             </div>
-                            <div class="hover-box" onclick="location.href='#explore-more'">
+                            <div class="hover-box" onclick="loadAndShowSection('products-section.html', 'exploreMore')">
                                 <h3>Explore More</h3>
                                 <ul>
-                                    <li>Future AI for Business</li>
-                                    
+                                    <li>Upcoming AI Innovations</li>
                                 </ul>
                             </div>
                         </div>
                     </li>
-                    
+
                     <!-- Pricing Navigation Bar Hover Menu -->
                     <li class="hover-trigger pricing-hover">
-                        <a href="#pricing" onclick="loadSection('pricing')">Pricing</a>
+                        <a href="#pricing" onclick="loadAndShowSection('pricing-section.html', 'pricing')">Pricing</a>
                         <div class="hover-content">
-                            <!-- Software Development Section -->
-                            <div class="hover-box" onclick="location.href='#software-development'">
-                                <h2>Software Development</h2>
-                                <p>Innovative website creation services designed to engage users.</p>
-                                
+                            <!-- Precision AI & Tech Consultation -->
+                            <div class="hover-box precision-ai" onclick="loadAndShowSection('pricing-section.html', 'precision-ai')">
+                                <h2>Precision AI & Tech Consultation</h2>
+                                <p>Expert AI and tech consulting tailored to your business needs.</p>
                             </div>
-                    
-                            <!-- Website Creation Section -->
-                            <div class="hover-box" onclick="location.href='#website-creation'">
-                                <h2>Website Creation</h2>
-                                <p>Innovative website creation services designed to engage users.</p>
-                            </div>
-                    
-                            <!-- Cyber Security Services Section -->
-                            <div class="hover-box" onclick="location.href='#cyber-security'">
-                                <h2>Cyber Security Services</h2>
-                                <p>Comprehensive cyber security services to protect your data.</p>
-                            </div>
-                    
-                            <!-- Blockchain Section -->
-                            <div class="hover-box" onclick="location.href='#blockchain'">
-                                <h2>Blockchain</h2>
-                                <p>Blockchain development services to secure and enhance your projects.</p>
-                            </div>
-                    
-                            <!-- Robotics & AI Machine Learning Section -->
-                            <div class="hover-box" onclick="location.href='#robotics-ai'">
-                                <h2>Robotics & AI Machine Learning</h2>
-                                <p>Advanced robotics and AI machine learning solutions for your business.</p>
-                            </div>
-                    
-                            <!-- Latest Models Section -->
-                            <div class="hover-box" onclick="location.href='#models'">
-                                <h2>Latest Models</h2>
-                                <p>Explore the latest models in AI and machine learning technology.</p>
-                            </div>
-                    
-                            <!-- FAQ Section -->
-                            <div class="hover-box" onclick="location.href='#faq'">
-                                <h2>FAQ</h2>
-                                <ul>
-                                    <li><strong>What’s a token?</strong> Tokens are pieces of words where 1,000 tokens are about 750 words.</li>
-                                </ul>
-                            </div>
-                    
-                            <!-- Contact Sales Button -->
-                            <div class="hover-box" onclick="location.href='#contact-sales'">
-                                <h2>Contact sales</h2>
-                                <button id="contact-sales-btn">Contact Sales</button>
 
+                            <!-- Value-Based Pricing for AI, Web & Cybersecurity -->
+                            <div class="hover-box value-based-pricing" onclick="loadAndShowSection('pricing-section.html', 'value-based-pricing')">
+                                <h2>Value-Based Pricing for AI, Web & Cybersecurity</h2>
+                                <p>Flexible pricing models based on impact and innovation.</p>
+                            </div>
+
+                            <!-- Elite AI & Robotics Memberships -->
+                            <div class="hover-box elite-memberships" onclick="loadAndShowSection('pricing-section.html', 'elite-memberships')">
+                                <h2>Elite AI & Robotics Memberships</h2>
+                                <p>Exclusive access to premium AI and robotics services.</p>
+                            </div>
+
+                            <!-- ROI-Driven AI & Business Growth -->
+                            <div class="hover-box roi-driven-ai" onclick="loadAndShowSection('pricing-section.html', 'roi-driven-ai')">
+                                <h2>ROI-Driven AI & Business Growth</h2>
+                                <p>Maximize your ROI with AI-powered business solutions.</p>
+                            </div>
+
+                            <!-- Limited-Time AI & Tech Offers -->
+                            <div class="hover-box limited-offers" onclick="loadAndShowSection('pricing-section.html', 'limited-offers')">
+                                <h2>Limited-Time AI & Tech Offers</h2>
+                                <p>Unlock exclusive discounts and offers on AI services.</p>
+                            </div>
+
+                            <!-- Thought Leadership & AI Mastery -->
+                            <div class="hover-box thought-leadership" onclick="loadAndShowSection('pricing-section.html', 'thought-leadership')">
+                                <h2>Thought Leadership & AI Mastery</h2>
+                                <p>Stay ahead with insights from top AI experts.</p>
+                            </div>
+
+                            <!-- Hands-On AI Demos & Prototyping -->
+                            <div class="hover-box ai-demos" onclick="loadAndShowSection('pricing-section.html', 'ai-demos')">
+                                <h2>Hands-On AI Demos & Prototyping</h2>
+                                <p>Experience AI innovations with live demos and prototypes.</p>
                             </div>
                         </div>
                     </li>
-                    
-                    
+
                     <!-- Research Navigation Bar Hover Menu -->
                     <li class="hover-trigger research-hover">
-                        <a href="#research" onclick="loadSection('research')">Research</a>
+                        <a href="#research" onclick="loadAndShowSection('research-section.html', 'research')">Research</a>
                         <div class="hover-content">
-                            <div class="hover-box" onclick="location.href='#vision'">
-                                <h3>Our Vision</h3>
-                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                            <!-- DiSPA -->
+                            <div class="hover-box" onclick="loadAndShowSection('research-section.html', 'dispa')">
+                                <h3>DiSPA - Disease Symptom Pathway Analyzer</h3>
+                                <p>AI-powered healthcare diagnosis.</p>
                             </div>
-                            <div class="hover-box" onclick="location.href='#mission'">
-                                <h3>Our Mission</h3>
-                                <p>To deliver high-quality, reliable, and innovative software solutions.</p>
+
+                            <!-- CarbonTrack -->
+                            <div class="hover-box" onclick="loadAndShowSection('research-section.html', 'carbontrack')">
+                                <h3>CarbonTrack - AI for Carbon Monitoring</h3>
+                                <p>Real-time AI tracking for carbon emissions.</p>
                             </div>
-                            <div class="hover-box" onclick="location.href='#goals'">
-                                <h3>Our Goals</h3>
-                                <p>To continuously evolve and improve our services.</p>
+
+                            <!-- RoboOptimize -->
+                            <div class="hover-box" onclick="loadAndShowSection('research-section.html', 'robooptimize')">
+                                <h3>RoboOptimize - AI Robotics</h3>
+                                <p>AI-powered robotic automation for industries.</p>
+                            </div>
+
+                            <!-- OmniAI -->
+                            <div class="hover-box" onclick="loadAndShowSection('research-section.html', 'omni-ai')">
+                                <h3>OmniAI - The Next AI Evolution</h3>
+                                <p>Human-level AI for the future.</p>
                             </div>
                         </div>
                     </li>
-                    
+
                     <!-- Resources Navigation Bar Hover Menu -->
                     <li class="hover-trigger resource-hover">
-                        <a href="#resources" onclick="loadSection('resources')">Resources</a>
+                        <a href="#" onclick="loadAndShowSection('resources-section.html', 'resources')">Resources</a>
+
                         <div class="hover-content">
                             <!-- Blog Section -->
-                            <div class="hover-box" onclick="location.href='#blog'">
+                            <div class="hover-box" onclick="loadAndShowSection('resources-section.html', 'blog')">
                                 <h3>Blog</h3>
-                                <!-- You can add a short description here -->
-                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                                <p>Explore AI insights, research, and updates.</p>
                             </div>
-                    
+
                             <!-- WSpace AI Academy Section -->
-                            <div class="hover-box" onclick="location.href='#wspace-ai-academy'">
+                            <div class="hover-box" onclick="loadAndShowSection('resources-section.html', 'wspace-ai-academy')">
                                 <h3>WSpace AI Academy</h3>
-                                <!-- You can add a short description here -->
-                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                                <p>Learn AI technologies and their applications.</p>
                             </div>
-                    
+
                             <!-- Guides & Tutorials Section -->
-                            <div class="hover-box" onclick="location.href='#guides-tutorials'">
+                            <div class="hover-box" onclick="loadAndShowSection('resources-section.html', 'guides-tutorials')">
                                 <h3>Guides & Tutorials</h3>
-                                <!-- You can add a short description here -->
-                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                                <p>Step-by-step AI tutorials and resources.</p>
                             </div>
-                    
+
                             <!-- Webinars Section -->
-                            <div class="hover-box" onclick="location.href='#webinars'">
+                            <div class="hover-box" onclick="loadAndShowSection('resources-section.html', 'webinars')">
                                 <h3>Webinars</h3>
-                                <!-- You can add a short description here -->
-                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                                <p>Join expert-led AI discussions and training.</p>
                             </div>
-                    
+
                             <!-- Help Center Section -->
-                            <div class="hover-box" onclick="location.href='#help-center'">
+                            <div class="hover-box" onclick="loadAndShowSection('resources-section.html', 'help-center')">
                                 <h3>Help Center</h3>
-                                <!-- You can add a short description here -->
-                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                                <p>Find solutions to your AI-related queries.</p>
                             </div>
-                    
+
                             <!-- Community Section -->
-                            <div class="hover-box" onclick="location.href='#community'">
+                            <div class="hover-box" onclick="loadAndShowSection('resources-section.html', 'community')">
                                 <h3>Community</h3>
-                                <!-- You can add a short description here -->
-                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                                <p>Connect with AI enthusiasts and professionals.</p>
                             </div>
-                    
+
                             <!-- Hire a Consultant Section -->
-                            <div class="hover-box" onclick="location.href='#hire-a-consultant'">
+                            <div class="hover-box" onclick="loadAndShowSection('resources-section.html', 'hire-a-consultant')">
                                 <h3>Hire a Consultant</h3>
-                                <!-- You can add a short description here -->
-                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                                <p>Get AI expertise for your projects.</p>
                             </div>
-                    
+
                             <!-- Become a Partner Section -->
-                            <div class="hover-box" onclick="location.href='#become-a-partner'">
+                            <div class="hover-box" onclick="loadAndShowSection('resources-section.html', 'become-a-partner')">
                                 <h3>Become a Partner</h3>
-                                <!-- You can add a short description here -->
-                                <p>To revolutionize the tech industry through innovative and impactful solutions.</p>
+                                <p>Collaborate with us in AI innovation.</p>
                             </div>
                         </div>
                     </li>
-                    
-                    <li><a href="#contacts" onclick="loadSection('contacts')">Contacts</a></li>
+
+                    <li><a href="#contacts" onclick="loadAndShowSection('contacts-section.html', 'contacts')">Contacts</a></li>
 
                     <!-- Company Navigation Bar Hover Menu -->
                     <li class="hover-trigger company-hover">
-                        <a href="#company" onclick="loadSection('company')">Company</a>
+                        <a href="#" onclick="loadAndShowSection('company-section.html', 'company')">Company</a>
+
                         <div class="hover-content">
-                            <div class="hover-box" onclick="location.href='#about'">
+                            <div class="hover-box" onclick="loadAndShowSection('company-section.html', 'about')">
                                 <h3>About Us</h3>
                                 <p>Learn more about WSpace AI and our journey</p>
                             </div>
-                            <div class="hover-box" onclick="location.href='#faqs'">
+                            <div class="hover-box" onclick="loadAndShowSection('company-section.html', 'faqs')">
                                 <h3>FAQs</h3>
                                 <p>Find answers to commonly asked questions</p>
                             </div>
-                            <div class="hover-box" onclick="location.href='#policies'">
+                            <div class="hover-box" onclick="loadAndShowSection('company-section.html', 'policies')">
                                 <h3>Policies</h3>
                                 <p>Read about our company policies</p>
                             </div>
-                            <div class="hover-box" onclick="location.href='#privacy'">
+                            <div class="hover-box" onclick="loadAndShowSection('company-section.html', 'privacy')">
                                 <h3>Privacy</h3>
                                 <p>Understand how we protect your data</p>
                             </div>
-                            <div class="hover-box" onclick="location.href='#terms'">
+                            <div class="hover-box" onclick="loadAndShowSection('company-section.html', 'terms')">
                                 <h3>Terms and Conditions</h3>
                                 <p>Review the terms of our services</p>
                             </div>
-                            <div class="hover-box" onclick="location.href='#careers'">
+                            <div class="hover-box" onclick="loadAndShowSection('company-section.html', 'careers')">
                                 <h3>Careers</h3>
                                 <p>Explore career opportunities at WSpace AI</p>
                             </div>
                             <!-- New Content Added -->
-                            <div class="hover-box" onclick="location.href='#news'">
+                            <div class="hover-box" onclick="loadAndShowSection('company-section.html', 'news')">
                                 <h3>News</h3>
-                                <p>Stay updated with the latest news from WW-Space AI.</p>
+                                <p>Stay updated with the latest news from WSpace AI.</p>
                             </div>
-                            <div class="hover-box" onclick="location.href='#charter'">
+                            <div class="hover-box" onclick="loadAndShowSection('company-section.html', 'charter')">
                                 <h3>Our Charter</h3>
                                 <p>Read our mission, vision, and guiding principles.</p>
                             </div>
-                            <div class="hover-box" onclick="location.href='#security'">
+                            <div class="hover-box" onclick="loadAndShowSection('company-section.html', 'security')">
                                 <h3>Security and Privacy</h3>
                                 <p>Discover our security measures to protect your data.</p>
                             </div>
-                            <div class="hover-box" onclick="location.href='#residency'">
+                            <div class="hover-box" onclick="loadAndShowSection('company-section.html', 'residency')">
                                 <h3>Residency</h3>
                                 <p>Learn about our residency programs and opportunities.</p>
                             </div>
-                            <div class="hover-box" onclick="location.href='#careers'">
+                            <div class="hover-box" onclick="loadAndShowSection('company-section.html', 'careers')">
                                 <h3>Careers</h3>
                                 <p>Check out career opportunities and join our growing team.</p>
                             </div>
                         </div>
                     </li>
-
-                </ul>
-                
+                </ul>               
             </nav>
 
             <!-- Hamburger Menu Icon -->
-            <!-- Hamburger Menu Icon -->
-            <div class="hamburger-menu" onclick="toggleHamburgerMenu()">
+            <div class="hamburger-menu">
                 <div class="hamburger-icon-bar"></div>
                 <div class="hamburger-icon-bar"></div>
                 <div class="hamburger-icon-bar"></div>
             </div>
+            
 
             <!-- Hamburger Menu Dropdown -->
             <div class="hamburger-dropdown" id="hamburger-dropdown">
                 <ul>
-                    <li><a href="#home" onclick="loadSection('home')">Home</a></li>
+                    <li><a href="#home" onclick="loadAndShowSection('home-section.html', 'home')">Home</a></li>
 
-                    <!-- Services with Sub-items -->
+                    <!-- Services Section -->
                     <li class="has-submenu">
-                        <a href="#services" onclick="loadSection('services')">Services</a>
+                        <a href="#" onclick="loadAndShowSection('services-section.html', 'services')">Services</a>
                         <ul class="submenu">
-                            <li><a href="#mobile-apps" onclick="location.href='#mobile-apps'">Mobile Apps Development</a></li>
-                            <li><a href="#desktop-apps" onclick="location.href='#desktop-apps'">Desktop Apps Development</a></li>
-                            <li><a href="#macos-apps" onclick="location.href='#macos-apps'">MacOS IDE Apps Development</a></li>
-                            <li><a href="#web-development" onclick="location.href='#web-development'">Website Creation</a></li>
-                            <li><a href="#cyber-security" onclick="location.href='#cyber-security'">Cyber Security Services</a></li>
-                            <li><a href="#blockchain" onclick="location.href='#blockchain'">Blockchain</a></li>
-                            <li><a href="#robotics-ai" onclick="location.href='#robotics-ai'">Robotics & Artificial Intelligence</a></li>                            
-                            <li><a href="#contacts" onclick="location.href = '#contacts'">Contacts</a></li>                            
+                            <li><a href="#" onclick="loadAndShowSection('services-section.html', 'custom-software-solutions')">Custom Software Solutions</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('services-section.html', 'cyber-security-services')">Cyber Security Services</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('services-section.html', 'blockchain-solutions')">Blockchain Solutions</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('services-section.html', 'ai-ml-model-development')">AI & ML Model Development</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('services-section.html', 'ai-driven-robotics-solutions')">AI-Driven Robotics</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('services-section.html', 'edge-computing-ai-integration')">Edge Computing & AI</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('services-section.html', 'computer-vision-solutions')">Computer Vision</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('services-section.html', 'nlp-solutions')">Natural Language Processing (NLP)</a></li>
                         </ul>
                     </li>
 
-                    <!-- Products with Sub-items -->
+                    <!-- Products Section -->
                     <li class="has-submenu">
-                        <a href="#products" onclick="loadSection('products')">Products</a>
+                        <a href="#" onclick="loadAndShowSection('products-section.html', 'products')">Products</a>
                         <ul class="submenu">
-                            <li><a href="#salome" onclick="location.href='#salome'">Salome v 3.5</a></li>
-                            <li><a href="#api" onclick="location.href='#api'">API</a></li>
-                            <li><a href="#explore-more" onclick="location.href='#explore-more'">Explore More</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('products-section.html', 'omniAI')">OmniAI</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('products-section.html', 'carbonTrack')">CarbonTrack</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('products-section.html', 'DiSPA')">DiSPA</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('products-section.html', 'roboOptimize')">RoboOptimize</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('products-section.html', 'api')">API</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('products-section.html', 'exploreMore')">Explore More</a></li>
                         </ul>
-                    </li>                   
+                    </li>                  
 
                     <!-- Pricing with Sub-items -->
+                    <!-- Pricing Section -->
                     <li class="has-submenu">
-                        <a href="#pricing" onclick="loadSection('pricing')">Pricing</a>
+                        <a href="#" onclick="loadAndShowSection('pricing-section.html', 'pricing')">Pricing</a>
                         <ul class="submenu">
-                            <li><a href="#software-development" onclick="location.href='#software-development'">Software Development</a></li>
-                            <li><a href="#website-creation" onclick="location.href='#website-creation'">Website Creation</a></li>
-                            <li><a href="#cyber-security" onclick="location.href='#cyber-security'">Cyber Security Services</a></li>
-                            <li><a href="#blockchain" onclick="location.href='#blockchain'">Blockchain</a></li>
-                            <li><a href="#robotics-ai" onclick="location.href='#robotics-ai'">Robotics & AI Machine Learning</a></li>
-                            <li><a href="#models" onclick="location.href='#models'">Latest Models</a></li>
-                            <li><a href="#faq" onclick="location.href='#faq'">FAQ</a></li>
-                            <li><a href="#contact-sales" onclick="location.href='#contact-sales'">Contact Sales</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('pricing-section.html', 'precision-ai')">Precision AI & Tech Consultation</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('pricing-section.html', 'value-based-pricing')">Value-Based Pricing for AI, Web & Cybersecurity</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('pricing-section.html', 'elite-memberships')">Elite AI & Robotics Memberships</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('pricing-section.html', 'roi-driven-ai')">ROI-Driven AI & Business Growth</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('pricing-section.html', 'limited-offers')">Limited-Time AI & Tech Offers</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('pricing-section.html', 'thought-leadership')">Thought Leadership & AI Mastery</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('pricing-section.html', 'ai-demos')">Hands-On AI Demos & Prototyping</a></li>
                         </ul>
                     </li>
 
-                    <!-- Research with Sub-items -->
+                    <!-- Research Section -->
                     <li class="has-submenu">
-                        <a href="#research" onclick="loadSection('research')">Research</a>
+                        <a href="#" onclick="loadAndShowSection('research-section.html', 'research')">Research</a>
                         <ul class="submenu">
-                            <li><a href="#vision" onclick="location.href='#vision'">Our Vision</a></li>
-                            <li><a href="#mission" onclick="location.href='#mission'">Our Mission</a></li>
-                            <li><a href="#goals" onclick="location.href='#goals'">Our Goals</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('research-section.html', 'dispa')">DiSPA - Disease Symptom Pathway Analyzer</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('research-section.html', 'carbontrack')">CarbonTrack - AI for Carbon Monitoring</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('research-section.html', 'robooptimize')">RoboOptimize - AI Robotics</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('research-section.html', 'omni-ai')">OmniAI - The Next AI Evolution</a></li>
                         </ul>
                     </li>
 
-                    <!-- Resources with Sub-items -->
+                    <!-- Resources Section -->
                     <li class="has-submenu">
-                        <a href="#resources" onclick="loadSection('resources')">Resources</a>
+                        <a href="#" onclick="loadAndShowSection('resources-section.html', 'resources')">Resources</a>
                         <ul class="submenu">
-                            <li><a href="#blog" onclick="location.href='#blog'">Blog</a></li>
-                            <li><a href="#wspace-ai-academy" onclick="location.href='#wspace-ai-academy'">WSpace AI Academy</a></li>
-                            <li><a href="#guides-tutorials" onclick="location.href='#guides-tutorials'">Guides & Tutorials</a></li>
-                            <li><a href="#webinars" onclick="location.href='#webinars'">Webinars</a></li>
-                            <li><a href="#help-center" onclick="location.href='#help-center'">Help Center</a></li>
-                            <li><a href="#community" onclick="location.href='#community'">Community</a></li>
-                            <li><a href="#hire-a-consultant" onclick="location.href='#hire-a-consultant'">Hire a Consultant</a></li>
-                            <li><a href="#become-a-partner" onclick="location.href='#become-a-partner'">Become a Partner</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('resources-section.html', 'blog')">Blog</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('resources-section.html', 'wspace-ai-academy')">WSpace AI Academy</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('resources-section.html', 'guides-tutorials')">Guides & Tutorials</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('resources-section.html', 'webinars')">Webinars</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('resources-section.html', 'help-center')">Help Center</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('resources-section.html', 'community')">Community</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('resources-section.html', 'hire-a-consultant')">Hire a Consultant</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('resources-section.html', 'become-a-partner')">Become a Partner</a></li>
                         </ul>
                     </li>
                     
                     <!-- Contacts -->
-                    <li><a href="#contacts" onclick="loadSection('contacts')">Contacts</a></li>
+                    <li><a href="#contacts" onclick="loadAndShowSection('contacts-section.html', 'contacts')">Contacts</a></li>
 
-
-                    <!-- Company with Sub-items -->
+                    <!-- Company Section -->
                     <li class="has-submenu">
-                        <a href="#company" onclick="loadSection('company')">Company</a>
+                        <a href="#" onclick="loadAndShowSection('company-section.html', 'company')">Company</a>
                         <ul class="submenu">
-                            <li><a href="#about" onclick="location.href='#about'">About Us</a></li>
-                            <li><a href="#faqs" onclick="location.href='#faqs'">FAQs</a></li>
-                            <li><a href="#policies" onclick="location.href='#policies'">Policies</a></li>
-                            <li><a href="#privacy" onclick="location.href='#privacy'">Privacy</a></li>
-                            <li><a href="#terms" onclick="location.href='#terms'">Terms and Conditions</a></li>
-                            <li><a href="#careers" onclick="location.href='#careers'">Careers</a></li>
-                            <li><a href="#news" onclick="location.href='#news'">News</a></li>
-                            <li><a href="#charter" onclick="location.href='#charter'">Our Charter</a></li>
-                            <li><a href="#security" onclick="location.href='#security'">Security and Privacy</a></li>
-                            <li><a href="#residency" onclick="location.href='#residency'">Residency</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('company-section.html', 'about')">About Us</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('company-section.html', 'faqs')">FAQs</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('company-section.html', 'policies')">Policies</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('company-section.html', 'privacy')">Privacy</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('company-section.html', 'terms')">Terms and Conditions</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('company-section.html', 'careers')">Careers</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('company-section.html', 'news')">News</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('company-section.html', 'charter')">Our Charter</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('company-section.html', 'security')">Security and Privacy</a></li>
+                            <li><a href="#" onclick="loadAndShowSection('company-section.html', 'residency')">Residency</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
 
-
-            
         </div>
     </header>
-
 
         <main id="main-content">     
             
@@ -444,8 +459,9 @@
     </footer>
 
     <script src="/js/app.js"></script>
-    <script src="/js/scripts.js"></script>
     <script src="/sections/home-section.js"></script> <!-- At the end of body -->
+    <script src="/js/scripts.js"></script>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     

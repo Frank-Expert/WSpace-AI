@@ -1,4 +1,4 @@
-// 🚀 Function to update meta tags dynamically
+// 🚀 FUNCTION TO UPDATE META TAGS DYNAMICALLY
 function updateMetaTags(title, description) {
     document.title = title;
     const metaDescription = document.querySelector("meta[name='description']");
@@ -7,9 +7,7 @@ function updateMetaTags(title, description) {
     }
 }
 
-
-
-// ✅ Function to Load Section CSS
+// ✅ FUNCTION TO LOAD SECTION CSS
 function loadSectionCSS(section) {
     let cssPath = `sections/${section}-section.css`; // ✅ Ensure path is correct
 
@@ -34,8 +32,7 @@ function loadSectionCSS(section) {
 }
 
 
-// 🚀 Function to load section-specific JS
-// 🚀 Function to Load Section-Specific JS (Alternative Fix)
+// 🚀 FUNCTION TO LOAD SECTION-SPECIFIC JS
 function loadSectionJS(section) {
     // ✅ Remove previous section-specific JavaScript
     let existingScript = document.getElementById("dynamic-section-js");
@@ -77,10 +74,9 @@ function loadSectionJS(section) {
 }
 
 
-// 🚀 Function to load a section dynamically
+// 🚀 FUNCTION TO LOAD A SECTION DYNAMICALLY
 // ✅ Track the currently loaded section to prevent duplicate fetches
 let currentSection = null;
-
 // 🚀 Function to Load a Section Dynamically
 function loadSection(section, updateHistory = true) {
     // ✅ Get the container where sections will be loaded
@@ -146,17 +142,206 @@ function loadSection(section, updateHistory = true) {
 }
 
 
-// 🚀 Function to update the URL without reloading
-function updateURL(section) {
-    history.pushState({ section }, "", `#${section}`);
+
+
+
+//SPINE LOAD SECTION/LINKS/BUTTONS
+// 🚀 Load and Display Sections with Stylish Loading & Smooth Scroll
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("📌 DOM fully loaded.");
+
+    const mainContent = document.getElementById('main-content');
+    const loadingSpinner = document.getElementById('loading-spinner');
+    const navLinks = document.querySelectorAll("a[data-section]"); // Nav links
+    const mobileMenu = document.getElementById("hamburger-menu"); // Hamburger menu
+
+    // ✅ Handle Navigation Clicks
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault(); // Prevent default link behavior
+
+            const sectionFile = this.getAttribute("data-section-file");
+            const sectionClass = this.getAttribute("data-section-class");
+
+            if (sectionFile && sectionClass) {
+                loadAndShowSection(sectionFile, sectionClass);
+            }
+
+            // ✅ Close mobile menu if open
+            if (mobileMenu && mobileMenu.classList.contains("open")) {
+                mobileMenu.classList.remove("open");
+            }
+        });
+    });
+
+    // ✅ Handle back/forward navigation
+    window.addEventListener("popstate", function (event) {
+        if (event.state) {
+            loadAndShowSection(event.state.sectionFile, event.state.sectionClass, false);
+        }
+    });
+});
+
+// ✅ Load Section & Instantly Show It at Target
+function loadAndShowSection(sectionFile, targetClass, addToHistory = true) {
+    const mainContent = document.getElementById('main-content');
+    const loadingSpinner = document.getElementById('loading-spinner');
+
+    if (!sectionFile || !targetClass) {
+        console.error("🚨 Invalid section data:", sectionFile, targetClass);
+        return;
+    }
+
+    // Prevent reloading the same section
+    if (mainContent.dataset.currentSection === sectionFile) {
+        console.warn(`⚠️ Section '${sectionFile}' is already loaded. Skipping fetch.`);
+        forceJumpToTarget(targetClass);
+        return;
+    }
+
+    mainContent.dataset.currentSection = sectionFile; // Track current section
+
+    if (addToHistory) {
+        history.pushState({ sectionFile, targetClass }, '', `#${targetClass}`);
+    }
+
+    // Show spinner, hide content
+    loadingSpinner.classList.remove('hidden');
+    mainContent.classList.remove('show');
+    mainContent.style.visibility = "hidden"; // Hide until fully loaded
+
+    // ✅ Fetch new section
+    fetch(`sections/${sectionFile}`)
+        .then(response => {
+            if (!response.ok) throw new Error(`❌ Failed to load ${sectionFile} (Status: ${response.status})`);
+            return response.text();
+        })
+        .then(html => {
+            mainContent.innerHTML = html;
+            loadingSpinner.classList.add('hidden');
+
+            // ✅ Instantly jump to section without showing scroll effect
+            setTimeout(() => {
+                forceJumpToTarget(targetClass);
+                mainContent.style.visibility = "visible"; // Show content once loaded
+            }, 100);
+        })
+        .catch(error => {
+            console.error('❌ Error:', error);
+            loadingSpinner.classList.add('hidden');
+        });
 }
 
-// 🚀 Handle back/forward navigation
+// ✅ Instantly Jump to Target (No Scroll)
+function forceJumpToTarget(targetClass) {
+    let target = document.querySelector(`.${targetClass}`);
+
+    if (target) {
+        console.log(`🎯 Jumping instantly to: .${targetClass}`);
+        window.scrollTo({ top: target.offsetTop, behavior: "instant" }); // No animation
+    } else {
+        console.warn(`⚠️ Target '.${targetClass}' not found.`);
+    }
+}
+
+
+
+// 🚀 Smooth scrolling function
+function scrollToSection(sectionClass) {
+    const target = document.querySelector(`.${sectionClass}`);
+    if (target) {
+        window.scrollTo({
+            top: target.offsetTop,
+            behavior: 'smooth'
+        });
+    }
+}
+
+
+
+
+
+//NAVIGATION HANDLING (INCLUDING BACK/FORWARD NAVIGATION)
+// **🚀 Handle Browser Back/Forward Navigation**
+window.addEventListener('popstate', (event) => {
+    console.log("🔄 Popstate triggered:", event);
+    if (event.state && event.state.sectionFile && event.state.sectionClass) {
+        console.log("🔄 Navigating back/forward to:", event.state);
+        loadAndShowSection(event.state.sectionFile, event.state.sectionClass, false);
+        if (event.state.sectionClass === 'home') {
+            initializeHeroSlider(); // Re-initialize hero slider when navigating back to home
+        }
+    } else {
+        console.warn("⚠️ No stored state found, reloading home section.");
+        loadAndShowSection('home-section.html', 'home', false);
+    }
+});
+
+// **🚀 Function to update the URL without reloading**
+function updateURL(section) {
+    const sectionFile = `${section}-section.html`;
+    history.pushState({ sectionFile, sectionClass: section }, '', `#${section}`);
+    console.log(`✅ Updated URL: #${section}`);
+}
+
+// **🚀 Handle back/forward navigation**
 window.addEventListener("popstate", (event) => {
     const section = event.state?.section || "home";
     loadSection(section, false); // Don't update history again
 });
 
+// **🚀 Ensure navigation links & submenu items work correctly**
+function setupNavigation() {
+    const navLinks = document.querySelectorAll("nav a, .hamburger-dropdown a");
+    const navbar = document.getElementById("navbar");
+    const submenu = document.querySelector(".submenu"); // Adjust selector based on your structure
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent full-page reload
+
+            const section = this.getAttribute("href").replace("#", ""); // Extract section name
+            if (section) loadSection(section);
+
+            // **✅ Auto-close Navigation Bar after clicking a link**
+            if (navbar && navbar.classList.contains("open")) {
+                navbar.classList.remove("open");
+            }
+
+            // **✅ Auto-close Submenu (if open)**
+            if (submenu && submenu.classList.contains("open")) {
+                submenu.classList.remove("open");
+            }
+        });
+    });
+
+    setupSubmenuToggle(); // Ensure submenu toggle works properly
+}
+
+// **🚀 Auto-hide submenu when the cursor leaves it**
+function setupSubmenuAutoHide() {
+    const submenuContainer = document.querySelector(".submenu-container"); // Adjust this to your submenu wrapper
+
+    if (submenuContainer) {
+        submenuContainer.addEventListener("mouseleave", () => {
+            const submenu = document.querySelector(".submenu");
+            if (submenu) submenu.classList.remove("open"); // Hide submenu when cursor leaves
+        });
+    }
+}
+
+// **🚀 Load section based on URL hash on page load (without forcing home)**
+document.addEventListener("DOMContentLoaded", () => {
+    const section = window.location.hash.substring(1) || "home"; // Default to home if no hash
+    setupNavigation(); // Ensure nav links & submenu work
+    setupSubmenuAutoHide(); // Enable auto-hide for submenu
+    loadSection(section); // Load the correct section
+});
+
+
+
+
+//HAMBURGER MENU HANDLING
 // 🚀 Function to toggle the Hamburger Menu
 function toggleHamburgerMenu(event) {
     event.stopPropagation(); // Prevent click from bubbling up
@@ -184,6 +369,35 @@ function closeAllMenus() {
     });
 }
 
+// Function to close submenu when clicking an item inside it
+function closeSubMenuOnClick() {
+    let allMenuItems = document.querySelectorAll(".submenu a, .navbar a, .hamburger-menu a");
+
+    allMenuItems.forEach((item) => {
+        item.addEventListener("click", function () {
+            closeAllMenus();
+        });
+    });
+}
+
+// Attach hamburger menu event listeners
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".hamburger-menu").addEventListener("click", toggleHamburgerMenu);
+    document.addEventListener("click", function (event) {
+        // Close everything if clicking outside of menu
+        if (!event.target.closest(".hamburger-menu, .navbar, .submenu")) {
+            closeAllMenus();
+        }
+    });
+
+    closeSubMenuOnClick(); // Ensure menus close on item click
+});
+
+
+
+
+
+//3. SUBMENU HANDLING
 // 🚀 Function to toggle submenus on click
 function setupSubmenuToggle() {
     document.querySelectorAll(".has-submenu > a").forEach(link => {
@@ -198,30 +412,26 @@ function setupSubmenuToggle() {
     });
 }
 
-// 🚀 Ensure navigation links work correctly
-function setupNavigation() {
-    document.querySelectorAll("nav a, .hamburger-dropdown a").forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent full-page reload
+// Handle submenu hover to show and hide
+document.addEventListener("DOMContentLoaded", function () {
+    let submenus = document.querySelectorAll(".has-submenu");
 
-            const section = this.getAttribute("href").replace("#", ""); // Extract section name
-            if (section) loadSection(section);
+    submenus.forEach((submenu) => {
+        let subMenuElement = submenu.querySelector(".submenu");
+
+        submenu.addEventListener("mouseenter", function () {
+            if (subMenuElement) {
+                subMenuElement.style.display = "block";
+            }
+        });
+
+        submenu.addEventListener("mouseleave", function () {
+            if (subMenuElement) {
+                subMenuElement.style.display = "none";
+            }
         });
     });
 
-    // Close menus when clicking outside
-    document.addEventListener("click", function (event) {
-        if (!event.target.closest(".hamburger-menu, .navbar, .submenu")) {
-            closeAllMenus();
-        }
-    });
-
-    setupSubmenuToggle(); // Ensure submenus work
-}
-
-// 🚀 Load section based on URL hash on page load **without forcing home**
-document.addEventListener("DOMContentLoaded", () => {
-    const section = window.location.hash.substring(1) || "home"; // Default to home if no hash
-    setupNavigation(); // Ensure nav links work
-    loadSection(section); // Load the correct section
+    setupSubmenuToggle(); // Ensure submenus toggle properly
 });
+
